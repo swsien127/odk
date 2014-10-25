@@ -1,0 +1,2742 @@
+{
+  "xlsx": {
+    "survey": [
+      {
+        "clause": "begin screen",
+        "_row_num": 2
+      },
+      {
+        "type": "note",
+        "name": "form_title",
+        "display": {
+          "text": "<strong>ADAPT Missed Visit Form for Returned Patients</strong>"
+        },
+        "_row_num": 3
+      },
+      {
+        "type": "note",
+        "name": "form_info",
+        "display": {
+          "text": "This form is used for ADAPT patients who were lost but in whom tracing attempts were unable to speak with the patient directly during the tracing process.  It is also important to note that this is in relation to a particular lapse in clinic visits."
+        },
+        "_row_num": 4
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 5
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 6
+      },
+      {
+        "type": "note",
+        "display": {
+          "text": "<strong>Section A:  Patient Information</strong>"
+        },
+        "_row_num": 7
+      },
+      {
+        "type": "text",
+        "name": "patient_name",
+        "display": {
+          "text": "Patient name:"
+        },
+        "_row_num": 8
+      },
+      {
+        "type": "text",
+        "name": "patient_id",
+        "display": {
+          "text": "Patient ID:"
+        },
+        "_row_num": 9
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 10
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 11
+      },
+      {
+        "type": "text",
+        "name": "clinic_name",
+        "display": {
+          "text": "Clinic name:"
+        },
+        "_row_num": 12
+      },
+      {
+        "type": "text",
+        "name": "clinic_sub_country",
+        "display": {
+          "text": "Clinic sub-country:"
+        },
+        "_row_num": 13
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 14
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 15
+      },
+      {
+        "type": "note",
+        "display": {
+          "text": "<strong>Dates of most recent gap in care (from this clinic)</strong>"
+        },
+        "_row_num": 16
+      },
+      {
+        "type": "date",
+        "name": "date_last_visit",
+        "display": {
+          "text": "Date of last visit to this clinic prior to gap in care:"
+        },
+        "_row_num": 17
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 18
+      },
+      {
+        "type": "date",
+        "name": "date_first_return",
+        "display": {
+          "text": "Date of first return visit to this clinic after gap in care:"
+        },
+        "_row_num": 19
+      },
+      {
+        "type": "date",
+        "name": "date_today",
+        "display": {
+          "text": "Today's date:"
+        },
+        "_row_num": 20
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 21
+      },
+      {
+        "type": "note",
+        "display": {
+          "text": "<strong>Section D: Patient Outcome: Reported by Patient Him/Herself</strong>"
+        },
+        "_row_num": 22
+      },
+      {
+        "type": "select_one",
+        "values_list": "clinic_visit_list",
+        "name": "clinic_visit",
+        "_row_num": 23
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 24
+      },
+      {
+        "clause": "if",
+        "condition": "calculates.ask_about_new_clinic()",
+        "_row_num": 25
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 26
+      },
+      {
+        "type": "date",
+        "name": "date_first_visit",
+        "display": {
+          "text": "Date of first visit to new clinic:"
+        },
+        "_row_num": 27
+      },
+      {
+        "type": "date",
+        "name": "date_most_recent_visit",
+        "display": {
+          "text": "Date of most recent visit to new clinic:"
+        },
+        "_row_num": 28
+      },
+      {
+        "type": "text",
+        "name": "new_clinic_name",
+        "display": {
+          "text": "New clinic name:"
+        },
+        "_row_num": 29
+      },
+      {
+        "type": "text",
+        "name": "new_clinic_town",
+        "display": {
+          "text": "New clinic town:"
+        },
+        "_row_num": 30
+      },
+      {
+        "type": "text",
+        "name": "new_patient_id",
+        "display": {
+          "text": "New Patient ID (if available):"
+        },
+        "_row_num": 31
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 32
+      },
+      {
+        "clause": "end if",
+        "_row_num": 33
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 34
+      },
+      {
+        "type": "note",
+        "display": {
+          "text": "<strong>Section E: Reasons for Missed Visits(s) at Initial Clinic</strong>"
+        },
+        "_row_num": 35
+      },
+      {
+        "type": "select_multiple",
+        "values_list": "medical_list",
+        "name": "medical",
+        "display": {
+          "text": "Medical"
+        },
+        "_row_num": 36
+      },
+      {
+        "clause": "if",
+        "condition": "calculates.other_medical_reason()",
+        "_row_num": 37
+      },
+      {
+        "type": "text",
+        "name": "other_reason_text",
+        "display": {
+          "text": "Specify:"
+        },
+        "_row_num": 38
+      },
+      {
+        "clause": "end if",
+        "_row_num": 39
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 40
+      },
+      {
+        "clause": "if",
+        "condition": "calculates.hospitalized()",
+        "_row_num": 41
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 42
+      },
+      {
+        "type": "date",
+        "name": "admit_date",
+        "display": {
+          "text": "Admit date:"
+        },
+        "_row_num": 43
+      },
+      {
+        "type": "text",
+        "name": "hospital_name",
+        "display": {
+          "text": "Hospital name:"
+        },
+        "_row_num": 44
+      },
+      {
+        "type": "text",
+        "name": "hospital_reason",
+        "display": {
+          "text": "Hospital reason:"
+        },
+        "_row_num": 45
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 46
+      },
+      {
+        "clause": "end if",
+        "_row_num": 47
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 48
+      },
+      {
+        "type": "select_multiple",
+        "values_list": "access_list",
+        "name": "access",
+        "display": {
+          "text": "Access to Care"
+        },
+        "_row_num": 49
+      },
+      {
+        "clause": "if",
+        "condition": "calculates.other_access_reason()",
+        "_row_num": 50
+      },
+      {
+        "type": "text",
+        "name": "other_access_text",
+        "display": {
+          "text": "Specify:"
+        },
+        "_row_num": 51
+      },
+      {
+        "clause": "end if",
+        "_row_num": 52
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 53
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 54
+      },
+      {
+        "type": "select_multiple",
+        "values_list": "clinic_factor_list",
+        "name": "clinic_factor",
+        "display": {
+          "text": "Clinic Factor"
+        },
+        "_row_num": 55
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 56
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 57
+      },
+      {
+        "type": "select_multiple",
+        "values_list": "work_family_list",
+        "name": "work_family",
+        "display": {
+          "text": "Work and Family"
+        },
+        "_row_num": 58
+      },
+      {
+        "clause": "if",
+        "condition": "calculates.other_work_family_reason()",
+        "_row_num": 59
+      },
+      {
+        "type": "text",
+        "name": "other_work_family_reason",
+        "display": {
+          "text": "Specify:"
+        },
+        "_row_num": 60
+      },
+      {
+        "clause": "end if",
+        "_row_num": 61
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 62
+      },
+      {
+        "type": "select_multiple",
+        "values_list": "relocated_list",
+        "name": "relocated",
+        "display": {
+          "text": "Relocated"
+        },
+        "_row_num": 63
+      },
+      {
+        "type": "select_multiple",
+        "values_list": "psychosocial_list",
+        "name": "psychosocial",
+        "display": {
+          "text": "Psychosocial"
+        },
+        "_row_num": 64
+      },
+      {
+        "type": "select_multiple",
+        "values_list": "other_list",
+        "name": "other_reason",
+        "display": {
+          "text": "Other"
+        },
+        "_row_num": 65
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 66
+      },
+      {
+        "type": "note",
+        "display": {
+          "text": "Section F: Interaction with Patient"
+        },
+        "_row_num": 67
+      },
+      {
+        "type": "select_one",
+        "values_list": "yesno_list",
+        "name": "yesno",
+        "display": {
+          "text": "Counseling conducted:"
+        },
+        "_row_num": 68
+      },
+      {
+        "clause": "if",
+        "condition": "calculates.yes_selected()",
+        "_row_num": 69
+      },
+      {
+        "type": "integer",
+        "name": "how_long",
+        "display": {
+          "text": "How long (in minutes):"
+        },
+        "_row_num": 70
+      },
+      {
+        "clause": "end if",
+        "_row_num": 71
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 72
+      },
+      {
+        "type": "select_multiple",
+        "values_list": "topics_list",
+        "name": "topics_discussed",
+        "display": {
+          "text": "Topics discussed (list of topics) including assessment of problem and plan to address problem:"
+        },
+        "_row_num": 73
+      },
+      {
+        "type": "text",
+        "name": "interaction_notes",
+        "display": {
+          "text": "Notes on interaction with patient:"
+        },
+        "_row_num": 74
+      }
+    ],
+    "choices": [
+      {
+        "choice_list_name": "clinic_visit_list",
+        "data_value": "yes_visit",
+        "display": {
+          "text": "Patient made at least one clinic visit to another facility during the most recent gap in care from this clinic"
+        },
+        "_row_num": 2
+      },
+      {
+        "choice_list_name": "clinic_visit_list",
+        "data_value": "no_visit",
+        "display": {
+          "text": "Patient has not received HIV care at another facility during this period of absence"
+        },
+        "_row_num": 3
+      },
+      {
+        "choice_list_name": "medical_list",
+        "data_value": "too_sick",
+        "display": {
+          "text": "Felt too sick to come to clinic"
+        },
+        "_row_num": 5
+      },
+      {
+        "choice_list_name": "medical_list",
+        "data_value": "side_effects",
+        "display": {
+          "text": "Side effects from pills"
+        },
+        "_row_num": 6
+      },
+      {
+        "choice_list_name": "medical_list",
+        "data_value": "burden",
+        "display": {
+          "text": "Pill burden"
+        },
+        "_row_num": 7
+      },
+      {
+        "choice_list_name": "medical_list",
+        "data_value": "break",
+        "display": {
+          "text": "Wanted a break from pills"
+        },
+        "_row_num": 8
+      },
+      {
+        "choice_list_name": "medical_list",
+        "data_value": "hospitalized",
+        "display": {
+          "text": "Hospitalized"
+        },
+        "_row_num": 9
+      },
+      {
+        "choice_list_name": "medical_list",
+        "data_value": "other_medical",
+        "display": {
+          "text": "Other medical reasons"
+        },
+        "_row_num": 10
+      },
+      {
+        "choice_list_name": "access_list",
+        "data_value": "transportation",
+        "display": {
+          "text": "Transportation problems"
+        },
+        "_row_num": 12
+      },
+      {
+        "choice_list_name": "access_list",
+        "data_value": "funds",
+        "display": {
+          "text": "Funds to get to the clinic"
+        },
+        "_row_num": 13
+      },
+      {
+        "choice_list_name": "access_list",
+        "data_value": "no_time",
+        "display": {
+          "text": "Didn't have enough time to for the clinic"
+        },
+        "_row_num": 14
+      },
+      {
+        "choice_list_name": "access_list",
+        "data_value": "other_access",
+        "display": {
+          "text": "Other access to care reasons"
+        },
+        "_row_num": 15
+      },
+      {
+        "choice_list_name": "clinic_factor_list",
+        "data_value": "ran_out_meds",
+        "display": {
+          "text": "The clinic ran out of medications"
+        },
+        "_row_num": 17
+      },
+      {
+        "choice_list_name": "clinic_factor_list",
+        "data_value": "not_nice",
+        "display": {
+          "text": "The staff was not nice"
+        },
+        "_row_num": 18
+      },
+      {
+        "choice_list_name": "clinic_factor_list",
+        "data_value": "not_good",
+        "display": {
+          "text": "The care was not good"
+        },
+        "_row_num": 19
+      },
+      {
+        "choice_list_name": "clinic_factor_list",
+        "data_value": "requirements",
+        "display": {
+          "text": "Too many admin requirements"
+        },
+        "_row_num": 20
+      },
+      {
+        "choice_list_name": "clinic_factor_list",
+        "data_value": "uncomfortable",
+        "display": {
+          "text": "The waiting area was uncomfortable"
+        },
+        "_row_num": 21
+      },
+      {
+        "choice_list_name": "clinic_factor_list",
+        "data_value": "crowded",
+        "display": {
+          "text": "The clinic was too crowded"
+        },
+        "_row_num": 22
+      },
+      {
+        "choice_list_name": "clinic_factor_list",
+        "data_value": "wait",
+        "display": {
+          "text": "I have to wait too long during visits"
+        },
+        "_row_num": 23
+      },
+      {
+        "choice_list_name": "clinic_factor_list",
+        "data_value": "retention_class",
+        "display": {
+          "text": "I didn't want to go to retention class"
+        },
+        "_row_num": 24
+      },
+      {
+        "choice_list_name": "work_family_list",
+        "data_value": "work_interference",
+        "display": {
+          "text": "Work interference"
+        },
+        "_row_num": 26
+      },
+      {
+        "choice_list_name": "work_family_list",
+        "data_value": "no_caregiver",
+        "display": {
+          "text": "No caregiver"
+        },
+        "_row_num": 27
+      },
+      {
+        "choice_list_name": "work_family_list",
+        "data_value": "attended_funeral",
+        "display": {
+          "text": "Attended funeral"
+        },
+        "_row_num": 28
+      },
+      {
+        "choice_list_name": "work_family_list",
+        "data_value": "family_obligation",
+        "display": {
+          "text": "Other family obligation"
+        },
+        "_row_num": 29
+      },
+      {
+        "choice_list_name": "work_family_list",
+        "data_value": "partner",
+        "display": {
+          "text": "Partner didn't want me to attend clinic"
+        },
+        "_row_num": 30
+      },
+      {
+        "choice_list_name": "work_family_list",
+        "data_value": "other_work_family",
+        "display": {
+          "text": "Other family/work reason"
+        },
+        "_row_num": 31
+      },
+      {
+        "choice_list_name": "relocated_list",
+        "data_value": "moved",
+        "display": {
+          "text": "Moved/migrated away to another region"
+        },
+        "_row_num": 33
+      },
+      {
+        "choice_list_name": "psychosocial_list",
+        "data_value": "felt_well",
+        "display": {
+          "text": "Felt well, didn't see need to visit clinic"
+        },
+        "_row_num": 35
+      },
+      {
+        "choice_list_name": "psychosocial_list",
+        "data_value": "disclosure_risk",
+        "display": {
+          "text": "Attending clinic risked HIV disclosure"
+        },
+        "_row_num": 36
+      },
+      {
+        "choice_list_name": "psychosocial_list",
+        "data_value": "scold",
+        "display": {
+          "text": "Afraid clinic would scold me for missing appointment"
+        },
+        "_row_num": 37
+      },
+      {
+        "choice_list_name": "psychosocial_list",
+        "data_value": "religion",
+        "display": {
+          "text": "Because I went to someone who tried / is trying to cure me by prayer / religious rituals"
+        },
+        "_row_num": 38
+      },
+      {
+        "choice_list_name": "psychosocial_list",
+        "data_value": "healer",
+        "display": {
+          "text": "Because I saw / am seeing a traditional healer instead"
+        },
+        "_row_num": 39
+      },
+      {
+        "choice_list_name": "psychosocial_list",
+        "data_value": "depression",
+        "display": {
+          "text": "I gave up hope because of depression"
+        },
+        "_row_num": 40
+      },
+      {
+        "choice_list_name": "psychosocial_list",
+        "data_value": "alcohol",
+        "display": {
+          "text": "Alcohol consumption"
+        },
+        "_row_num": 41
+      },
+      {
+        "choice_list_name": "psychosocial_list",
+        "data_value": "forgot",
+        "display": {
+          "text": "Forgot appointment"
+        },
+        "_row_num": 42
+      },
+      {
+        "choice_list_name": "other_list",
+        "data_value": "appointment",
+        "display": {
+          "text": "Did not actually miss appointment at original clinic"
+        },
+        "_row_num": 44
+      },
+      {
+        "choice_list_name": "yesno_list",
+        "data_value": "yes",
+        "display": {
+          "text": "Yes"
+        },
+        "_row_num": 46
+      },
+      {
+        "choice_list_name": "yesno_list",
+        "data_value": "no",
+        "display": {
+          "text": "No"
+        },
+        "_row_num": 47
+      },
+      {
+        "choice_list_name": "topics_list",
+        "data_value": "knowledge",
+        "display": {
+          "text": "HIV knowledge"
+        },
+        "_row_num": 49
+      },
+      {
+        "choice_list_name": "topics_list",
+        "data_value": "literacy",
+        "display": {
+          "text": "Treatment literacy"
+        },
+        "_row_num": 50
+      },
+      {
+        "choice_list_name": "topics_list",
+        "data_value": "stigma",
+        "display": {
+          "text": "Stigma"
+        },
+        "_row_num": 51
+      },
+      {
+        "choice_list_name": "topics_list",
+        "data_value": "disclosure",
+        "display": {
+          "text": "Disclosure"
+        },
+        "_row_num": 52
+      },
+      {
+        "choice_list_name": "topics_list",
+        "data_value": "advice_referrals",
+        "display": {
+          "text": "Advice or referrals for current illness/injury"
+        },
+        "_row_num": 53
+      },
+      {
+        "choice_list_name": "topics_list",
+        "data_value": "barriers_workplace",
+        "display": {
+          "text": "Barriers related to workplace"
+        },
+        "_row_num": 54
+      },
+      {
+        "choice_list_name": "topics_list",
+        "data_value": "barriers_clinic",
+        "display": {
+          "text": "Barriers related to clinic"
+        },
+        "_row_num": 55
+      },
+      {
+        "choice_list_name": "topics_list",
+        "data_value": "barriers_economic",
+        "display": {
+          "text": "Economic barriers"
+        },
+        "_row_num": 56
+      },
+      {
+        "choice_list_name": "topics_list",
+        "data_value": "family_matters",
+        "display": {
+          "text": "Family matters"
+        },
+        "_row_num": 57
+      },
+      {
+        "choice_list_name": "topics_list",
+        "data_value": "other_topic",
+        "display": {
+          "text": "Other"
+        },
+        "_row_num": 58
+      }
+    ],
+    "calculates": [
+      {
+        "calculation_name": "ask_about_new_clinic",
+        "calculation": "selected(data('clinic_visit'), 'yes_visit')",
+        "_row_num": 2
+      },
+      {
+        "calculation_name": "hospitalized",
+        "calculation": "selected(data('medical'), 'hospitalized')",
+        "_row_num": 3
+      },
+      {
+        "calculation_name": "other_medical_reason",
+        "calculation": "selected(data('medical'), 'other_medical')",
+        "_row_num": 4
+      },
+      {
+        "calculation_name": "other_access_reason",
+        "calculation": "selected(data('access'), 'other_access')",
+        "_row_num": 5
+      },
+      {
+        "calculation_name": "other_work_family_reason",
+        "calculation": "selected(data('work_family'), 'other_work_family')",
+        "_row_num": 6
+      },
+      {
+        "calculation_name": "yes_selected",
+        "calculation": "selected(data('yesno'), 'yes')",
+        "_row_num": 7
+      }
+    ],
+    "settings": [
+      {
+        "setting_name": "table_id",
+        "value": "adapt_missed_visit_form",
+        "_row_num": 2
+      },
+      {
+        "setting_name": "form_id",
+        "value": "adapt_missed_visit_form",
+        "_row_num": 3
+      },
+      {
+        "setting_name": "form_version",
+        "value": 20141008,
+        "_row_num": 4
+      },
+      {
+        "setting_name": "survey",
+        "display": {
+          "title": "ADAPT Missed Visit Form for Return Patients"
+        },
+        "_row_num": 5
+      }
+    ]
+  },
+  "specification": {
+    "column_types": {
+      "_screen_block": "function",
+      "condition": "formula",
+      "constraint": "formula",
+      "required": "formula",
+      "calculation": "formula",
+      "auxillaryHash": "formula",
+      "selectionArgs": "formula",
+      "url": "formula",
+      "uri": "formula",
+      "callback": "formula(context)",
+      "choice_filter": "formula(choice_item)",
+      "templatePath": "requirejs_path",
+      "image": "app_path_localized",
+      "audio": "app_path_localized",
+      "video": "app_path_localized"
+    },
+    "settings": {
+      "table_id": {
+        "setting_name": "table_id",
+        "value": "adapt_missed_visit_form",
+        "_row_num": 2
+      },
+      "form_id": {
+        "setting_name": "form_id",
+        "value": "adapt_missed_visit_form",
+        "_row_num": 3
+      },
+      "form_version": {
+        "setting_name": "form_version",
+        "value": 20141008,
+        "_row_num": 4
+      },
+      "survey": {
+        "setting_name": "survey",
+        "display": {
+          "title": "ADAPT Missed Visit Form for Return Patients"
+        },
+        "_row_num": 5
+      },
+      "_locales": {
+        "setting_name": "_locales",
+        "_row_num": 5,
+        "value": [
+          {
+            "display": {
+              "text": "default"
+            },
+            "name": "default"
+          }
+        ]
+      },
+      "_default_locale": {
+        "setting_name": "_default_locale",
+        "_row_num": 5,
+        "value": "default"
+      },
+      "initial": {
+        "setting_name": "survey",
+        "display": {
+          "title": "ADAPT Missed Visit Form for Return Patients"
+        },
+        "_row_num": 5
+      }
+    },
+    "choices": {
+      "clinic_visit_list": [
+        {
+          "choice_list_name": "clinic_visit_list",
+          "data_value": "yes_visit",
+          "display": {
+            "text": "Patient made at least one clinic visit to another facility during the most recent gap in care from this clinic"
+          },
+          "_row_num": 2
+        },
+        {
+          "choice_list_name": "clinic_visit_list",
+          "data_value": "no_visit",
+          "display": {
+            "text": "Patient has not received HIV care at another facility during this period of absence"
+          },
+          "_row_num": 3
+        }
+      ],
+      "medical_list": [
+        {
+          "choice_list_name": "medical_list",
+          "data_value": "too_sick",
+          "display": {
+            "text": "Felt too sick to come to clinic"
+          },
+          "_row_num": 5
+        },
+        {
+          "choice_list_name": "medical_list",
+          "data_value": "side_effects",
+          "display": {
+            "text": "Side effects from pills"
+          },
+          "_row_num": 6
+        },
+        {
+          "choice_list_name": "medical_list",
+          "data_value": "burden",
+          "display": {
+            "text": "Pill burden"
+          },
+          "_row_num": 7
+        },
+        {
+          "choice_list_name": "medical_list",
+          "data_value": "break",
+          "display": {
+            "text": "Wanted a break from pills"
+          },
+          "_row_num": 8
+        },
+        {
+          "choice_list_name": "medical_list",
+          "data_value": "hospitalized",
+          "display": {
+            "text": "Hospitalized"
+          },
+          "_row_num": 9
+        },
+        {
+          "choice_list_name": "medical_list",
+          "data_value": "other_medical",
+          "display": {
+            "text": "Other medical reasons"
+          },
+          "_row_num": 10
+        }
+      ],
+      "access_list": [
+        {
+          "choice_list_name": "access_list",
+          "data_value": "transportation",
+          "display": {
+            "text": "Transportation problems"
+          },
+          "_row_num": 12
+        },
+        {
+          "choice_list_name": "access_list",
+          "data_value": "funds",
+          "display": {
+            "text": "Funds to get to the clinic"
+          },
+          "_row_num": 13
+        },
+        {
+          "choice_list_name": "access_list",
+          "data_value": "no_time",
+          "display": {
+            "text": "Didn't have enough time to for the clinic"
+          },
+          "_row_num": 14
+        },
+        {
+          "choice_list_name": "access_list",
+          "data_value": "other_access",
+          "display": {
+            "text": "Other access to care reasons"
+          },
+          "_row_num": 15
+        }
+      ],
+      "clinic_factor_list": [
+        {
+          "choice_list_name": "clinic_factor_list",
+          "data_value": "ran_out_meds",
+          "display": {
+            "text": "The clinic ran out of medications"
+          },
+          "_row_num": 17
+        },
+        {
+          "choice_list_name": "clinic_factor_list",
+          "data_value": "not_nice",
+          "display": {
+            "text": "The staff was not nice"
+          },
+          "_row_num": 18
+        },
+        {
+          "choice_list_name": "clinic_factor_list",
+          "data_value": "not_good",
+          "display": {
+            "text": "The care was not good"
+          },
+          "_row_num": 19
+        },
+        {
+          "choice_list_name": "clinic_factor_list",
+          "data_value": "requirements",
+          "display": {
+            "text": "Too many admin requirements"
+          },
+          "_row_num": 20
+        },
+        {
+          "choice_list_name": "clinic_factor_list",
+          "data_value": "uncomfortable",
+          "display": {
+            "text": "The waiting area was uncomfortable"
+          },
+          "_row_num": 21
+        },
+        {
+          "choice_list_name": "clinic_factor_list",
+          "data_value": "crowded",
+          "display": {
+            "text": "The clinic was too crowded"
+          },
+          "_row_num": 22
+        },
+        {
+          "choice_list_name": "clinic_factor_list",
+          "data_value": "wait",
+          "display": {
+            "text": "I have to wait too long during visits"
+          },
+          "_row_num": 23
+        },
+        {
+          "choice_list_name": "clinic_factor_list",
+          "data_value": "retention_class",
+          "display": {
+            "text": "I didn't want to go to retention class"
+          },
+          "_row_num": 24
+        }
+      ],
+      "work_family_list": [
+        {
+          "choice_list_name": "work_family_list",
+          "data_value": "work_interference",
+          "display": {
+            "text": "Work interference"
+          },
+          "_row_num": 26
+        },
+        {
+          "choice_list_name": "work_family_list",
+          "data_value": "no_caregiver",
+          "display": {
+            "text": "No caregiver"
+          },
+          "_row_num": 27
+        },
+        {
+          "choice_list_name": "work_family_list",
+          "data_value": "attended_funeral",
+          "display": {
+            "text": "Attended funeral"
+          },
+          "_row_num": 28
+        },
+        {
+          "choice_list_name": "work_family_list",
+          "data_value": "family_obligation",
+          "display": {
+            "text": "Other family obligation"
+          },
+          "_row_num": 29
+        },
+        {
+          "choice_list_name": "work_family_list",
+          "data_value": "partner",
+          "display": {
+            "text": "Partner didn't want me to attend clinic"
+          },
+          "_row_num": 30
+        },
+        {
+          "choice_list_name": "work_family_list",
+          "data_value": "other_work_family",
+          "display": {
+            "text": "Other family/work reason"
+          },
+          "_row_num": 31
+        }
+      ],
+      "relocated_list": [
+        {
+          "choice_list_name": "relocated_list",
+          "data_value": "moved",
+          "display": {
+            "text": "Moved/migrated away to another region"
+          },
+          "_row_num": 33
+        }
+      ],
+      "psychosocial_list": [
+        {
+          "choice_list_name": "psychosocial_list",
+          "data_value": "felt_well",
+          "display": {
+            "text": "Felt well, didn't see need to visit clinic"
+          },
+          "_row_num": 35
+        },
+        {
+          "choice_list_name": "psychosocial_list",
+          "data_value": "disclosure_risk",
+          "display": {
+            "text": "Attending clinic risked HIV disclosure"
+          },
+          "_row_num": 36
+        },
+        {
+          "choice_list_name": "psychosocial_list",
+          "data_value": "scold",
+          "display": {
+            "text": "Afraid clinic would scold me for missing appointment"
+          },
+          "_row_num": 37
+        },
+        {
+          "choice_list_name": "psychosocial_list",
+          "data_value": "religion",
+          "display": {
+            "text": "Because I went to someone who tried / is trying to cure me by prayer / religious rituals"
+          },
+          "_row_num": 38
+        },
+        {
+          "choice_list_name": "psychosocial_list",
+          "data_value": "healer",
+          "display": {
+            "text": "Because I saw / am seeing a traditional healer instead"
+          },
+          "_row_num": 39
+        },
+        {
+          "choice_list_name": "psychosocial_list",
+          "data_value": "depression",
+          "display": {
+            "text": "I gave up hope because of depression"
+          },
+          "_row_num": 40
+        },
+        {
+          "choice_list_name": "psychosocial_list",
+          "data_value": "alcohol",
+          "display": {
+            "text": "Alcohol consumption"
+          },
+          "_row_num": 41
+        },
+        {
+          "choice_list_name": "psychosocial_list",
+          "data_value": "forgot",
+          "display": {
+            "text": "Forgot appointment"
+          },
+          "_row_num": 42
+        }
+      ],
+      "other_list": [
+        {
+          "choice_list_name": "other_list",
+          "data_value": "appointment",
+          "display": {
+            "text": "Did not actually miss appointment at original clinic"
+          },
+          "_row_num": 44
+        }
+      ],
+      "yesno_list": [
+        {
+          "choice_list_name": "yesno_list",
+          "data_value": "yes",
+          "display": {
+            "text": "Yes"
+          },
+          "_row_num": 46
+        },
+        {
+          "choice_list_name": "yesno_list",
+          "data_value": "no",
+          "display": {
+            "text": "No"
+          },
+          "_row_num": 47
+        }
+      ],
+      "topics_list": [
+        {
+          "choice_list_name": "topics_list",
+          "data_value": "knowledge",
+          "display": {
+            "text": "HIV knowledge"
+          },
+          "_row_num": 49
+        },
+        {
+          "choice_list_name": "topics_list",
+          "data_value": "literacy",
+          "display": {
+            "text": "Treatment literacy"
+          },
+          "_row_num": 50
+        },
+        {
+          "choice_list_name": "topics_list",
+          "data_value": "stigma",
+          "display": {
+            "text": "Stigma"
+          },
+          "_row_num": 51
+        },
+        {
+          "choice_list_name": "topics_list",
+          "data_value": "disclosure",
+          "display": {
+            "text": "Disclosure"
+          },
+          "_row_num": 52
+        },
+        {
+          "choice_list_name": "topics_list",
+          "data_value": "advice_referrals",
+          "display": {
+            "text": "Advice or referrals for current illness/injury"
+          },
+          "_row_num": 53
+        },
+        {
+          "choice_list_name": "topics_list",
+          "data_value": "barriers_workplace",
+          "display": {
+            "text": "Barriers related to workplace"
+          },
+          "_row_num": 54
+        },
+        {
+          "choice_list_name": "topics_list",
+          "data_value": "barriers_clinic",
+          "display": {
+            "text": "Barriers related to clinic"
+          },
+          "_row_num": 55
+        },
+        {
+          "choice_list_name": "topics_list",
+          "data_value": "barriers_economic",
+          "display": {
+            "text": "Economic barriers"
+          },
+          "_row_num": 56
+        },
+        {
+          "choice_list_name": "topics_list",
+          "data_value": "family_matters",
+          "display": {
+            "text": "Family matters"
+          },
+          "_row_num": 57
+        },
+        {
+          "choice_list_name": "topics_list",
+          "data_value": "other_topic",
+          "display": {
+            "text": "Other"
+          },
+          "_row_num": 58
+        }
+      ]
+    },
+    "queries": {},
+    "calculates": {
+      "ask_about_new_clinic": {
+        "calculation_name": "ask_about_new_clinic",
+        "calculation": "selected(data('clinic_visit'), 'yes_visit')",
+        "_row_num": 2
+      },
+      "hospitalized": {
+        "calculation_name": "hospitalized",
+        "calculation": "selected(data('medical'), 'hospitalized')",
+        "_row_num": 3
+      },
+      "other_medical_reason": {
+        "calculation_name": "other_medical_reason",
+        "calculation": "selected(data('medical'), 'other_medical')",
+        "_row_num": 4
+      },
+      "other_access_reason": {
+        "calculation_name": "other_access_reason",
+        "calculation": "selected(data('access'), 'other_access')",
+        "_row_num": 5
+      },
+      "other_work_family_reason": {
+        "calculation_name": "other_work_family_reason",
+        "calculation": "selected(data('work_family'), 'other_work_family')",
+        "_row_num": 6
+      },
+      "yes_selected": {
+        "calculation_name": "yes_selected",
+        "calculation": "selected(data('yesno'), 'yes')",
+        "_row_num": 7
+      }
+    },
+    "model": {
+      "patient_name": {
+        "_defn": [
+          {
+            "_row_num": 8,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "patient_name"
+      },
+      "patient_id": {
+        "_defn": [
+          {
+            "_row_num": 9,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "patient_id"
+      },
+      "clinic_name": {
+        "_defn": [
+          {
+            "_row_num": 12,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "clinic_name"
+      },
+      "clinic_sub_country": {
+        "_defn": [
+          {
+            "_row_num": 13,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "clinic_sub_country"
+      },
+      "date_last_visit": {
+        "_defn": [
+          {
+            "_row_num": 17,
+            "section_name": "survey"
+          }
+        ],
+        "type": "object",
+        "elementType": "date",
+        "elementKey": "date_last_visit"
+      },
+      "date_first_return": {
+        "_defn": [
+          {
+            "_row_num": 19,
+            "section_name": "survey"
+          }
+        ],
+        "type": "object",
+        "elementType": "date",
+        "elementKey": "date_first_return"
+      },
+      "date_today": {
+        "_defn": [
+          {
+            "_row_num": 20,
+            "section_name": "survey"
+          }
+        ],
+        "type": "object",
+        "elementType": "date",
+        "elementKey": "date_today"
+      },
+      "clinic_visit": {
+        "_defn": [
+          {
+            "_row_num": 23,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "clinic_visit_list",
+        "elementKey": "clinic_visit"
+      },
+      "date_first_visit": {
+        "_defn": [
+          {
+            "_row_num": 27,
+            "section_name": "survey"
+          }
+        ],
+        "type": "object",
+        "elementType": "date",
+        "elementKey": "date_first_visit"
+      },
+      "date_most_recent_visit": {
+        "_defn": [
+          {
+            "_row_num": 28,
+            "section_name": "survey"
+          }
+        ],
+        "type": "object",
+        "elementType": "date",
+        "elementKey": "date_most_recent_visit"
+      },
+      "new_clinic_name": {
+        "_defn": [
+          {
+            "_row_num": 29,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "new_clinic_name"
+      },
+      "new_clinic_town": {
+        "_defn": [
+          {
+            "_row_num": 30,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "new_clinic_town"
+      },
+      "new_patient_id": {
+        "_defn": [
+          {
+            "_row_num": 31,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "new_patient_id"
+      },
+      "medical": {
+        "_defn": [
+          {
+            "_row_num": 36,
+            "section_name": "survey"
+          }
+        ],
+        "type": "array",
+        "items": {
+          "type": "string",
+          "elementKey": "medical_items"
+        },
+        "valuesList": "medical_list",
+        "elementKey": "medical"
+      },
+      "other_reason_text": {
+        "_defn": [
+          {
+            "_row_num": 38,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "other_reason_text"
+      },
+      "admit_date": {
+        "_defn": [
+          {
+            "_row_num": 43,
+            "section_name": "survey"
+          }
+        ],
+        "type": "object",
+        "elementType": "date",
+        "elementKey": "admit_date"
+      },
+      "hospital_name": {
+        "_defn": [
+          {
+            "_row_num": 44,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "hospital_name"
+      },
+      "hospital_reason": {
+        "_defn": [
+          {
+            "_row_num": 45,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "hospital_reason"
+      },
+      "access": {
+        "_defn": [
+          {
+            "_row_num": 49,
+            "section_name": "survey"
+          }
+        ],
+        "type": "array",
+        "items": {
+          "type": "string",
+          "elementKey": "access_items"
+        },
+        "valuesList": "access_list",
+        "elementKey": "access"
+      },
+      "other_access_text": {
+        "_defn": [
+          {
+            "_row_num": 51,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "other_access_text"
+      },
+      "clinic_factor": {
+        "_defn": [
+          {
+            "_row_num": 55,
+            "section_name": "survey"
+          }
+        ],
+        "type": "array",
+        "items": {
+          "type": "string",
+          "elementKey": "clinic_factor_items"
+        },
+        "valuesList": "clinic_factor_list",
+        "elementKey": "clinic_factor"
+      },
+      "work_family": {
+        "_defn": [
+          {
+            "_row_num": 58,
+            "section_name": "survey"
+          }
+        ],
+        "type": "array",
+        "items": {
+          "type": "string",
+          "elementKey": "work_family_items"
+        },
+        "valuesList": "work_family_list",
+        "elementKey": "work_family"
+      },
+      "other_work_family_reason": {
+        "_defn": [
+          {
+            "_row_num": 60,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "other_work_family_reason"
+      },
+      "relocated": {
+        "_defn": [
+          {
+            "_row_num": 63,
+            "section_name": "survey"
+          }
+        ],
+        "type": "array",
+        "items": {
+          "type": "string",
+          "elementKey": "relocated_items"
+        },
+        "valuesList": "relocated_list",
+        "elementKey": "relocated"
+      },
+      "psychosocial": {
+        "_defn": [
+          {
+            "_row_num": 64,
+            "section_name": "survey"
+          }
+        ],
+        "type": "array",
+        "items": {
+          "type": "string",
+          "elementKey": "psychosocial_items"
+        },
+        "valuesList": "psychosocial_list",
+        "elementKey": "psychosocial"
+      },
+      "other_reason": {
+        "_defn": [
+          {
+            "_row_num": 65,
+            "section_name": "survey"
+          }
+        ],
+        "type": "array",
+        "items": {
+          "type": "string",
+          "elementKey": "other_reason_items"
+        },
+        "valuesList": "other_list",
+        "elementKey": "other_reason"
+      },
+      "yesno": {
+        "_defn": [
+          {
+            "_row_num": 68,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "yesno_list",
+        "elementKey": "yesno"
+      },
+      "how_long": {
+        "_defn": [
+          {
+            "_row_num": 70,
+            "section_name": "survey"
+          }
+        ],
+        "type": "integer",
+        "elementKey": "how_long"
+      },
+      "topics_discussed": {
+        "_defn": [
+          {
+            "_row_num": 73,
+            "section_name": "survey"
+          }
+        ],
+        "type": "array",
+        "items": {
+          "type": "string",
+          "elementKey": "topics_discussed_items"
+        },
+        "valuesList": "topics_list",
+        "elementKey": "topics_discussed"
+      },
+      "interaction_notes": {
+        "_defn": [
+          {
+            "_row_num": 74,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "interaction_notes"
+      }
+    },
+    "section_names": [
+      "initial",
+      "survey"
+    ],
+    "sections": {
+      "survey": {
+        "section_name": "survey",
+        "nested_sections": {},
+        "reachable_sections": {},
+        "prompts": [
+          {
+            "type": "note",
+            "name": "form_title",
+            "display": {
+              "text": "<strong>ADAPT Missed Visit Form for Returned Patients</strong>"
+            },
+            "_row_num": 3,
+            "__rowNum__": 2,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 0
+          },
+          {
+            "type": "note",
+            "name": "form_info",
+            "display": {
+              "text": "This form is used for ADAPT patients who were lost but in whom tracing attempts were unable to speak with the patient directly during the tracing process.  It is also important to note that this is in relation to a particular lapse in clinic visits."
+            },
+            "_row_num": 4,
+            "__rowNum__": 3,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 1
+          },
+          {
+            "type": "note",
+            "display": {
+              "text": "<strong>Section A:  Patient Information</strong>"
+            },
+            "_row_num": 7,
+            "__rowNum__": 6,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "survey/_screen6",
+            "promptIdx": 2
+          },
+          {
+            "type": "text",
+            "name": "patient_name",
+            "display": {
+              "text": "Patient name:"
+            },
+            "_row_num": 8,
+            "__rowNum__": 7,
+            "_token_type": "prompt",
+            "_type": "text",
+            "_branch_label_enclosing_screen": "survey/_screen6",
+            "promptIdx": 3
+          },
+          {
+            "type": "text",
+            "name": "patient_id",
+            "display": {
+              "text": "Patient ID:"
+            },
+            "_row_num": 9,
+            "__rowNum__": 8,
+            "_token_type": "prompt",
+            "_type": "text",
+            "_branch_label_enclosing_screen": "survey/_screen6",
+            "promptIdx": 4
+          },
+          {
+            "type": "text",
+            "name": "clinic_name",
+            "display": {
+              "text": "Clinic name:"
+            },
+            "_row_num": 12,
+            "__rowNum__": 11,
+            "_token_type": "prompt",
+            "_type": "text",
+            "_branch_label_enclosing_screen": "survey/_screen11",
+            "promptIdx": 5
+          },
+          {
+            "type": "text",
+            "name": "clinic_sub_country",
+            "display": {
+              "text": "Clinic sub-country:"
+            },
+            "_row_num": 13,
+            "__rowNum__": 12,
+            "_token_type": "prompt",
+            "_type": "text",
+            "_branch_label_enclosing_screen": "survey/_screen11",
+            "promptIdx": 6
+          },
+          {
+            "type": "note",
+            "display": {
+              "text": "<strong>Dates of most recent gap in care (from this clinic)</strong>"
+            },
+            "_row_num": 16,
+            "__rowNum__": 15,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "survey/_screen15",
+            "promptIdx": 7
+          },
+          {
+            "type": "date",
+            "name": "date_last_visit",
+            "display": {
+              "text": "Date of last visit to this clinic prior to gap in care:"
+            },
+            "_row_num": 17,
+            "__rowNum__": 16,
+            "_token_type": "prompt",
+            "_type": "date",
+            "_branch_label_enclosing_screen": "survey/_screen15",
+            "promptIdx": 8
+          },
+          {
+            "type": "date",
+            "name": "date_first_return",
+            "display": {
+              "text": "Date of first return visit to this clinic after gap in care:"
+            },
+            "_row_num": 19,
+            "__rowNum__": 18,
+            "_token_type": "prompt",
+            "_type": "date",
+            "_branch_label_enclosing_screen": "survey/_screen19",
+            "promptIdx": 9
+          },
+          {
+            "type": "date",
+            "name": "date_today",
+            "display": {
+              "text": "Today's date:"
+            },
+            "_row_num": 20,
+            "__rowNum__": 19,
+            "_token_type": "prompt",
+            "_type": "date",
+            "_branch_label_enclosing_screen": "survey/_screen20",
+            "promptIdx": 10
+          },
+          {
+            "type": "note",
+            "display": {
+              "text": "<strong>Section D: Patient Outcome: Reported by Patient Him/Herself</strong>"
+            },
+            "_row_num": 22,
+            "__rowNum__": 21,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "survey/_screen21",
+            "promptIdx": 11
+          },
+          {
+            "type": "select_one",
+            "values_list": "clinic_visit_list",
+            "name": "clinic_visit",
+            "_row_num": 23,
+            "__rowNum__": 22,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen21",
+            "promptIdx": 12
+          },
+          {
+            "type": "date",
+            "name": "date_first_visit",
+            "display": {
+              "text": "Date of first visit to new clinic:"
+            },
+            "_row_num": 27,
+            "__rowNum__": 26,
+            "_token_type": "prompt",
+            "_type": "date",
+            "_branch_label_enclosing_screen": "survey/_screen26",
+            "promptIdx": 13
+          },
+          {
+            "type": "date",
+            "name": "date_most_recent_visit",
+            "display": {
+              "text": "Date of most recent visit to new clinic:"
+            },
+            "_row_num": 28,
+            "__rowNum__": 27,
+            "_token_type": "prompt",
+            "_type": "date",
+            "_branch_label_enclosing_screen": "survey/_screen26",
+            "promptIdx": 14
+          },
+          {
+            "type": "text",
+            "name": "new_clinic_name",
+            "display": {
+              "text": "New clinic name:"
+            },
+            "_row_num": 29,
+            "__rowNum__": 28,
+            "_token_type": "prompt",
+            "_type": "text",
+            "_branch_label_enclosing_screen": "survey/_screen26",
+            "promptIdx": 15
+          },
+          {
+            "type": "text",
+            "name": "new_clinic_town",
+            "display": {
+              "text": "New clinic town:"
+            },
+            "_row_num": 30,
+            "__rowNum__": 29,
+            "_token_type": "prompt",
+            "_type": "text",
+            "_branch_label_enclosing_screen": "survey/_screen26",
+            "promptIdx": 16
+          },
+          {
+            "type": "text",
+            "name": "new_patient_id",
+            "display": {
+              "text": "New Patient ID (if available):"
+            },
+            "_row_num": 31,
+            "__rowNum__": 30,
+            "_token_type": "prompt",
+            "_type": "text",
+            "_branch_label_enclosing_screen": "survey/_screen26",
+            "promptIdx": 17
+          },
+          {
+            "type": "note",
+            "display": {
+              "text": "<strong>Section E: Reasons for Missed Visits(s) at Initial Clinic</strong>"
+            },
+            "_row_num": 35,
+            "__rowNum__": 34,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "survey/_screen34",
+            "promptIdx": 18
+          },
+          {
+            "type": "select_multiple",
+            "values_list": "medical_list",
+            "name": "medical",
+            "display": {
+              "text": "Medical"
+            },
+            "_row_num": 36,
+            "__rowNum__": 35,
+            "_token_type": "prompt",
+            "_type": "select_multiple",
+            "_branch_label_enclosing_screen": "survey/_screen34",
+            "promptIdx": 19
+          },
+          {
+            "type": "text",
+            "name": "other_reason_text",
+            "display": {
+              "text": "Specify:"
+            },
+            "_row_num": 38,
+            "__rowNum__": 37,
+            "_token_type": "prompt",
+            "_type": "text",
+            "_branch_label_enclosing_screen": "survey/_screen34",
+            "promptIdx": 20
+          },
+          {
+            "type": "date",
+            "name": "admit_date",
+            "display": {
+              "text": "Admit date:"
+            },
+            "_row_num": 43,
+            "__rowNum__": 42,
+            "_token_type": "prompt",
+            "_type": "date",
+            "_branch_label_enclosing_screen": "survey/_screen42",
+            "promptIdx": 21
+          },
+          {
+            "type": "text",
+            "name": "hospital_name",
+            "display": {
+              "text": "Hospital name:"
+            },
+            "_row_num": 44,
+            "__rowNum__": 43,
+            "_token_type": "prompt",
+            "_type": "text",
+            "_branch_label_enclosing_screen": "survey/_screen42",
+            "promptIdx": 22
+          },
+          {
+            "type": "text",
+            "name": "hospital_reason",
+            "display": {
+              "text": "Hospital reason:"
+            },
+            "_row_num": 45,
+            "__rowNum__": 44,
+            "_token_type": "prompt",
+            "_type": "text",
+            "_branch_label_enclosing_screen": "survey/_screen42",
+            "promptIdx": 23
+          },
+          {
+            "type": "select_multiple",
+            "values_list": "access_list",
+            "name": "access",
+            "display": {
+              "text": "Access to Care"
+            },
+            "_row_num": 49,
+            "__rowNum__": 48,
+            "_token_type": "prompt",
+            "_type": "select_multiple",
+            "_branch_label_enclosing_screen": "survey/_screen48",
+            "promptIdx": 24
+          },
+          {
+            "type": "text",
+            "name": "other_access_text",
+            "display": {
+              "text": "Specify:"
+            },
+            "_row_num": 51,
+            "__rowNum__": 50,
+            "_token_type": "prompt",
+            "_type": "text",
+            "_branch_label_enclosing_screen": "survey/_screen48",
+            "promptIdx": 25
+          },
+          {
+            "type": "select_multiple",
+            "values_list": "clinic_factor_list",
+            "name": "clinic_factor",
+            "display": {
+              "text": "Clinic Factor"
+            },
+            "_row_num": 55,
+            "__rowNum__": 54,
+            "_token_type": "prompt",
+            "_type": "select_multiple",
+            "_branch_label_enclosing_screen": "survey/_screen54",
+            "promptIdx": 26
+          },
+          {
+            "type": "select_multiple",
+            "values_list": "work_family_list",
+            "name": "work_family",
+            "display": {
+              "text": "Work and Family"
+            },
+            "_row_num": 58,
+            "__rowNum__": 57,
+            "_token_type": "prompt",
+            "_type": "select_multiple",
+            "_branch_label_enclosing_screen": "survey/_screen57",
+            "promptIdx": 27
+          },
+          {
+            "type": "text",
+            "name": "other_work_family_reason",
+            "display": {
+              "text": "Specify:"
+            },
+            "_row_num": 60,
+            "__rowNum__": 59,
+            "_token_type": "prompt",
+            "_type": "text",
+            "_branch_label_enclosing_screen": "survey/_screen57",
+            "promptIdx": 28
+          },
+          {
+            "type": "select_multiple",
+            "values_list": "relocated_list",
+            "name": "relocated",
+            "display": {
+              "text": "Relocated"
+            },
+            "_row_num": 63,
+            "__rowNum__": 62,
+            "_token_type": "prompt",
+            "_type": "select_multiple",
+            "_branch_label_enclosing_screen": "survey/_screen63",
+            "promptIdx": 29
+          },
+          {
+            "type": "select_multiple",
+            "values_list": "psychosocial_list",
+            "name": "psychosocial",
+            "display": {
+              "text": "Psychosocial"
+            },
+            "_row_num": 64,
+            "__rowNum__": 63,
+            "_token_type": "prompt",
+            "_type": "select_multiple",
+            "_branch_label_enclosing_screen": "survey/_screen64",
+            "promptIdx": 30
+          },
+          {
+            "type": "select_multiple",
+            "values_list": "other_list",
+            "name": "other_reason",
+            "display": {
+              "text": "Other"
+            },
+            "_row_num": 65,
+            "__rowNum__": 64,
+            "_token_type": "prompt",
+            "_type": "select_multiple",
+            "_branch_label_enclosing_screen": "survey/_screen65",
+            "promptIdx": 31
+          },
+          {
+            "type": "note",
+            "display": {
+              "text": "Section F: Interaction with Patient"
+            },
+            "_row_num": 67,
+            "__rowNum__": 66,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "survey/_screen66",
+            "promptIdx": 32
+          },
+          {
+            "type": "select_one",
+            "values_list": "yesno_list",
+            "name": "yesno",
+            "display": {
+              "text": "Counseling conducted:"
+            },
+            "_row_num": 68,
+            "__rowNum__": 67,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen66",
+            "promptIdx": 33
+          },
+          {
+            "type": "integer",
+            "name": "how_long",
+            "display": {
+              "text": "How long (in minutes):"
+            },
+            "_row_num": 70,
+            "__rowNum__": 69,
+            "_token_type": "prompt",
+            "_type": "integer",
+            "_branch_label_enclosing_screen": "survey/_screen66",
+            "promptIdx": 34
+          },
+          {
+            "type": "select_multiple",
+            "values_list": "topics_list",
+            "name": "topics_discussed",
+            "display": {
+              "text": "Topics discussed (list of topics) including assessment of problem and plan to address problem:"
+            },
+            "_row_num": 73,
+            "__rowNum__": 72,
+            "_token_type": "prompt",
+            "_type": "select_multiple",
+            "_branch_label_enclosing_screen": "survey/_screen73",
+            "promptIdx": 35
+          },
+          {
+            "type": "text",
+            "name": "interaction_notes",
+            "display": {
+              "text": "Notes on interaction with patient:"
+            },
+            "_row_num": 74,
+            "__rowNum__": 73,
+            "_token_type": "prompt",
+            "_type": "text",
+            "_branch_label_enclosing_screen": "survey/_screen74",
+            "promptIdx": 36
+          },
+          {
+            "_token_type": "prompt",
+            "type": "contents",
+            "_type": "contents",
+            "_row_num": 75,
+            "_branch_label_enclosing_screen": "survey/_screen75",
+            "promptIdx": 37
+          }
+        ],
+        "validation_tag_map": {
+          "finalize": []
+        },
+        "operations": [
+          {
+            "clause": "begin screen",
+            "_row_num": 2,
+            "__rowNum__": 1,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 5,
+              "__rowNum__": 4,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 0
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 6,
+            "__rowNum__": 5,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 10,
+              "__rowNum__": 9,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(2);\nactivePromptIndicies.push(3);\nactivePromptIndicies.push(4);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 1
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 11,
+            "__rowNum__": 10,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 14,
+              "__rowNum__": 13,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(5);\nactivePromptIndicies.push(6);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 2
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 15,
+            "__rowNum__": 14,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 18,
+              "__rowNum__": 17,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(7);\nactivePromptIndicies.push(8);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 3
+          },
+          {
+            "_row_num": 19,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(9);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 4
+          },
+          {
+            "_row_num": 20,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(10);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 5
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 21,
+            "__rowNum__": 20,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 24,
+              "__rowNum__": 23,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(11);\nactivePromptIndicies.push(12);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 6
+          },
+          {
+            "clause": "if",
+            "condition": "calculates.ask_about_new_clinic()",
+            "_row_num": 25,
+            "__rowNum__": 24,
+            "_token_type": "goto_label",
+            "_branch_label": "_then25",
+            "operationIdx": 7
+          },
+          {
+            "clause": "end if",
+            "_token_type": "goto_label",
+            "_branch_label": "_else33",
+            "_row_num": 33,
+            "operationIdx": 8
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 26,
+            "__rowNum__": 25,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 32,
+              "__rowNum__": 31,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(13);\nactivePromptIndicies.push(14);\nactivePromptIndicies.push(15);\nactivePromptIndicies.push(16);\nactivePromptIndicies.push(17);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 9
+          },
+          {
+            "clause": "end if",
+            "_token_type": "goto_label",
+            "_branch_label": "_endif33",
+            "_row_num": 33,
+            "operationIdx": 10
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 34,
+            "__rowNum__": 33,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 40,
+              "__rowNum__": 39,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(18);\nactivePromptIndicies.push(19);\nif (calculates.other_medical_reason()) {\nactivePromptIndicies.push(20);\n}\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 11
+          },
+          {
+            "clause": "if",
+            "condition": "calculates.hospitalized()",
+            "_row_num": 41,
+            "__rowNum__": 40,
+            "_token_type": "goto_label",
+            "_branch_label": "_then41",
+            "operationIdx": 12
+          },
+          {
+            "clause": "end if",
+            "_token_type": "goto_label",
+            "_branch_label": "_else47",
+            "_row_num": 47,
+            "operationIdx": 13
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 42,
+            "__rowNum__": 41,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 46,
+              "__rowNum__": 45,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(21);\nactivePromptIndicies.push(22);\nactivePromptIndicies.push(23);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 14
+          },
+          {
+            "clause": "end if",
+            "_token_type": "goto_label",
+            "_branch_label": "_endif47",
+            "_row_num": 47,
+            "operationIdx": 15
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 48,
+            "__rowNum__": 47,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 53,
+              "__rowNum__": 52,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(24);\nif (calculates.other_access_reason()) {\nactivePromptIndicies.push(25);\n}\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 16
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 54,
+            "__rowNum__": 53,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 56,
+              "__rowNum__": 55,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(26);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 17
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 57,
+            "__rowNum__": 56,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 62,
+              "__rowNum__": 61,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(27);\nif (calculates.other_work_family_reason()) {\nactivePromptIndicies.push(28);\n}\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 18
+          },
+          {
+            "_row_num": 63,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(29);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 19
+          },
+          {
+            "_row_num": 64,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(30);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 20
+          },
+          {
+            "_row_num": 65,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(31);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 21
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 66,
+            "__rowNum__": 65,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 72,
+              "__rowNum__": 71,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(32);\nactivePromptIndicies.push(33);\nif (calculates.yes_selected()) {\nactivePromptIndicies.push(34);\n}\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 22
+          },
+          {
+            "_row_num": 73,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(35);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 23
+          },
+          {
+            "_row_num": 74,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(36);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 24
+          },
+          {
+            "_token_type": "exit_section",
+            "clause": "exit section",
+            "_row_num": 75,
+            "operationIdx": 25
+          },
+          {
+            "_row_num": 75,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(37);\n\nreturn activePromptIndicies;\n}\n",
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 26
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 75,
+            "operationIdx": 27
+          }
+        ],
+        "branch_label_map": {
+          "_screen2": 0,
+          "_screen6": 1,
+          "_screen11": 2,
+          "_screen15": 3,
+          "_screen19": 4,
+          "_screen20": 5,
+          "_screen21": 6,
+          "_then25": 9,
+          "_screen26": 9,
+          "_else33": 11,
+          "_endif33": 11,
+          "_screen34": 11,
+          "_then41": 14,
+          "_screen42": 14,
+          "_else47": 16,
+          "_endif47": 16,
+          "_screen48": 16,
+          "_screen54": 17,
+          "_screen57": 18,
+          "_screen63": 19,
+          "_screen64": 20,
+          "_screen65": 21,
+          "_screen66": 22,
+          "_screen73": 23,
+          "_screen74": 24,
+          "_contents": 26,
+          "_screen75": 26
+        }
+      },
+      "initial": {
+        "section_name": "initial",
+        "nested_sections": {
+          "survey": true
+        },
+        "reachable_sections": {
+          "survey": true
+        },
+        "prompts": [
+          {
+            "_row_num": 3,
+            "type": "opening",
+            "display": {
+              "text": "Edit form"
+            },
+            "_token_type": "prompt",
+            "_type": "opening",
+            "_branch_label_enclosing_screen": "initial/_screen3",
+            "promptIdx": 0
+          },
+          {
+            "_row_num": 4,
+            "clause": "do section survey",
+            "_token_type": "prompt",
+            "_do_section_name": "survey",
+            "_type": "_section",
+            "promptIdx": 1,
+            "display": {
+              "title": "ADAPT Missed Visit Form for Return Patients"
+            },
+            "_branch_label_enclosing_screen": "survey/0"
+          },
+          {
+            "_row_num": 5,
+            "type": "finalize",
+            "display": {
+              "text": "Save form"
+            },
+            "_token_type": "prompt",
+            "_type": "finalize",
+            "_branch_label_enclosing_screen": "initial/_screen5",
+            "promptIdx": 2
+          },
+          {
+            "_row_num": 7,
+            "type": "instances",
+            "display": {
+              "text": "Saved instances"
+            },
+            "_token_type": "prompt",
+            "_type": "instances",
+            "_branch_label_enclosing_screen": "initial/_screen7",
+            "promptIdx": 3
+          },
+          {
+            "_token_type": "prompt",
+            "type": "contents",
+            "_type": "contents",
+            "_row_num": 9,
+            "_branch_label_enclosing_screen": "initial/_screen9",
+            "promptIdx": 4
+          }
+        ],
+        "validation_tag_map": {
+          "finalize": []
+        },
+        "operations": [
+          {
+            "_row_num": 2,
+            "clause": "if // start",
+            "condition": "(opendatakit.getCurrentInstanceId() != null)",
+            "_token_type": "goto_label",
+            "_tag_name": "start",
+            "_branch_label": "_then2",
+            "operationIdx": 0
+          },
+          {
+            "clause": "else // start",
+            "_token_type": "goto_label",
+            "_branch_label": "_else6",
+            "_row_num": 6,
+            "operationIdx": 1
+          },
+          {
+            "_row_num": 3,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 2
+          },
+          {
+            "_row_num": 4,
+            "clause": "do section survey",
+            "_token_type": "do_section",
+            "_do_section_name": "survey",
+            "operationIdx": 3
+          },
+          {
+            "_row_num": 5,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(2);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 4
+          },
+          {
+            "clause": "end if // start",
+            "_token_type": "goto_label",
+            "_branch_label": "_endif8",
+            "_row_num": 8,
+            "operationIdx": 5
+          },
+          {
+            "_row_num": 7,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(3);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 6
+          },
+          {
+            "_token_type": "exit_section",
+            "clause": "exit section",
+            "_row_num": 9,
+            "operationIdx": 7
+          },
+          {
+            "_row_num": 9,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(4);\n\nreturn activePromptIndicies;\n}\n",
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 8
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 9,
+            "operationIdx": 9
+          },
+          {
+            "_token_type": "validate",
+            "clause": "validate finalize",
+            "_sweep_name": "finalize",
+            "_row_num": 9,
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 10
+          },
+          {
+            "_token_type": "save_and_terminate",
+            "clause": "save and terminate",
+            "calculation": true,
+            "_row_num": 9,
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 11
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 9,
+            "operationIdx": 12
+          }
+        ],
+        "branch_label_map": {
+          "_then2": 2,
+          "_screen3": 2,
+          "_screen5": 4,
+          "_else6": 6,
+          "_screen7": 6,
+          "_endif8": 7,
+          "_contents": 8,
+          "_screen9": 8,
+          "_finalize": 10
+        }
+      }
+    }
+  }
+}

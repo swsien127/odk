@@ -1,0 +1,2734 @@
+{
+  "xlsx": {
+    "survey": [
+      {
+        "clause": "begin screen",
+        "_row_num": 2
+      },
+      {
+        "type": "select_one",
+        "values_list": "response_list",
+        "name": "question1",
+        "display": {
+          "text": "Although others such as health workers and family members may help me, the ultimate responsibility for managing my health condition is on me."
+        },
+        "_row_num": 3
+      },
+      {
+        "clause": "if",
+        "condition": "calculates.expand_agree_1()",
+        "_row_num": 4
+      },
+      {
+        "type": "select_one",
+        "values_list": "agree_list",
+        "name": "question1_agree",
+        "display": {
+          "text": "If agree, would you say you:"
+        },
+        "_row_num": 5
+      },
+      {
+        "clause": "end if",
+        "_row_num": 6
+      },
+      {
+        "clause": "if",
+        "condition": "calculates.expand_disagree_1()",
+        "_row_num": 7
+      },
+      {
+        "type": "select_one",
+        "values_list": "disagree_list",
+        "name": "question1_disagree",
+        "display": {
+          "text": "If disagree, would you say you:"
+        },
+        "_row_num": 8
+      },
+      {
+        "clause": "end if",
+        "_row_num": 9
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 10
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 11
+      },
+      {
+        "type": "select_one",
+        "values_list": "response_list",
+        "name": "question2",
+        "display": {
+          "text": "The most important thing that determines my health and well-being is that I am at the forefront of taking care of my own health, and not expecting others to play the lead role in matters related to my health."
+        },
+        "_row_num": 12
+      },
+      {
+        "clause": "if",
+        "condition": "calculates.expand_agree_2()",
+        "_row_num": 13
+      },
+      {
+        "type": "select_one",
+        "values_list": "agree_list",
+        "name": "question2_agree",
+        "display": {
+          "text": "If agree, would you say you:"
+        },
+        "_row_num": 14
+      },
+      {
+        "clause": "end if",
+        "_row_num": 15
+      },
+      {
+        "clause": "if",
+        "condition": "calculates.expand_disagree_2()",
+        "_row_num": 16
+      },
+      {
+        "type": "select_one",
+        "values_list": "disagree_list",
+        "name": "question2_disagree",
+        "display": {
+          "text": "If disagree, would you say you:"
+        },
+        "_row_num": 17
+      },
+      {
+        "clause": "end if",
+        "_row_num": 18
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 19
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 20
+      },
+      {
+        "type": "select_one",
+        "values_list": "response_list",
+        "name": "question3",
+        "display": {
+          "text": "I truly believe that I know the things that I need to do to prevent or minimize those symptoms and problems, and I can do those things needed to prevent/minimize."
+        },
+        "_row_num": 21
+      },
+      {
+        "clause": "if",
+        "condition": "calculates.expand_agree_3()",
+        "_row_num": 22
+      },
+      {
+        "type": "select_one",
+        "values_list": "agree_list",
+        "name": "question3_agree",
+        "display": {
+          "text": "If agree, would you say you:"
+        },
+        "_row_num": 23
+      },
+      {
+        "clause": "end if",
+        "_row_num": 24
+      },
+      {
+        "clause": "if",
+        "condition": "calculates.expand_disagree_3()",
+        "_row_num": 25
+      },
+      {
+        "type": "select_one",
+        "values_list": "disagree_list",
+        "name": "question3_disagree",
+        "display": {
+          "text": "If disagree, would you say you:"
+        },
+        "_row_num": 26
+      },
+      {
+        "clause": "end if",
+        "_row_num": 27
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 28
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 29
+      },
+      {
+        "type": "select_one",
+        "values_list": "response_list",
+        "name": "question4",
+        "display": {
+          "text": "I know the effects and side effects of my medicines."
+        },
+        "_row_num": 30
+      },
+      {
+        "clause": "if",
+        "condition": "calculates.expand_agree_4()",
+        "_row_num": 31
+      },
+      {
+        "type": "select_one",
+        "values_list": "agree_list",
+        "name": "question4_agree",
+        "display": {
+          "text": "If agree, would you say you:"
+        },
+        "_row_num": 32
+      },
+      {
+        "clause": "end if",
+        "_row_num": 33
+      },
+      {
+        "clause": "if",
+        "condition": "calculates.expand_disagree_4()",
+        "_row_num": 34
+      },
+      {
+        "type": "select_one",
+        "values_list": "disagree_list",
+        "name": "question4_disagree",
+        "display": {
+          "text": "If disagree, would you say you:"
+        },
+        "_row_num": 35
+      },
+      {
+        "clause": "end if",
+        "_row_num": 36
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 37
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 38
+      },
+      {
+        "type": "select_one",
+        "values_list": "response_list",
+        "name": "question5",
+        "display": {
+          "text": "I feel sure that I know when I should seek medical care and when I can take care of things myself."
+        },
+        "_row_num": 39
+      },
+      {
+        "clause": "if",
+        "condition": "calculates.expand_agree_5()",
+        "_row_num": 40
+      },
+      {
+        "type": "select_one",
+        "values_list": "agree_list",
+        "name": "question5_agree",
+        "display": {
+          "text": "If agree, would you say you:"
+        },
+        "_row_num": 41
+      },
+      {
+        "clause": "end if",
+        "_row_num": 42
+      },
+      {
+        "clause": "if",
+        "condition": "calculates.expand_disagree_5()",
+        "_row_num": 43
+      },
+      {
+        "type": "select_one",
+        "values_list": "disagree_list",
+        "name": "question5_disagree",
+        "display": {
+          "text": "If disagree, would you say you:"
+        },
+        "_row_num": 44
+      },
+      {
+        "clause": "end if",
+        "_row_num": 45
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 46
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 47
+      },
+      {
+        "type": "select_one",
+        "values_list": "response_list",
+        "name": "question6",
+        "display": {
+          "text": "I am confident that I can tell a doctor concerns  I have even when he or she does not ask."
+        },
+        "_row_num": 48
+      },
+      {
+        "clause": "if",
+        "condition": "calculates.expand_agree_6()",
+        "_row_num": 49
+      },
+      {
+        "type": "select_one",
+        "values_list": "agree_list",
+        "name": "question6_agree",
+        "display": {
+          "text": "If agree, would you say you:"
+        },
+        "_row_num": 50
+      },
+      {
+        "clause": "end if",
+        "_row_num": 51
+      },
+      {
+        "clause": "if",
+        "condition": "calculates.expand_disagree_6()",
+        "_row_num": 52
+      },
+      {
+        "type": "select_one",
+        "values_list": "disagree_list",
+        "name": "question6_disagree",
+        "display": {
+          "text": "If disagree, would you say you:"
+        },
+        "_row_num": 53
+      },
+      {
+        "clause": "end if",
+        "_row_num": 54
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 55
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 56
+      },
+      {
+        "type": "select_one",
+        "values_list": "response_list",
+        "name": "question7",
+        "display": {
+          "text": "I truly believe that I can carry out my medical treatment at home."
+        },
+        "_row_num": 57
+      },
+      {
+        "clause": "if",
+        "condition": "calculates.expand_agree_7()",
+        "_row_num": 58
+      },
+      {
+        "type": "select_one",
+        "values_list": "agree_list",
+        "name": "question7_agree",
+        "display": {
+          "text": "If agree, would you say you:"
+        },
+        "_row_num": 59
+      },
+      {
+        "clause": "end if",
+        "_row_num": 60
+      },
+      {
+        "clause": "if",
+        "condition": "calculates.expand_disagree_7()",
+        "_row_num": 61
+      },
+      {
+        "type": "select_one",
+        "values_list": "disagree_list",
+        "name": "question7_disagree",
+        "display": {
+          "text": "If disagree, would you say you:"
+        },
+        "_row_num": 62
+      },
+      {
+        "clause": "end if",
+        "_row_num": 63
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 64
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 65
+      },
+      {
+        "type": "select_one",
+        "values_list": "response_list",
+        "name": "question8",
+        "display": {
+          "text": "I know the reasons for my health conditions and what it can do to my health."
+        },
+        "_row_num": 66
+      },
+      {
+        "clause": "if",
+        "condition": "calculates.expand_agree_8()",
+        "_row_num": 67
+      },
+      {
+        "type": "select_one",
+        "values_list": "agree_list",
+        "name": "question8_agree",
+        "display": {
+          "text": "If agree, would you say you:"
+        },
+        "_row_num": 68
+      },
+      {
+        "clause": "end if",
+        "_row_num": 69
+      },
+      {
+        "clause": "if",
+        "condition": "calculates.expand_disagree_8()",
+        "_row_num": 70
+      },
+      {
+        "type": "select_one",
+        "values_list": "disagree_list",
+        "name": "question8_disagree",
+        "display": {
+          "text": "If disagree, would you say you:"
+        },
+        "_row_num": 71
+      },
+      {
+        "clause": "end if",
+        "_row_num": 72
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 73
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 74
+      },
+      {
+        "type": "select_one",
+        "values_list": "response_list",
+        "name": "question9",
+        "display": {
+          "text": "I understand why I come to the HIV clinic. I know what it means to have HIV and how to live positively. I know what causes it. I also know how the disease progresses with treatment and without treatment."
+        },
+        "_row_num": 75
+      },
+      {
+        "clause": "if",
+        "condition": "calculates.expand_agree_9()",
+        "_row_num": 76
+      },
+      {
+        "type": "select_one",
+        "values_list": "agree_list",
+        "name": "question9_agree",
+        "display": {
+          "text": "If agree, would you say you:"
+        },
+        "_row_num": 77
+      },
+      {
+        "clause": "end if",
+        "_row_num": 78
+      },
+      {
+        "clause": "if",
+        "condition": "calculates.expand_disagree_9()",
+        "_row_num": 79
+      },
+      {
+        "type": "select_one",
+        "values_list": "disagree_list",
+        "name": "question9_disagree",
+        "display": {
+          "text": "If disagree, would you say you:"
+        },
+        "_row_num": 80
+      },
+      {
+        "clause": "end if",
+        "_row_num": 81
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 82
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 83
+      },
+      {
+        "type": "select_one",
+        "values_list": "response_list",
+        "name": "question10",
+        "display": {
+          "text": "I know [about] the healthcare services offered at hospitals that are available for treating my health condition."
+        },
+        "_row_num": 84
+      },
+      {
+        "clause": "if",
+        "condition": "calculates.expand_agree_10()",
+        "_row_num": 85
+      },
+      {
+        "type": "select_one",
+        "values_list": "agree_list",
+        "name": "question10_agree",
+        "display": {
+          "text": "If agree, would you say you:"
+        },
+        "_row_num": 86
+      },
+      {
+        "clause": "end if",
+        "_row_num": 87
+      },
+      {
+        "clause": "if",
+        "condition": "calculates.expand_disagree_10()",
+        "_row_num": 88
+      },
+      {
+        "type": "select_one",
+        "values_list": "disagree_list",
+        "name": "question10_disagree",
+        "display": {
+          "text": "If disagree, would you say you:"
+        },
+        "_row_num": 89
+      },
+      {
+        "clause": "end if",
+        "_row_num": 90
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 91
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 92
+      },
+      {
+        "type": "select_one",
+        "values_list": "response_list",
+        "name": "question11",
+        "display": {
+          "text": "Because of my health condition, I had to make changes in my lifestyle. I have been able to maintain this new way of living/lifestyle."
+        },
+        "_row_num": 93
+      },
+      {
+        "clause": "if",
+        "condition": "calculates.expand_agree_11()",
+        "_row_num": 94
+      },
+      {
+        "type": "select_one",
+        "values_list": "agree_list",
+        "name": "question11_agree",
+        "display": {
+          "text": "If agree, would you say you:"
+        },
+        "_row_num": 95
+      },
+      {
+        "clause": "end if",
+        "_row_num": 96
+      },
+      {
+        "clause": "if",
+        "condition": "calculates.expand_disagree_11()",
+        "_row_num": 97
+      },
+      {
+        "type": "select_one",
+        "values_list": "disagree_list",
+        "name": "question11_disagree",
+        "display": {
+          "text": "If disagree, would you say you:"
+        },
+        "_row_num": 98
+      },
+      {
+        "clause": "end if",
+        "_row_num": 99
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 100
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 101
+      },
+      {
+        "type": "select_one",
+        "values_list": "response_list",
+        "name": "question12",
+        "display": {
+          "text": "My health condition could worsen due to a number of things. However, I know what I need to do to prevent it from worsening."
+        },
+        "_row_num": 102
+      },
+      {
+        "clause": "if",
+        "condition": "calculates.expand_agree_12()",
+        "_row_num": 103
+      },
+      {
+        "type": "select_one",
+        "values_list": "agree_list",
+        "name": "question12_agree",
+        "display": {
+          "text": "If agree, would you say you:"
+        },
+        "_row_num": 104
+      },
+      {
+        "clause": "end if",
+        "_row_num": 105
+      },
+      {
+        "clause": "if",
+        "condition": "calculates.expand_disagree_12()",
+        "_row_num": 106
+      },
+      {
+        "type": "select_one",
+        "values_list": "disagree_list",
+        "name": "question12_disagree",
+        "display": {
+          "text": "If disagree, would you say you:"
+        },
+        "_row_num": 107
+      },
+      {
+        "clause": "end if",
+        "_row_num": 108
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 109
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 110
+      },
+      {
+        "type": "select_one",
+        "values_list": "response_list",
+        "name": "question13",
+        "display": {
+          "text": "I know how to prevent further problems when new situations or problems arise with my health condition."
+        },
+        "_row_num": 111
+      },
+      {
+        "clause": "if",
+        "condition": "calculates.expand_agree_13()",
+        "_row_num": 112
+      },
+      {
+        "type": "select_one",
+        "values_list": "agree_list",
+        "name": "question13_agree",
+        "display": {
+          "text": "If agree, would you say you:"
+        },
+        "_row_num": 113
+      },
+      {
+        "clause": "end if",
+        "_row_num": 114
+      },
+      {
+        "clause": "if",
+        "condition": "calculates.expand_disagree_13()",
+        "_row_num": 115
+      },
+      {
+        "type": "select_one",
+        "values_list": "disagree_list",
+        "name": "question13_disagree",
+        "display": {
+          "text": "If disagree, would you say you:"
+        },
+        "_row_num": 116
+      },
+      {
+        "clause": "end if",
+        "_row_num": 117
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 118
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 119
+      },
+      {
+        "type": "select_one",
+        "values_list": "response_list",
+        "name": "question14",
+        "display": {
+          "text": "My health condition could worsen due to a number of things. However, I know what I need to do to prevent it from worsening."
+        },
+        "_row_num": 120
+      },
+      {
+        "clause": "if",
+        "condition": "calculates.expand_agree_14()",
+        "_row_num": 121
+      },
+      {
+        "type": "select_one",
+        "values_list": "agree_list",
+        "name": "question14_agree",
+        "display": {
+          "text": "If agree, would you say you:"
+        },
+        "_row_num": 122
+      },
+      {
+        "clause": "end if",
+        "_row_num": 123
+      },
+      {
+        "clause": "if",
+        "condition": "calculates.expand_disagree_14()",
+        "_row_num": 124
+      },
+      {
+        "type": "select_one",
+        "values_list": "disagree_list",
+        "name": "question14_disagree",
+        "display": {
+          "text": "If disagree, would you say you:"
+        },
+        "_row_num": 125
+      },
+      {
+        "clause": "end if",
+        "_row_num": 126
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 127
+      }
+    ],
+    "calculates": [
+      {
+        "calculation_name": "expand_agree_1",
+        "calculation": "selected(data('question1'), 'agree')",
+        "_row_num": 2
+      },
+      {
+        "calculation_name": "expand_disagree_1",
+        "calculation": "selected(data('question1'), 'disagree')",
+        "_row_num": 3
+      },
+      {
+        "calculation_name": "expand_agree_2",
+        "calculation": "selected(data('question2'), 'agree')",
+        "_row_num": 5
+      },
+      {
+        "calculation_name": "expand_disagree_2",
+        "calculation": "selected(data('question2'), 'disagree')",
+        "_row_num": 6
+      },
+      {
+        "calculation_name": "expand_agree_3",
+        "calculation": "selected(data('question3'), 'agree')",
+        "_row_num": 8
+      },
+      {
+        "calculation_name": "expand_disagree_3",
+        "calculation": "selected(data('question3'), 'disagree')",
+        "_row_num": 9
+      },
+      {
+        "calculation_name": "expand_agree_4",
+        "calculation": "selected(data('question4'), 'agree')",
+        "_row_num": 11
+      },
+      {
+        "calculation_name": "expand_disagree_4",
+        "calculation": "selected(data('question4'), 'disagree')",
+        "_row_num": 12
+      },
+      {
+        "calculation_name": "expand_agree_5",
+        "calculation": "selected(data('question5'), 'agree')",
+        "_row_num": 14
+      },
+      {
+        "calculation_name": "expand_disagree_5",
+        "calculation": "selected(data('question5'), 'disagree')",
+        "_row_num": 15
+      },
+      {
+        "calculation_name": "expand_agree_6",
+        "calculation": "selected(data('question6'), 'agree')",
+        "_row_num": 17
+      },
+      {
+        "calculation_name": "expand_disagree_6",
+        "calculation": "selected(data('question6'), 'disagree')",
+        "_row_num": 18
+      },
+      {
+        "calculation_name": "expand_agree_7",
+        "calculation": "selected(data('question7'), 'agree')",
+        "_row_num": 20
+      },
+      {
+        "calculation_name": "expand_disagree_7",
+        "calculation": "selected(data('question7'), 'disagree')",
+        "_row_num": 21
+      },
+      {
+        "calculation_name": "expand_agree_8",
+        "calculation": "selected(data('question8'), 'agree')",
+        "_row_num": 23
+      },
+      {
+        "calculation_name": "expand_disagree_8",
+        "calculation": "selected(data('question8'), 'disagree')",
+        "_row_num": 24
+      },
+      {
+        "calculation_name": "expand_agree_9",
+        "calculation": "selected(data('question9'), 'agree')",
+        "_row_num": 26
+      },
+      {
+        "calculation_name": "expand_disagree_9",
+        "calculation": "selected(data('question9'), 'disagree')",
+        "_row_num": 27
+      },
+      {
+        "calculation_name": "expand_agree_10",
+        "calculation": "selected(data('question10'), 'agree')",
+        "_row_num": 29
+      },
+      {
+        "calculation_name": "expand_disagree_10",
+        "calculation": "selected(data('question10'), 'disagree')",
+        "_row_num": 30
+      },
+      {
+        "calculation_name": "expand_agree_11",
+        "calculation": "selected(data('question11'), 'agree')",
+        "_row_num": 32
+      },
+      {
+        "calculation_name": "expand_disagree_11",
+        "calculation": "selected(data('question11'), 'disagree')",
+        "_row_num": 33
+      },
+      {
+        "calculation_name": "expand_agree_12",
+        "calculation": "selected(data('question12'), 'agree')",
+        "_row_num": 35
+      },
+      {
+        "calculation_name": "expand_disagree_12",
+        "calculation": "selected(data('question12'), 'disagree')",
+        "_row_num": 36
+      },
+      {
+        "calculation_name": "expand_agree_13",
+        "calculation": "selected(data('question13'), 'agree')",
+        "_row_num": 38
+      },
+      {
+        "calculation_name": "expand_disagree_13",
+        "calculation": "selected(data('question13'), 'disagree')",
+        "_row_num": 39
+      },
+      {
+        "calculation_name": "expand_agree_14",
+        "calculation": "selected(data('question14'), 'agree')",
+        "_row_num": 41
+      },
+      {
+        "calculation_name": "expand_disagree_14",
+        "calculation": "selected(data('question14'), 'disagree')",
+        "_row_num": 42
+      }
+    ],
+    "choices": [
+      {
+        "choice_list_name": "response_list",
+        "data_value": "agree",
+        "display": {
+          "text": "Agree"
+        },
+        "_row_num": 2
+      },
+      {
+        "choice_list_name": "response_list",
+        "data_value": "neither",
+        "display": {
+          "text": "Neither agree or disagree"
+        },
+        "_row_num": 3
+      },
+      {
+        "choice_list_name": "response_list",
+        "data_value": "disagree",
+        "display": {
+          "text": "Disagree"
+        },
+        "_row_num": 4
+      },
+      {
+        "choice_list_name": "agree_list",
+        "data_value": "somewhat_agree",
+        "display": {
+          "text": "Somewhat agree"
+        },
+        "_row_num": 6
+      },
+      {
+        "choice_list_name": "agree_list",
+        "data_value": "strongly_agree",
+        "display": {
+          "text": "Strongly agree"
+        },
+        "_row_num": 7
+      },
+      {
+        "choice_list_name": "disagree_list",
+        "data_value": "somewhat_disagree",
+        "display": {
+          "text": "Somewhat disagree"
+        },
+        "_row_num": 9
+      },
+      {
+        "choice_list_name": "disagree_list",
+        "data_value": "strongly_disagree",
+        "display": {
+          "text": "Strongly disagree"
+        },
+        "_row_num": 10
+      }
+    ],
+    "settings": [
+      {
+        "setting_name": "table_id",
+        "value": "hibbard_patient_activation_measure",
+        "_row_num": 2
+      },
+      {
+        "setting_name": "form_id",
+        "value": "hibbard_patient_activation_measure",
+        "_row_num": 3
+      },
+      {
+        "setting_name": "form_version",
+        "value": 20141008,
+        "_row_num": 4
+      },
+      {
+        "setting_name": "survey",
+        "display": {
+          "title": "Hibbard Patient Activation Measure"
+        },
+        "_row_num": 5
+      }
+    ]
+  },
+  "specification": {
+    "column_types": {
+      "_screen_block": "function",
+      "condition": "formula",
+      "constraint": "formula",
+      "required": "formula",
+      "calculation": "formula",
+      "auxillaryHash": "formula",
+      "selectionArgs": "formula",
+      "url": "formula",
+      "uri": "formula",
+      "callback": "formula(context)",
+      "choice_filter": "formula(choice_item)",
+      "templatePath": "requirejs_path",
+      "image": "app_path_localized",
+      "audio": "app_path_localized",
+      "video": "app_path_localized"
+    },
+    "settings": {
+      "table_id": {
+        "setting_name": "table_id",
+        "value": "hibbard_patient_activation_measure",
+        "_row_num": 2
+      },
+      "form_id": {
+        "setting_name": "form_id",
+        "value": "hibbard_patient_activation_measure",
+        "_row_num": 3
+      },
+      "form_version": {
+        "setting_name": "form_version",
+        "value": 20141008,
+        "_row_num": 4
+      },
+      "survey": {
+        "setting_name": "survey",
+        "display": {
+          "title": "Hibbard Patient Activation Measure"
+        },
+        "_row_num": 5
+      },
+      "_locales": {
+        "setting_name": "_locales",
+        "_row_num": 5,
+        "value": [
+          {
+            "display": {
+              "text": "default"
+            },
+            "name": "default"
+          }
+        ]
+      },
+      "_default_locale": {
+        "setting_name": "_default_locale",
+        "_row_num": 5,
+        "value": "default"
+      },
+      "initial": {
+        "setting_name": "survey",
+        "display": {
+          "title": "Hibbard Patient Activation Measure"
+        },
+        "_row_num": 5
+      }
+    },
+    "choices": {
+      "response_list": [
+        {
+          "choice_list_name": "response_list",
+          "data_value": "agree",
+          "display": {
+            "text": "Agree"
+          },
+          "_row_num": 2
+        },
+        {
+          "choice_list_name": "response_list",
+          "data_value": "neither",
+          "display": {
+            "text": "Neither agree or disagree"
+          },
+          "_row_num": 3
+        },
+        {
+          "choice_list_name": "response_list",
+          "data_value": "disagree",
+          "display": {
+            "text": "Disagree"
+          },
+          "_row_num": 4
+        }
+      ],
+      "agree_list": [
+        {
+          "choice_list_name": "agree_list",
+          "data_value": "somewhat_agree",
+          "display": {
+            "text": "Somewhat agree"
+          },
+          "_row_num": 6
+        },
+        {
+          "choice_list_name": "agree_list",
+          "data_value": "strongly_agree",
+          "display": {
+            "text": "Strongly agree"
+          },
+          "_row_num": 7
+        }
+      ],
+      "disagree_list": [
+        {
+          "choice_list_name": "disagree_list",
+          "data_value": "somewhat_disagree",
+          "display": {
+            "text": "Somewhat disagree"
+          },
+          "_row_num": 9
+        },
+        {
+          "choice_list_name": "disagree_list",
+          "data_value": "strongly_disagree",
+          "display": {
+            "text": "Strongly disagree"
+          },
+          "_row_num": 10
+        }
+      ]
+    },
+    "queries": {},
+    "calculates": {
+      "expand_agree_1": {
+        "calculation_name": "expand_agree_1",
+        "calculation": "selected(data('question1'), 'agree')",
+        "_row_num": 2
+      },
+      "expand_disagree_1": {
+        "calculation_name": "expand_disagree_1",
+        "calculation": "selected(data('question1'), 'disagree')",
+        "_row_num": 3
+      },
+      "expand_agree_2": {
+        "calculation_name": "expand_agree_2",
+        "calculation": "selected(data('question2'), 'agree')",
+        "_row_num": 5
+      },
+      "expand_disagree_2": {
+        "calculation_name": "expand_disagree_2",
+        "calculation": "selected(data('question2'), 'disagree')",
+        "_row_num": 6
+      },
+      "expand_agree_3": {
+        "calculation_name": "expand_agree_3",
+        "calculation": "selected(data('question3'), 'agree')",
+        "_row_num": 8
+      },
+      "expand_disagree_3": {
+        "calculation_name": "expand_disagree_3",
+        "calculation": "selected(data('question3'), 'disagree')",
+        "_row_num": 9
+      },
+      "expand_agree_4": {
+        "calculation_name": "expand_agree_4",
+        "calculation": "selected(data('question4'), 'agree')",
+        "_row_num": 11
+      },
+      "expand_disagree_4": {
+        "calculation_name": "expand_disagree_4",
+        "calculation": "selected(data('question4'), 'disagree')",
+        "_row_num": 12
+      },
+      "expand_agree_5": {
+        "calculation_name": "expand_agree_5",
+        "calculation": "selected(data('question5'), 'agree')",
+        "_row_num": 14
+      },
+      "expand_disagree_5": {
+        "calculation_name": "expand_disagree_5",
+        "calculation": "selected(data('question5'), 'disagree')",
+        "_row_num": 15
+      },
+      "expand_agree_6": {
+        "calculation_name": "expand_agree_6",
+        "calculation": "selected(data('question6'), 'agree')",
+        "_row_num": 17
+      },
+      "expand_disagree_6": {
+        "calculation_name": "expand_disagree_6",
+        "calculation": "selected(data('question6'), 'disagree')",
+        "_row_num": 18
+      },
+      "expand_agree_7": {
+        "calculation_name": "expand_agree_7",
+        "calculation": "selected(data('question7'), 'agree')",
+        "_row_num": 20
+      },
+      "expand_disagree_7": {
+        "calculation_name": "expand_disagree_7",
+        "calculation": "selected(data('question7'), 'disagree')",
+        "_row_num": 21
+      },
+      "expand_agree_8": {
+        "calculation_name": "expand_agree_8",
+        "calculation": "selected(data('question8'), 'agree')",
+        "_row_num": 23
+      },
+      "expand_disagree_8": {
+        "calculation_name": "expand_disagree_8",
+        "calculation": "selected(data('question8'), 'disagree')",
+        "_row_num": 24
+      },
+      "expand_agree_9": {
+        "calculation_name": "expand_agree_9",
+        "calculation": "selected(data('question9'), 'agree')",
+        "_row_num": 26
+      },
+      "expand_disagree_9": {
+        "calculation_name": "expand_disagree_9",
+        "calculation": "selected(data('question9'), 'disagree')",
+        "_row_num": 27
+      },
+      "expand_agree_10": {
+        "calculation_name": "expand_agree_10",
+        "calculation": "selected(data('question10'), 'agree')",
+        "_row_num": 29
+      },
+      "expand_disagree_10": {
+        "calculation_name": "expand_disagree_10",
+        "calculation": "selected(data('question10'), 'disagree')",
+        "_row_num": 30
+      },
+      "expand_agree_11": {
+        "calculation_name": "expand_agree_11",
+        "calculation": "selected(data('question11'), 'agree')",
+        "_row_num": 32
+      },
+      "expand_disagree_11": {
+        "calculation_name": "expand_disagree_11",
+        "calculation": "selected(data('question11'), 'disagree')",
+        "_row_num": 33
+      },
+      "expand_agree_12": {
+        "calculation_name": "expand_agree_12",
+        "calculation": "selected(data('question12'), 'agree')",
+        "_row_num": 35
+      },
+      "expand_disagree_12": {
+        "calculation_name": "expand_disagree_12",
+        "calculation": "selected(data('question12'), 'disagree')",
+        "_row_num": 36
+      },
+      "expand_agree_13": {
+        "calculation_name": "expand_agree_13",
+        "calculation": "selected(data('question13'), 'agree')",
+        "_row_num": 38
+      },
+      "expand_disagree_13": {
+        "calculation_name": "expand_disagree_13",
+        "calculation": "selected(data('question13'), 'disagree')",
+        "_row_num": 39
+      },
+      "expand_agree_14": {
+        "calculation_name": "expand_agree_14",
+        "calculation": "selected(data('question14'), 'agree')",
+        "_row_num": 41
+      },
+      "expand_disagree_14": {
+        "calculation_name": "expand_disagree_14",
+        "calculation": "selected(data('question14'), 'disagree')",
+        "_row_num": 42
+      }
+    },
+    "model": {
+      "question1": {
+        "_defn": [
+          {
+            "_row_num": 3,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "response_list",
+        "elementKey": "question1"
+      },
+      "question1_agree": {
+        "_defn": [
+          {
+            "_row_num": 5,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "agree_list",
+        "elementKey": "question1_agree"
+      },
+      "question1_disagree": {
+        "_defn": [
+          {
+            "_row_num": 8,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "disagree_list",
+        "elementKey": "question1_disagree"
+      },
+      "question2": {
+        "_defn": [
+          {
+            "_row_num": 12,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "response_list",
+        "elementKey": "question2"
+      },
+      "question2_agree": {
+        "_defn": [
+          {
+            "_row_num": 14,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "agree_list",
+        "elementKey": "question2_agree"
+      },
+      "question2_disagree": {
+        "_defn": [
+          {
+            "_row_num": 17,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "disagree_list",
+        "elementKey": "question2_disagree"
+      },
+      "question3": {
+        "_defn": [
+          {
+            "_row_num": 21,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "response_list",
+        "elementKey": "question3"
+      },
+      "question3_agree": {
+        "_defn": [
+          {
+            "_row_num": 23,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "agree_list",
+        "elementKey": "question3_agree"
+      },
+      "question3_disagree": {
+        "_defn": [
+          {
+            "_row_num": 26,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "disagree_list",
+        "elementKey": "question3_disagree"
+      },
+      "question4": {
+        "_defn": [
+          {
+            "_row_num": 30,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "response_list",
+        "elementKey": "question4"
+      },
+      "question4_agree": {
+        "_defn": [
+          {
+            "_row_num": 32,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "agree_list",
+        "elementKey": "question4_agree"
+      },
+      "question4_disagree": {
+        "_defn": [
+          {
+            "_row_num": 35,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "disagree_list",
+        "elementKey": "question4_disagree"
+      },
+      "question5": {
+        "_defn": [
+          {
+            "_row_num": 39,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "response_list",
+        "elementKey": "question5"
+      },
+      "question5_agree": {
+        "_defn": [
+          {
+            "_row_num": 41,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "agree_list",
+        "elementKey": "question5_agree"
+      },
+      "question5_disagree": {
+        "_defn": [
+          {
+            "_row_num": 44,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "disagree_list",
+        "elementKey": "question5_disagree"
+      },
+      "question6": {
+        "_defn": [
+          {
+            "_row_num": 48,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "response_list",
+        "elementKey": "question6"
+      },
+      "question6_agree": {
+        "_defn": [
+          {
+            "_row_num": 50,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "agree_list",
+        "elementKey": "question6_agree"
+      },
+      "question6_disagree": {
+        "_defn": [
+          {
+            "_row_num": 53,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "disagree_list",
+        "elementKey": "question6_disagree"
+      },
+      "question7": {
+        "_defn": [
+          {
+            "_row_num": 57,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "response_list",
+        "elementKey": "question7"
+      },
+      "question7_agree": {
+        "_defn": [
+          {
+            "_row_num": 59,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "agree_list",
+        "elementKey": "question7_agree"
+      },
+      "question7_disagree": {
+        "_defn": [
+          {
+            "_row_num": 62,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "disagree_list",
+        "elementKey": "question7_disagree"
+      },
+      "question8": {
+        "_defn": [
+          {
+            "_row_num": 66,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "response_list",
+        "elementKey": "question8"
+      },
+      "question8_agree": {
+        "_defn": [
+          {
+            "_row_num": 68,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "agree_list",
+        "elementKey": "question8_agree"
+      },
+      "question8_disagree": {
+        "_defn": [
+          {
+            "_row_num": 71,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "disagree_list",
+        "elementKey": "question8_disagree"
+      },
+      "question9": {
+        "_defn": [
+          {
+            "_row_num": 75,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "response_list",
+        "elementKey": "question9"
+      },
+      "question9_agree": {
+        "_defn": [
+          {
+            "_row_num": 77,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "agree_list",
+        "elementKey": "question9_agree"
+      },
+      "question9_disagree": {
+        "_defn": [
+          {
+            "_row_num": 80,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "disagree_list",
+        "elementKey": "question9_disagree"
+      },
+      "question10": {
+        "_defn": [
+          {
+            "_row_num": 84,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "response_list",
+        "elementKey": "question10"
+      },
+      "question10_agree": {
+        "_defn": [
+          {
+            "_row_num": 86,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "agree_list",
+        "elementKey": "question10_agree"
+      },
+      "question10_disagree": {
+        "_defn": [
+          {
+            "_row_num": 89,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "disagree_list",
+        "elementKey": "question10_disagree"
+      },
+      "question11": {
+        "_defn": [
+          {
+            "_row_num": 93,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "response_list",
+        "elementKey": "question11"
+      },
+      "question11_agree": {
+        "_defn": [
+          {
+            "_row_num": 95,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "agree_list",
+        "elementKey": "question11_agree"
+      },
+      "question11_disagree": {
+        "_defn": [
+          {
+            "_row_num": 98,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "disagree_list",
+        "elementKey": "question11_disagree"
+      },
+      "question12": {
+        "_defn": [
+          {
+            "_row_num": 102,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "response_list",
+        "elementKey": "question12"
+      },
+      "question12_agree": {
+        "_defn": [
+          {
+            "_row_num": 104,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "agree_list",
+        "elementKey": "question12_agree"
+      },
+      "question12_disagree": {
+        "_defn": [
+          {
+            "_row_num": 107,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "disagree_list",
+        "elementKey": "question12_disagree"
+      },
+      "question13": {
+        "_defn": [
+          {
+            "_row_num": 111,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "response_list",
+        "elementKey": "question13"
+      },
+      "question13_agree": {
+        "_defn": [
+          {
+            "_row_num": 113,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "agree_list",
+        "elementKey": "question13_agree"
+      },
+      "question13_disagree": {
+        "_defn": [
+          {
+            "_row_num": 116,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "disagree_list",
+        "elementKey": "question13_disagree"
+      },
+      "question14": {
+        "_defn": [
+          {
+            "_row_num": 120,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "response_list",
+        "elementKey": "question14"
+      },
+      "question14_agree": {
+        "_defn": [
+          {
+            "_row_num": 122,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "agree_list",
+        "elementKey": "question14_agree"
+      },
+      "question14_disagree": {
+        "_defn": [
+          {
+            "_row_num": 125,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "disagree_list",
+        "elementKey": "question14_disagree"
+      }
+    },
+    "section_names": [
+      "initial",
+      "survey"
+    ],
+    "sections": {
+      "survey": {
+        "section_name": "survey",
+        "nested_sections": {},
+        "reachable_sections": {},
+        "prompts": [
+          {
+            "type": "select_one",
+            "values_list": "response_list",
+            "name": "question1",
+            "display": {
+              "text": "Although others such as health workers and family members may help me, the ultimate responsibility for managing my health condition is on me."
+            },
+            "_row_num": 3,
+            "__rowNum__": 2,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 0
+          },
+          {
+            "type": "select_one",
+            "values_list": "agree_list",
+            "name": "question1_agree",
+            "display": {
+              "text": "If agree, would you say you:"
+            },
+            "_row_num": 5,
+            "__rowNum__": 4,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 1
+          },
+          {
+            "type": "select_one",
+            "values_list": "disagree_list",
+            "name": "question1_disagree",
+            "display": {
+              "text": "If disagree, would you say you:"
+            },
+            "_row_num": 8,
+            "__rowNum__": 7,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 2
+          },
+          {
+            "type": "select_one",
+            "values_list": "response_list",
+            "name": "question2",
+            "display": {
+              "text": "The most important thing that determines my health and well-being is that I am at the forefront of taking care of my own health, and not expecting others to play the lead role in matters related to my health."
+            },
+            "_row_num": 12,
+            "__rowNum__": 11,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen11",
+            "promptIdx": 3
+          },
+          {
+            "type": "select_one",
+            "values_list": "agree_list",
+            "name": "question2_agree",
+            "display": {
+              "text": "If agree, would you say you:"
+            },
+            "_row_num": 14,
+            "__rowNum__": 13,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen11",
+            "promptIdx": 4
+          },
+          {
+            "type": "select_one",
+            "values_list": "disagree_list",
+            "name": "question2_disagree",
+            "display": {
+              "text": "If disagree, would you say you:"
+            },
+            "_row_num": 17,
+            "__rowNum__": 16,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen11",
+            "promptIdx": 5
+          },
+          {
+            "type": "select_one",
+            "values_list": "response_list",
+            "name": "question3",
+            "display": {
+              "text": "I truly believe that I know the things that I need to do to prevent or minimize those symptoms and problems, and I can do those things needed to prevent/minimize."
+            },
+            "_row_num": 21,
+            "__rowNum__": 20,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen20",
+            "promptIdx": 6
+          },
+          {
+            "type": "select_one",
+            "values_list": "agree_list",
+            "name": "question3_agree",
+            "display": {
+              "text": "If agree, would you say you:"
+            },
+            "_row_num": 23,
+            "__rowNum__": 22,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen20",
+            "promptIdx": 7
+          },
+          {
+            "type": "select_one",
+            "values_list": "disagree_list",
+            "name": "question3_disagree",
+            "display": {
+              "text": "If disagree, would you say you:"
+            },
+            "_row_num": 26,
+            "__rowNum__": 25,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen20",
+            "promptIdx": 8
+          },
+          {
+            "type": "select_one",
+            "values_list": "response_list",
+            "name": "question4",
+            "display": {
+              "text": "I know the effects and side effects of my medicines."
+            },
+            "_row_num": 30,
+            "__rowNum__": 29,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen29",
+            "promptIdx": 9
+          },
+          {
+            "type": "select_one",
+            "values_list": "agree_list",
+            "name": "question4_agree",
+            "display": {
+              "text": "If agree, would you say you:"
+            },
+            "_row_num": 32,
+            "__rowNum__": 31,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen29",
+            "promptIdx": 10
+          },
+          {
+            "type": "select_one",
+            "values_list": "disagree_list",
+            "name": "question4_disagree",
+            "display": {
+              "text": "If disagree, would you say you:"
+            },
+            "_row_num": 35,
+            "__rowNum__": 34,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen29",
+            "promptIdx": 11
+          },
+          {
+            "type": "select_one",
+            "values_list": "response_list",
+            "name": "question5",
+            "display": {
+              "text": "I feel sure that I know when I should seek medical care and when I can take care of things myself."
+            },
+            "_row_num": 39,
+            "__rowNum__": 38,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen38",
+            "promptIdx": 12
+          },
+          {
+            "type": "select_one",
+            "values_list": "agree_list",
+            "name": "question5_agree",
+            "display": {
+              "text": "If agree, would you say you:"
+            },
+            "_row_num": 41,
+            "__rowNum__": 40,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen38",
+            "promptIdx": 13
+          },
+          {
+            "type": "select_one",
+            "values_list": "disagree_list",
+            "name": "question5_disagree",
+            "display": {
+              "text": "If disagree, would you say you:"
+            },
+            "_row_num": 44,
+            "__rowNum__": 43,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen38",
+            "promptIdx": 14
+          },
+          {
+            "type": "select_one",
+            "values_list": "response_list",
+            "name": "question6",
+            "display": {
+              "text": "I am confident that I can tell a doctor concerns  I have even when he or she does not ask."
+            },
+            "_row_num": 48,
+            "__rowNum__": 47,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen47",
+            "promptIdx": 15
+          },
+          {
+            "type": "select_one",
+            "values_list": "agree_list",
+            "name": "question6_agree",
+            "display": {
+              "text": "If agree, would you say you:"
+            },
+            "_row_num": 50,
+            "__rowNum__": 49,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen47",
+            "promptIdx": 16
+          },
+          {
+            "type": "select_one",
+            "values_list": "disagree_list",
+            "name": "question6_disagree",
+            "display": {
+              "text": "If disagree, would you say you:"
+            },
+            "_row_num": 53,
+            "__rowNum__": 52,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen47",
+            "promptIdx": 17
+          },
+          {
+            "type": "select_one",
+            "values_list": "response_list",
+            "name": "question7",
+            "display": {
+              "text": "I truly believe that I can carry out my medical treatment at home."
+            },
+            "_row_num": 57,
+            "__rowNum__": 56,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen56",
+            "promptIdx": 18
+          },
+          {
+            "type": "select_one",
+            "values_list": "agree_list",
+            "name": "question7_agree",
+            "display": {
+              "text": "If agree, would you say you:"
+            },
+            "_row_num": 59,
+            "__rowNum__": 58,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen56",
+            "promptIdx": 19
+          },
+          {
+            "type": "select_one",
+            "values_list": "disagree_list",
+            "name": "question7_disagree",
+            "display": {
+              "text": "If disagree, would you say you:"
+            },
+            "_row_num": 62,
+            "__rowNum__": 61,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen56",
+            "promptIdx": 20
+          },
+          {
+            "type": "select_one",
+            "values_list": "response_list",
+            "name": "question8",
+            "display": {
+              "text": "I know the reasons for my health conditions and what it can do to my health."
+            },
+            "_row_num": 66,
+            "__rowNum__": 65,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen65",
+            "promptIdx": 21
+          },
+          {
+            "type": "select_one",
+            "values_list": "agree_list",
+            "name": "question8_agree",
+            "display": {
+              "text": "If agree, would you say you:"
+            },
+            "_row_num": 68,
+            "__rowNum__": 67,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen65",
+            "promptIdx": 22
+          },
+          {
+            "type": "select_one",
+            "values_list": "disagree_list",
+            "name": "question8_disagree",
+            "display": {
+              "text": "If disagree, would you say you:"
+            },
+            "_row_num": 71,
+            "__rowNum__": 70,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen65",
+            "promptIdx": 23
+          },
+          {
+            "type": "select_one",
+            "values_list": "response_list",
+            "name": "question9",
+            "display": {
+              "text": "I understand why I come to the HIV clinic. I know what it means to have HIV and how to live positively. I know what causes it. I also know how the disease progresses with treatment and without treatment."
+            },
+            "_row_num": 75,
+            "__rowNum__": 74,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen74",
+            "promptIdx": 24
+          },
+          {
+            "type": "select_one",
+            "values_list": "agree_list",
+            "name": "question9_agree",
+            "display": {
+              "text": "If agree, would you say you:"
+            },
+            "_row_num": 77,
+            "__rowNum__": 76,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen74",
+            "promptIdx": 25
+          },
+          {
+            "type": "select_one",
+            "values_list": "disagree_list",
+            "name": "question9_disagree",
+            "display": {
+              "text": "If disagree, would you say you:"
+            },
+            "_row_num": 80,
+            "__rowNum__": 79,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen74",
+            "promptIdx": 26
+          },
+          {
+            "type": "select_one",
+            "values_list": "response_list",
+            "name": "question10",
+            "display": {
+              "text": "I know [about] the healthcare services offered at hospitals that are available for treating my health condition."
+            },
+            "_row_num": 84,
+            "__rowNum__": 83,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen83",
+            "promptIdx": 27
+          },
+          {
+            "type": "select_one",
+            "values_list": "agree_list",
+            "name": "question10_agree",
+            "display": {
+              "text": "If agree, would you say you:"
+            },
+            "_row_num": 86,
+            "__rowNum__": 85,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen83",
+            "promptIdx": 28
+          },
+          {
+            "type": "select_one",
+            "values_list": "disagree_list",
+            "name": "question10_disagree",
+            "display": {
+              "text": "If disagree, would you say you:"
+            },
+            "_row_num": 89,
+            "__rowNum__": 88,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen83",
+            "promptIdx": 29
+          },
+          {
+            "type": "select_one",
+            "values_list": "response_list",
+            "name": "question11",
+            "display": {
+              "text": "Because of my health condition, I had to make changes in my lifestyle. I have been able to maintain this new way of living/lifestyle."
+            },
+            "_row_num": 93,
+            "__rowNum__": 92,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen92",
+            "promptIdx": 30
+          },
+          {
+            "type": "select_one",
+            "values_list": "agree_list",
+            "name": "question11_agree",
+            "display": {
+              "text": "If agree, would you say you:"
+            },
+            "_row_num": 95,
+            "__rowNum__": 94,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen92",
+            "promptIdx": 31
+          },
+          {
+            "type": "select_one",
+            "values_list": "disagree_list",
+            "name": "question11_disagree",
+            "display": {
+              "text": "If disagree, would you say you:"
+            },
+            "_row_num": 98,
+            "__rowNum__": 97,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen92",
+            "promptIdx": 32
+          },
+          {
+            "type": "select_one",
+            "values_list": "response_list",
+            "name": "question12",
+            "display": {
+              "text": "My health condition could worsen due to a number of things. However, I know what I need to do to prevent it from worsening."
+            },
+            "_row_num": 102,
+            "__rowNum__": 101,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen101",
+            "promptIdx": 33
+          },
+          {
+            "type": "select_one",
+            "values_list": "agree_list",
+            "name": "question12_agree",
+            "display": {
+              "text": "If agree, would you say you:"
+            },
+            "_row_num": 104,
+            "__rowNum__": 103,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen101",
+            "promptIdx": 34
+          },
+          {
+            "type": "select_one",
+            "values_list": "disagree_list",
+            "name": "question12_disagree",
+            "display": {
+              "text": "If disagree, would you say you:"
+            },
+            "_row_num": 107,
+            "__rowNum__": 106,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen101",
+            "promptIdx": 35
+          },
+          {
+            "type": "select_one",
+            "values_list": "response_list",
+            "name": "question13",
+            "display": {
+              "text": "I know how to prevent further problems when new situations or problems arise with my health condition."
+            },
+            "_row_num": 111,
+            "__rowNum__": 110,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen110",
+            "promptIdx": 36
+          },
+          {
+            "type": "select_one",
+            "values_list": "agree_list",
+            "name": "question13_agree",
+            "display": {
+              "text": "If agree, would you say you:"
+            },
+            "_row_num": 113,
+            "__rowNum__": 112,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen110",
+            "promptIdx": 37
+          },
+          {
+            "type": "select_one",
+            "values_list": "disagree_list",
+            "name": "question13_disagree",
+            "display": {
+              "text": "If disagree, would you say you:"
+            },
+            "_row_num": 116,
+            "__rowNum__": 115,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen110",
+            "promptIdx": 38
+          },
+          {
+            "type": "select_one",
+            "values_list": "response_list",
+            "name": "question14",
+            "display": {
+              "text": "My health condition could worsen due to a number of things. However, I know what I need to do to prevent it from worsening."
+            },
+            "_row_num": 120,
+            "__rowNum__": 119,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen119",
+            "promptIdx": 39
+          },
+          {
+            "type": "select_one",
+            "values_list": "agree_list",
+            "name": "question14_agree",
+            "display": {
+              "text": "If agree, would you say you:"
+            },
+            "_row_num": 122,
+            "__rowNum__": 121,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen119",
+            "promptIdx": 40
+          },
+          {
+            "type": "select_one",
+            "values_list": "disagree_list",
+            "name": "question14_disagree",
+            "display": {
+              "text": "If disagree, would you say you:"
+            },
+            "_row_num": 125,
+            "__rowNum__": 124,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen119",
+            "promptIdx": 41
+          },
+          {
+            "_token_type": "prompt",
+            "type": "contents",
+            "_type": "contents",
+            "_row_num": 128,
+            "_branch_label_enclosing_screen": "survey/_screen128",
+            "promptIdx": 42
+          }
+        ],
+        "validation_tag_map": {
+          "finalize": []
+        },
+        "operations": [
+          {
+            "clause": "begin screen",
+            "_row_num": 2,
+            "__rowNum__": 1,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 10,
+              "__rowNum__": 9,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nif (calculates.expand_agree_1()) {\nactivePromptIndicies.push(1);\n}\nif (calculates.expand_disagree_1()) {\nactivePromptIndicies.push(2);\n}\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 0
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 11,
+            "__rowNum__": 10,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 19,
+              "__rowNum__": 18,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(3);\nif (calculates.expand_agree_2()) {\nactivePromptIndicies.push(4);\n}\nif (calculates.expand_disagree_2()) {\nactivePromptIndicies.push(5);\n}\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 1
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 20,
+            "__rowNum__": 19,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 28,
+              "__rowNum__": 27,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(6);\nif (calculates.expand_agree_3()) {\nactivePromptIndicies.push(7);\n}\nif (calculates.expand_disagree_3()) {\nactivePromptIndicies.push(8);\n}\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 2
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 29,
+            "__rowNum__": 28,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 37,
+              "__rowNum__": 36,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(9);\nif (calculates.expand_agree_4()) {\nactivePromptIndicies.push(10);\n}\nif (calculates.expand_disagree_4()) {\nactivePromptIndicies.push(11);\n}\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 3
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 38,
+            "__rowNum__": 37,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 46,
+              "__rowNum__": 45,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(12);\nif (calculates.expand_agree_5()) {\nactivePromptIndicies.push(13);\n}\nif (calculates.expand_disagree_5()) {\nactivePromptIndicies.push(14);\n}\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 4
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 47,
+            "__rowNum__": 46,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 55,
+              "__rowNum__": 54,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(15);\nif (calculates.expand_agree_6()) {\nactivePromptIndicies.push(16);\n}\nif (calculates.expand_disagree_6()) {\nactivePromptIndicies.push(17);\n}\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 5
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 56,
+            "__rowNum__": 55,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 64,
+              "__rowNum__": 63,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(18);\nif (calculates.expand_agree_7()) {\nactivePromptIndicies.push(19);\n}\nif (calculates.expand_disagree_7()) {\nactivePromptIndicies.push(20);\n}\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 6
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 65,
+            "__rowNum__": 64,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 73,
+              "__rowNum__": 72,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(21);\nif (calculates.expand_agree_8()) {\nactivePromptIndicies.push(22);\n}\nif (calculates.expand_disagree_8()) {\nactivePromptIndicies.push(23);\n}\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 7
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 74,
+            "__rowNum__": 73,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 82,
+              "__rowNum__": 81,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(24);\nif (calculates.expand_agree_9()) {\nactivePromptIndicies.push(25);\n}\nif (calculates.expand_disagree_9()) {\nactivePromptIndicies.push(26);\n}\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 8
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 83,
+            "__rowNum__": 82,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 91,
+              "__rowNum__": 90,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(27);\nif (calculates.expand_agree_10()) {\nactivePromptIndicies.push(28);\n}\nif (calculates.expand_disagree_10()) {\nactivePromptIndicies.push(29);\n}\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 9
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 92,
+            "__rowNum__": 91,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 100,
+              "__rowNum__": 99,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(30);\nif (calculates.expand_agree_11()) {\nactivePromptIndicies.push(31);\n}\nif (calculates.expand_disagree_11()) {\nactivePromptIndicies.push(32);\n}\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 10
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 101,
+            "__rowNum__": 100,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 109,
+              "__rowNum__": 108,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(33);\nif (calculates.expand_agree_12()) {\nactivePromptIndicies.push(34);\n}\nif (calculates.expand_disagree_12()) {\nactivePromptIndicies.push(35);\n}\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 11
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 110,
+            "__rowNum__": 109,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 118,
+              "__rowNum__": 117,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(36);\nif (calculates.expand_agree_13()) {\nactivePromptIndicies.push(37);\n}\nif (calculates.expand_disagree_13()) {\nactivePromptIndicies.push(38);\n}\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 12
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 119,
+            "__rowNum__": 118,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 127,
+              "__rowNum__": 126,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(39);\nif (calculates.expand_agree_14()) {\nactivePromptIndicies.push(40);\n}\nif (calculates.expand_disagree_14()) {\nactivePromptIndicies.push(41);\n}\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 13
+          },
+          {
+            "_token_type": "exit_section",
+            "clause": "exit section",
+            "_row_num": 128,
+            "operationIdx": 14
+          },
+          {
+            "_row_num": 128,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(42);\n\nreturn activePromptIndicies;\n}\n",
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 15
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 128,
+            "operationIdx": 16
+          }
+        ],
+        "branch_label_map": {
+          "_screen2": 0,
+          "_screen11": 1,
+          "_screen20": 2,
+          "_screen29": 3,
+          "_screen38": 4,
+          "_screen47": 5,
+          "_screen56": 6,
+          "_screen65": 7,
+          "_screen74": 8,
+          "_screen83": 9,
+          "_screen92": 10,
+          "_screen101": 11,
+          "_screen110": 12,
+          "_screen119": 13,
+          "_contents": 15,
+          "_screen128": 15
+        }
+      },
+      "initial": {
+        "section_name": "initial",
+        "nested_sections": {
+          "survey": true
+        },
+        "reachable_sections": {
+          "survey": true
+        },
+        "prompts": [
+          {
+            "_row_num": 3,
+            "type": "opening",
+            "display": {
+              "text": "Edit form"
+            },
+            "_token_type": "prompt",
+            "_type": "opening",
+            "_branch_label_enclosing_screen": "initial/_screen3",
+            "promptIdx": 0
+          },
+          {
+            "_row_num": 4,
+            "clause": "do section survey",
+            "_token_type": "prompt",
+            "_do_section_name": "survey",
+            "_type": "_section",
+            "promptIdx": 1,
+            "display": {
+              "title": "Hibbard Patient Activation Measure"
+            },
+            "_branch_label_enclosing_screen": "survey/0"
+          },
+          {
+            "_row_num": 5,
+            "type": "finalize",
+            "display": {
+              "text": "Save form"
+            },
+            "_token_type": "prompt",
+            "_type": "finalize",
+            "_branch_label_enclosing_screen": "initial/_screen5",
+            "promptIdx": 2
+          },
+          {
+            "_row_num": 7,
+            "type": "instances",
+            "display": {
+              "text": "Saved instances"
+            },
+            "_token_type": "prompt",
+            "_type": "instances",
+            "_branch_label_enclosing_screen": "initial/_screen7",
+            "promptIdx": 3
+          },
+          {
+            "_token_type": "prompt",
+            "type": "contents",
+            "_type": "contents",
+            "_row_num": 9,
+            "_branch_label_enclosing_screen": "initial/_screen9",
+            "promptIdx": 4
+          }
+        ],
+        "validation_tag_map": {
+          "finalize": []
+        },
+        "operations": [
+          {
+            "_row_num": 2,
+            "clause": "if // start",
+            "condition": "(opendatakit.getCurrentInstanceId() != null)",
+            "_token_type": "goto_label",
+            "_tag_name": "start",
+            "_branch_label": "_then2",
+            "operationIdx": 0
+          },
+          {
+            "clause": "else // start",
+            "_token_type": "goto_label",
+            "_branch_label": "_else6",
+            "_row_num": 6,
+            "operationIdx": 1
+          },
+          {
+            "_row_num": 3,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 2
+          },
+          {
+            "_row_num": 4,
+            "clause": "do section survey",
+            "_token_type": "do_section",
+            "_do_section_name": "survey",
+            "operationIdx": 3
+          },
+          {
+            "_row_num": 5,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(2);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 4
+          },
+          {
+            "clause": "end if // start",
+            "_token_type": "goto_label",
+            "_branch_label": "_endif8",
+            "_row_num": 8,
+            "operationIdx": 5
+          },
+          {
+            "_row_num": 7,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(3);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 6
+          },
+          {
+            "_token_type": "exit_section",
+            "clause": "exit section",
+            "_row_num": 9,
+            "operationIdx": 7
+          },
+          {
+            "_row_num": 9,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(4);\n\nreturn activePromptIndicies;\n}\n",
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 8
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 9,
+            "operationIdx": 9
+          },
+          {
+            "_token_type": "validate",
+            "clause": "validate finalize",
+            "_sweep_name": "finalize",
+            "_row_num": 9,
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 10
+          },
+          {
+            "_token_type": "save_and_terminate",
+            "clause": "save and terminate",
+            "calculation": true,
+            "_row_num": 9,
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 11
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 9,
+            "operationIdx": 12
+          }
+        ],
+        "branch_label_map": {
+          "_then2": 2,
+          "_screen3": 2,
+          "_screen5": 4,
+          "_else6": 6,
+          "_screen7": 6,
+          "_endif8": 7,
+          "_contents": 8,
+          "_screen9": 8,
+          "_finalize": 10
+        }
+      }
+    }
+  }
+}

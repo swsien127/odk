@@ -1,0 +1,98 @@
+<div class="odk-screen{{#unless disableSwipeNavigation}}{{#if enableNavigation}}{{#if enableForwardNavigation}} swipeForwardEnabled{{/if}}{{#if enableBackNavigation}} swipeBackEnabled{{/if}}{{/if}}{{/unless}}" >
+    {{#if showHeader}}
+        <div class="odk-header">
+            <div class="ui-grid-b my-breakpoint {{#if hideNavigationButtonText}}my-breakpoint-no-nav-btn-text{{/if}}">
+                <div class="ui-block-a">
+                    <div class="odk-options-btn">
+                        <a data-role="button" data-rel="popup">{{localize form_title}}</a>
+                    </div>
+                </div>
+                <div class="ui-block-b">
+                    <a class="odk-prev-btn
+                    {{#unless enableBackNavigation}}ui-disabled{{/unless}}"
+                    data-role="button" data-icon="carat-l" data-iconpos="left">{{#unless hideNavigationButtonText}}back{{/unless}}</a> 
+                </div>
+                <div class="ui-block-c">   
+                    <a class="odk-next-btn
+                    {{#unless enableForwardNavigation}}ui-disabled{{/unless}}"
+                    data-role="button" data-icon="carat-r" data-iconpos="right">{{#unless hideNavigationButtonText}}{{#if showAsContinueButton}}continue{{else}}next{{/if}}{{/unless}}</a>               
+                </div>
+            </div>
+        </div>
+    {{/if}}
+
+
+<div data-role="content" class="odk-scroll"><div class="odk-container">
+
+<h2>LOST TO FOLLOW-UP TRACKING FORM</h2>
+
+<div data-role="main" class="ui-content">
+    <form>
+        <fieldset data-role="controlgroup">
+            <legend><div field-name="transport"></div></legend>
+                <div field-name="walking_select"></div>
+                <div field-name="time_walking"></div>
+                <div field-name="cost_walking"></div>
+                
+                <div field-name="bicycle_select"></div>
+                <div field-name="time_bicycle"></div>
+                <div field-name="cost_bicycle"></div>
+                
+                <div field-name="boda_boda_select"></div>
+                <div field-name="time_boda_boda"></div>
+                <div field-name="cost_boda_boda"></div>
+                
+                <div field-name="piki_picki_select"></div> 
+                <div field-name="time_piki_piki"></div>
+                <div field-name="cost_piki_piki"></div>
+                
+                <div field-name="tuk_tuk_select"></div> 
+                <div field-name="time_tuk_tuk"></div>
+                <div field-name="cost_tuk_tuk"></div>
+                
+                <div field-name="matatu_select"></div> 
+                <div field-name="time_matatu"></div>
+                <div field-name="cost_matatu"></div>
+                
+                <div field-name="bus_select"></div> 
+                <div field-name="time_bus"></div>
+                <div field-name="cost_bus"></div>
+                
+                <div field-name="taxi_select"></div> 
+                <div field-name="time_taxi"></div>
+                <div field-name="cost_taxi"></div>
+                
+                <div field-name="car_select"></div> 
+                <div field-name="time_car"></div>
+                <div field-name="cost_car"></div>
+                
+                <div field-name="boat_select"></div> 
+                <div field-name="time_boat"></div>
+                <div field-name="cost_boat"></div>
+        </fieldset>
+    </form>
+</div>
+
+</div></div>
+  
+
+{{! emit the footer always -- so that we get full-screen content area }}
+{{#if showFooter}} 
+    <div class="odk-footer">
+        <div class="ui-grid-b my-breakpoint {{#if hideNavigationButtonText}}my-breakpoint-no-nav-btn-text{{/if}}">
+            <div class="ui-block-a">
+                <a class="odk-prev-btn
+                {{#unless enableBackNavigation}}ui-disabled{{/unless}}"
+                data-role="button" data-icon="carat-l" data-iconpos="left" style="display:block;">{{#unless hideNavigationButtonText}}back{{/unless}}</a> 
+            </div>
+            <div class="ui-block-b">
+
+            </div>
+            <div class="ui-block-c">   
+                <a class="odk-next-btn
+                {{#unless enableForwardNavigation}}ui-disabled{{/unless}}"
+                data-role="button" data-icon="carat-r" data-iconpos="right" style="display:block;">{{#unless hideNavigationButtonText}}{{#if showAsContinueButton}}continue{{else}}next{{/if}}{{/unless}}</a>               
+            </div>
+        </div>
+    </div>
+{{/if}}

@@ -1,0 +1,2951 @@
+{
+  "xlsx": {
+    "survey": [
+      {
+        "clause": "begin screen",
+        "_row_num": 2
+      },
+      {
+        "type": "note",
+        "name": "title_1",
+        "display": {
+          "text": "Administrative",
+          "title": "Administrative"
+        },
+        "_row_num": 3
+      },
+      {
+        "type": "date",
+        "name": "visit_date",
+        "display": {
+          "text": "Date of visit:"
+        },
+        "_row_num": 4
+      },
+      {
+        "type": "text",
+        "name": "interviewer_id",
+        "display": {
+          "text": "Interviewer identifier:"
+        },
+        "_row_num": 5
+      },
+      {
+        "type": "text",
+        "name": "patient_id",
+        "display": {
+          "text": "Patient identifier:"
+        },
+        "_row_num": 6
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 7
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 8
+      },
+      {
+        "type": "note",
+        "name": "title_2",
+        "display": {
+          "text": "<strong>Demographics</strong>",
+          "title": "Demographics"
+        },
+        "_row_num": 9
+      },
+      {
+        "type": "select_one_dropdown",
+        "values_list": "clinic_list",
+        "name": "clinic",
+        "display": {
+          "text": "Clinic:"
+        },
+        "_row_num": 10
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 11
+      },
+      {
+        "type": "date",
+        "name": "birth_date",
+        "display": {
+          "text": "Date of birth:"
+        },
+        "_row_num": 12
+      },
+      {
+        "type": "select_one",
+        "values_list": "sexes",
+        "name": "sex",
+        "display": {
+          "text": "Gender:"
+        },
+        "_row_num": 13
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 14
+      },
+      {
+        "type": "select_one",
+        "values_list": "occupation_list",
+        "name": "occupation",
+        "display": {
+          "text": "Primary occupation:"
+        },
+        "_row_num": 15
+      },
+      {
+        "clause": "if",
+        "condition": "calculates.expand_other_occupation()",
+        "_row_num": 16
+      },
+      {
+        "type": "text",
+        "name": "other_occupation",
+        "display": {
+          "text": "Specify:"
+        },
+        "_row_num": 17
+      },
+      {
+        "clause": "end if",
+        "_row_num": 18
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 19
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 20
+      },
+      {
+        "type": "note",
+        "name": "title_3",
+        "display": {
+          "text": "<strong>Details of travel to today's visit</strong>",
+          "title": "Details of travel to today's visit"
+        },
+        "_row_num": 21
+      },
+      {
+        "type": "select_one",
+        "values_list": "from_list",
+        "name": "journey_start",
+        "display": {
+          "text": "When you set out to come to this clinic visit, from where did you start your journey?"
+        },
+        "_row_num": 22
+      },
+      {
+        "clause": "if",
+        "condition": "calculates.expand_other_journey_start()",
+        "_row_num": 23
+      },
+      {
+        "type": "text",
+        "name": "other_journey_start",
+        "display": {
+          "text": "Specify:"
+        },
+        "_row_num": 24
+      },
+      {
+        "clause": "end if",
+        "_row_num": 25
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 26
+      },
+      {
+        "type": "text",
+        "name": "sub_country",
+        "display": {
+          "text": "Which sub-country and constituency is that?"
+        },
+        "_row_num": 27
+      },
+      {
+        "type": "decimal",
+        "name": "distance",
+        "display": {
+          "text": "How far did you travel to get to your clinic visit?"
+        },
+        "_row_num": 28
+      },
+      {
+        "type": "datetime",
+        "name": "leave_time",
+        "display": {
+          "text": "What date and time did you leave for the clinic?"
+        },
+        "_row_num": 29
+      },
+      {
+        "type": "datetime",
+        "name": "arrive_time",
+        "display": {
+          "text": "What time did you arrive at the clinic?"
+        },
+        "_row_num": 30
+      },
+      {
+        "type": "datetime",
+        "name": "seen_time",
+        "display": {
+          "text": "When were you first seen by a doctor or nurse?"
+        },
+        "_row_num": 31
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 32
+      },
+      {
+        "type": "note",
+        "name": "transport",
+        "display": {
+          "text": "Which of the following modes of transport did you use to get to clinic for today's visit?"
+        },
+        "_row_num": 33
+      },
+      {
+        "type": "select_multiple",
+        "values_list": "walking_list",
+        "name": "walking_select",
+        "_row_num": 34
+      },
+      {
+        "clause": "if",
+        "condition": "calculates.expand_walking()",
+        "_row_num": 35
+      },
+      {
+        "type": "integer",
+        "name": "time_walking",
+        "display": {
+          "text": "Time (how long it took one way)"
+        },
+        "_row_num": 36
+      },
+      {
+        "type": "integer",
+        "name": "cost_walking",
+        "display": {
+          "text": "Cost (in KSH, if no cost enter 0)"
+        },
+        "_row_num": 37
+      },
+      {
+        "clause": "end if",
+        "_row_num": 38
+      },
+      {
+        "type": "select_multiple",
+        "values_list": "bicycle_list",
+        "name": "bicycle_select",
+        "_row_num": 39
+      },
+      {
+        "clause": "if",
+        "condition": "calculates.expand_bicycle()",
+        "_row_num": 40
+      },
+      {
+        "type": "integer",
+        "name": "time_bicycle",
+        "display": {
+          "text": "Time (how long it took one way)"
+        },
+        "_row_num": 41
+      },
+      {
+        "type": "integer",
+        "name": "cost_bicycle",
+        "display": {
+          "text": "Cost (in KSH, if no cost enter 0)"
+        },
+        "_row_num": 42
+      },
+      {
+        "clause": "end if",
+        "_row_num": 43
+      },
+      {
+        "type": "select_multiple",
+        "values_list": "boda_boda_list",
+        "name": "boda_boda_select",
+        "_row_num": 44
+      },
+      {
+        "clause": "if",
+        "condition": "calculates.expand_boda_boda()",
+        "_row_num": 45
+      },
+      {
+        "type": "integer",
+        "name": "time_boda_boda",
+        "display": {
+          "text": "Time (how long it took one way)"
+        },
+        "_row_num": 46
+      },
+      {
+        "type": "integer",
+        "name": "cost_boda_boda",
+        "display": {
+          "text": "Cost (in KSH, if no cost enter 0)"
+        },
+        "_row_num": 47
+      },
+      {
+        "clause": "end if",
+        "_row_num": 48
+      },
+      {
+        "type": "select_multiple",
+        "values_list": "piki_piki_list",
+        "name": "piki_piki_select",
+        "_row_num": 49
+      },
+      {
+        "clause": "if",
+        "condition": "calculates.expand_piki_piki()",
+        "_row_num": 50
+      },
+      {
+        "type": "integer",
+        "name": "time_piki_piki",
+        "display": {
+          "text": "Time (how long it took one way)"
+        },
+        "_row_num": 51
+      },
+      {
+        "type": "integer",
+        "name": "cost_piki_piki",
+        "display": {
+          "text": "Cost (in KSH, if no cost enter 0)"
+        },
+        "_row_num": 52
+      },
+      {
+        "clause": "end if",
+        "_row_num": 53
+      },
+      {
+        "type": "select_multiple",
+        "values_list": "tuk_tuk_list",
+        "name": "tuk_tuk_select",
+        "_row_num": 54
+      },
+      {
+        "clause": "if",
+        "condition": "calculates.expand_tuk_tuk()",
+        "_row_num": 55
+      },
+      {
+        "type": "integer",
+        "name": "time_tuk_tuk",
+        "display": {
+          "text": "Time (how long it took one way)"
+        },
+        "_row_num": 56
+      },
+      {
+        "type": "integer",
+        "name": "cost_tuk_tuk",
+        "display": {
+          "text": "Cost (in KSH, if no cost enter 0)"
+        },
+        "_row_num": 57
+      },
+      {
+        "clause": "end if",
+        "_row_num": 58
+      },
+      {
+        "type": "select_multiple",
+        "values_list": "matatu_list",
+        "name": "matatu_select",
+        "_row_num": 59
+      },
+      {
+        "clause": "if",
+        "condition": "calculates.expand_matatu()",
+        "_row_num": 60
+      },
+      {
+        "type": "integer",
+        "name": "time_matatu",
+        "display": {
+          "text": "Time (how long it took one way)"
+        },
+        "_row_num": 61
+      },
+      {
+        "type": "integer",
+        "name": "cost_matatu",
+        "display": {
+          "text": "Cost (in KSH, if no cost enter 0)"
+        },
+        "_row_num": 62
+      },
+      {
+        "clause": "end if",
+        "_row_num": 63
+      },
+      {
+        "type": "select_multiple",
+        "values_list": "bus_list",
+        "name": "bus_select",
+        "_row_num": 64
+      },
+      {
+        "clause": "if",
+        "condition": "calculates.expand_bus()",
+        "_row_num": 65
+      },
+      {
+        "type": "integer",
+        "name": "time_bus",
+        "display": {
+          "text": "Time (how long it took one way)"
+        },
+        "_row_num": 66
+      },
+      {
+        "type": "integer",
+        "name": "cost_bus",
+        "display": {
+          "text": "Cost (in KSH, if no cost enter 0)"
+        },
+        "_row_num": 67
+      },
+      {
+        "clause": "end if",
+        "_row_num": 68
+      },
+      {
+        "type": "select_multiple",
+        "values_list": "taxi_list",
+        "name": "taxi_select",
+        "_row_num": 69
+      },
+      {
+        "clause": "if",
+        "condition": "calculates.expand_taxi()",
+        "_row_num": 70
+      },
+      {
+        "type": "integer",
+        "name": "time_taxi",
+        "display": {
+          "text": "Time (how long it took one way)"
+        },
+        "_row_num": 71
+      },
+      {
+        "type": "integer",
+        "name": "cost_taxi",
+        "display": {
+          "text": "Cost (in KSH, if no cost enter 0)"
+        },
+        "_row_num": 72
+      },
+      {
+        "clause": "end if",
+        "_row_num": 73
+      },
+      {
+        "type": "select_multiple",
+        "values_list": "car_list",
+        "name": "car_select",
+        "_row_num": 74
+      },
+      {
+        "clause": "if",
+        "condition": "calculates.expand_car()",
+        "_row_num": 75
+      },
+      {
+        "type": "integer",
+        "name": "time_car",
+        "display": {
+          "text": "Time (how long it took one way)"
+        },
+        "_row_num": 76
+      },
+      {
+        "type": "integer",
+        "name": "cost_car",
+        "display": {
+          "text": "Cost (in KSH, if no cost enter 0)"
+        },
+        "_row_num": 77
+      },
+      {
+        "clause": "end if",
+        "_row_num": 78
+      },
+      {
+        "type": "select_multiple",
+        "values_list": "boat_list",
+        "name": "boat_select",
+        "_row_num": 79
+      },
+      {
+        "clause": "if",
+        "condition": "calculates.expand_boat()",
+        "_row_num": 80
+      },
+      {
+        "type": "integer",
+        "name": "time_boat",
+        "display": {
+          "text": "Time (how long it took one way)"
+        },
+        "_row_num": 81
+      },
+      {
+        "type": "integer",
+        "name": "cost_boat",
+        "display": {
+          "text": "Cost (in KSH, if no cost enter 0)"
+        },
+        "_row_num": 82
+      },
+      {
+        "clause": "end if",
+        "_row_num": 83
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 84
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 85
+      },
+      {
+        "type": "note",
+        "name": "ancillary",
+        "display": {
+          "text": "<strong>Ancillary costs</strong>"
+        },
+        "_row_num": 86
+      },
+      {
+        "type": "integer",
+        "name": "medical_cost",
+        "display": {
+          "text": "For this clinic visit, how many shillings did you spend on medical costs?",
+          "hint": "e.g. HIV testing, medication, lab tests, maternal/child health"
+        },
+        "_row_num": 87
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 88
+      },
+      {
+        "type": "integer",
+        "name": "hours_away",
+        "display": {
+          "text": "How many hours were you away from home in order to seek and receive care?",
+          "hint": "Overall time, including the estimated time need to travel back home"
+        },
+        "_row_num": 89
+      },
+      {
+        "type": "integer",
+        "name": "earning",
+        "display": {
+          "text": "How much money would you have earned today had you not had to spend the time to clinic?",
+          "hint": "Record \"0\" if the patient doesn't have a paid job (in KSH)"
+        },
+        "_row_num": 90
+      }
+    ],
+    "choices": [
+      {
+        "choice_list_name": "clinic_list",
+        "data_value": "KLM",
+        "display": {
+          "text": "Lumumba(KLM)"
+        },
+        "_row_num": 2
+      },
+      {
+        "choice_list_name": "clinic_list",
+        "data_value": "KPP",
+        "display": {
+          "text": "Pandipieri(KPP)"
+        },
+        "_row_num": 3
+      },
+      {
+        "choice_list_name": "clinic_list",
+        "data_value": "RDH",
+        "display": {
+          "text": "Rongo District Hospital (RDH)"
+        },
+        "_row_num": 4
+      },
+      {
+        "choice_list_name": "clinic_list",
+        "data_value": "MDH",
+        "display": {
+          "text": "Migori District Hospital (MDH)"
+        },
+        "_row_num": 5
+      },
+      {
+        "choice_list_name": "sexes",
+        "data_value": "male",
+        "display": {
+          "text": "Male"
+        },
+        "_row_num": 7
+      },
+      {
+        "choice_list_name": "sexes",
+        "data_value": "female",
+        "display": {
+          "text": "Female"
+        },
+        "_row_num": 8
+      },
+      {
+        "choice_list_name": "occupation_list",
+        "data_value": "farmer",
+        "display": {
+          "text": "Farmer"
+        },
+        "_row_num": 10
+      },
+      {
+        "choice_list_name": "occupation_list",
+        "data_value": "teacher",
+        "display": {
+          "text": "Teacher"
+        },
+        "_row_num": 11
+      },
+      {
+        "choice_list_name": "occupation_list",
+        "data_value": "fisherfolk",
+        "display": {
+          "text": "Fisherfolk"
+        },
+        "_row_num": 12
+      },
+      {
+        "choice_list_name": "occupation_list",
+        "data_value": "housework",
+        "display": {
+          "text": "Housework"
+        },
+        "_row_num": 13
+      },
+      {
+        "choice_list_name": "occupation_list",
+        "data_value": "business",
+        "display": {
+          "text": "Small business owner/trader"
+        },
+        "_row_num": 14
+      },
+      {
+        "choice_list_name": "occupation_list",
+        "data_value": "driver",
+        "display": {
+          "text": "Driver"
+        },
+        "_row_num": 15
+      },
+      {
+        "choice_list_name": "occupation_list",
+        "data_value": "professional",
+        "display": {
+          "text": "Professional"
+        },
+        "_row_num": 16
+      },
+      {
+        "choice_list_name": "occupation_list",
+        "data_value": "security",
+        "display": {
+          "text": "Security"
+        },
+        "_row_num": 17
+      },
+      {
+        "choice_list_name": "occupation_list",
+        "data_value": "labour",
+        "display": {
+          "text": "Causal labour"
+        },
+        "_row_num": 18
+      },
+      {
+        "choice_list_name": "occupation_list",
+        "data_value": "student",
+        "display": {
+          "text": "Student"
+        },
+        "_row_num": 19
+      },
+      {
+        "choice_list_name": "occupation_list",
+        "data_value": "unemployed",
+        "display": {
+          "text": "Unemployed"
+        },
+        "_row_num": 20
+      },
+      {
+        "choice_list_name": "occupation_list",
+        "data_value": "other_occupation",
+        "display": {
+          "text": "Other"
+        },
+        "_row_num": 21
+      },
+      {
+        "choice_list_name": "from_list",
+        "data_value": "home",
+        "display": {
+          "text": "Home"
+        },
+        "_row_num": 23
+      },
+      {
+        "choice_list_name": "from_list",
+        "data_value": "work",
+        "display": {
+          "text": "Work"
+        },
+        "_row_num": 24
+      },
+      {
+        "choice_list_name": "from_list",
+        "data_value": "school",
+        "display": {
+          "text": "School"
+        },
+        "_row_num": 25
+      },
+      {
+        "choice_list_name": "from_list",
+        "data_value": "prison",
+        "display": {
+          "text": "Prison"
+        },
+        "_row_num": 26
+      },
+      {
+        "choice_list_name": "from_list",
+        "data_value": "other_journey_start",
+        "display": {
+          "text": "Other"
+        },
+        "_row_num": 27
+      },
+      {
+        "choice_list_name": "walking_list",
+        "data_value": "walking",
+        "display": {
+          "text": "Walking"
+        },
+        "_row_num": 29
+      },
+      {
+        "choice_list_name": "bicycle_list",
+        "data_value": "bicycle",
+        "display": {
+          "text": "Bicycle (self rode)"
+        },
+        "_row_num": 30
+      },
+      {
+        "choice_list_name": "boda_boda_list",
+        "data_value": "boda_boda",
+        "display": {
+          "text": "Boda Boda"
+        },
+        "_row_num": 31
+      },
+      {
+        "choice_list_name": "piki_piki_list",
+        "data_value": "piki_piki",
+        "display": {
+          "text": "Piki Piki"
+        },
+        "_row_num": 32
+      },
+      {
+        "choice_list_name": "tuk_tuk_list",
+        "data_value": "tuk_tuk",
+        "display": {
+          "text": "Tuk Tuk"
+        },
+        "_row_num": 33
+      },
+      {
+        "choice_list_name": "matatu_list",
+        "data_value": "matatu",
+        "display": {
+          "text": "Matatu"
+        },
+        "_row_num": 34
+      },
+      {
+        "choice_list_name": "bus_list",
+        "data_value": "bus",
+        "display": {
+          "text": "Long distance bus"
+        },
+        "_row_num": 35
+      },
+      {
+        "choice_list_name": "taxi_list",
+        "data_value": "taxi",
+        "display": {
+          "text": "Taxi"
+        },
+        "_row_num": 36
+      },
+      {
+        "choice_list_name": "car_list",
+        "data_value": "car",
+        "display": {
+          "text": "Car (client/acquaintance drove)"
+        },
+        "_row_num": 37
+      },
+      {
+        "choice_list_name": "boat_list",
+        "data_value": "boat",
+        "display": {
+          "text": "Boat"
+        },
+        "_row_num": 38
+      }
+    ],
+    "calculates": [
+      {
+        "calculation_name": "expand_other_occupation",
+        "calculation": "selected(data('occupation'), 'other_occupation')",
+        "_row_num": 2
+      },
+      {
+        "calculation_name": "expand_other_journey_start",
+        "calculation": "selected(data('journey_start'), 'other_journey_start')",
+        "_row_num": 3
+      },
+      {
+        "calculation_name": "expand_walking",
+        "calculation": "selected(data('walking_select'), 'walking')",
+        "_row_num": 5
+      },
+      {
+        "calculation_name": "expand_bicycle",
+        "calculation": "selected(data('bicycle_select'), 'bicycle')",
+        "_row_num": 6
+      },
+      {
+        "calculation_name": "expand_boda_boda",
+        "calculation": "selected(data('boda_boda_select'), 'boda_boda')",
+        "_row_num": 7
+      },
+      {
+        "calculation_name": "expand_piki_piki",
+        "calculation": "selected(data('piki_piki_select'), 'piki_piki')",
+        "_row_num": 8
+      },
+      {
+        "calculation_name": "expand_tuk_tuk",
+        "calculation": "selected(data('tuk_tuk_select'), 'tuk_tuk')",
+        "_row_num": 9
+      },
+      {
+        "calculation_name": "expand_matatu",
+        "calculation": "selected(data('matatu_select'), 'matatu')",
+        "_row_num": 10
+      },
+      {
+        "calculation_name": "expand_bus",
+        "calculation": "selected(data('bus_select'), 'bus')",
+        "_row_num": 11
+      },
+      {
+        "calculation_name": "expand_taxi",
+        "calculation": "selected(data('taxi_select'), 'taxi')",
+        "_row_num": 12
+      },
+      {
+        "calculation_name": "expand_car",
+        "calculation": "selected(data('car_select'), 'car')",
+        "_row_num": 13
+      },
+      {
+        "calculation_name": "expand_boat",
+        "calculation": "selected(data('boat_select'), 'boat')",
+        "_row_num": 14
+      }
+    ],
+    "settings": [
+      {
+        "setting_name": "table_id",
+        "value": "adapt_r_survey",
+        "_row_num": 2
+      },
+      {
+        "setting_name": "form_id",
+        "value": "adapt_r_survey",
+        "_row_num": 3
+      },
+      {
+        "setting_name": "form_version",
+        "value": 20141006,
+        "_row_num": 4
+      },
+      {
+        "setting_name": "survey",
+        "display": {
+          "title": "Adapt_R Survey Questions on Patient-Borne Costs"
+        },
+        "_row_num": 5
+      }
+    ]
+  },
+  "specification": {
+    "column_types": {
+      "_screen_block": "function",
+      "condition": "formula",
+      "constraint": "formula",
+      "required": "formula",
+      "calculation": "formula",
+      "auxillaryHash": "formula",
+      "selectionArgs": "formula",
+      "url": "formula",
+      "uri": "formula",
+      "callback": "formula(context)",
+      "choice_filter": "formula(choice_item)",
+      "templatePath": "requirejs_path",
+      "image": "app_path_localized",
+      "audio": "app_path_localized",
+      "video": "app_path_localized"
+    },
+    "settings": {
+      "table_id": {
+        "setting_name": "table_id",
+        "value": "adapt_r_survey",
+        "_row_num": 2
+      },
+      "form_id": {
+        "setting_name": "form_id",
+        "value": "adapt_r_survey",
+        "_row_num": 3
+      },
+      "form_version": {
+        "setting_name": "form_version",
+        "value": 20141006,
+        "_row_num": 4
+      },
+      "survey": {
+        "setting_name": "survey",
+        "display": {
+          "title": "Adapt_R Survey Questions on Patient-Borne Costs"
+        },
+        "_row_num": 5
+      },
+      "_locales": {
+        "setting_name": "_locales",
+        "_row_num": 5,
+        "value": [
+          {
+            "display": {
+              "text": "default"
+            },
+            "name": "default"
+          }
+        ]
+      },
+      "_default_locale": {
+        "setting_name": "_default_locale",
+        "_row_num": 5,
+        "value": "default"
+      },
+      "initial": {
+        "setting_name": "survey",
+        "display": {
+          "title": "Adapt_R Survey Questions on Patient-Borne Costs"
+        },
+        "_row_num": 5
+      }
+    },
+    "choices": {
+      "clinic_list": [
+        {
+          "choice_list_name": "clinic_list",
+          "data_value": "KLM",
+          "display": {
+            "text": "Lumumba(KLM)"
+          },
+          "_row_num": 2
+        },
+        {
+          "choice_list_name": "clinic_list",
+          "data_value": "KPP",
+          "display": {
+            "text": "Pandipieri(KPP)"
+          },
+          "_row_num": 3
+        },
+        {
+          "choice_list_name": "clinic_list",
+          "data_value": "RDH",
+          "display": {
+            "text": "Rongo District Hospital (RDH)"
+          },
+          "_row_num": 4
+        },
+        {
+          "choice_list_name": "clinic_list",
+          "data_value": "MDH",
+          "display": {
+            "text": "Migori District Hospital (MDH)"
+          },
+          "_row_num": 5
+        }
+      ],
+      "sexes": [
+        {
+          "choice_list_name": "sexes",
+          "data_value": "male",
+          "display": {
+            "text": "Male"
+          },
+          "_row_num": 7
+        },
+        {
+          "choice_list_name": "sexes",
+          "data_value": "female",
+          "display": {
+            "text": "Female"
+          },
+          "_row_num": 8
+        }
+      ],
+      "occupation_list": [
+        {
+          "choice_list_name": "occupation_list",
+          "data_value": "farmer",
+          "display": {
+            "text": "Farmer"
+          },
+          "_row_num": 10
+        },
+        {
+          "choice_list_name": "occupation_list",
+          "data_value": "teacher",
+          "display": {
+            "text": "Teacher"
+          },
+          "_row_num": 11
+        },
+        {
+          "choice_list_name": "occupation_list",
+          "data_value": "fisherfolk",
+          "display": {
+            "text": "Fisherfolk"
+          },
+          "_row_num": 12
+        },
+        {
+          "choice_list_name": "occupation_list",
+          "data_value": "housework",
+          "display": {
+            "text": "Housework"
+          },
+          "_row_num": 13
+        },
+        {
+          "choice_list_name": "occupation_list",
+          "data_value": "business",
+          "display": {
+            "text": "Small business owner/trader"
+          },
+          "_row_num": 14
+        },
+        {
+          "choice_list_name": "occupation_list",
+          "data_value": "driver",
+          "display": {
+            "text": "Driver"
+          },
+          "_row_num": 15
+        },
+        {
+          "choice_list_name": "occupation_list",
+          "data_value": "professional",
+          "display": {
+            "text": "Professional"
+          },
+          "_row_num": 16
+        },
+        {
+          "choice_list_name": "occupation_list",
+          "data_value": "security",
+          "display": {
+            "text": "Security"
+          },
+          "_row_num": 17
+        },
+        {
+          "choice_list_name": "occupation_list",
+          "data_value": "labour",
+          "display": {
+            "text": "Causal labour"
+          },
+          "_row_num": 18
+        },
+        {
+          "choice_list_name": "occupation_list",
+          "data_value": "student",
+          "display": {
+            "text": "Student"
+          },
+          "_row_num": 19
+        },
+        {
+          "choice_list_name": "occupation_list",
+          "data_value": "unemployed",
+          "display": {
+            "text": "Unemployed"
+          },
+          "_row_num": 20
+        },
+        {
+          "choice_list_name": "occupation_list",
+          "data_value": "other_occupation",
+          "display": {
+            "text": "Other"
+          },
+          "_row_num": 21
+        }
+      ],
+      "from_list": [
+        {
+          "choice_list_name": "from_list",
+          "data_value": "home",
+          "display": {
+            "text": "Home"
+          },
+          "_row_num": 23
+        },
+        {
+          "choice_list_name": "from_list",
+          "data_value": "work",
+          "display": {
+            "text": "Work"
+          },
+          "_row_num": 24
+        },
+        {
+          "choice_list_name": "from_list",
+          "data_value": "school",
+          "display": {
+            "text": "School"
+          },
+          "_row_num": 25
+        },
+        {
+          "choice_list_name": "from_list",
+          "data_value": "prison",
+          "display": {
+            "text": "Prison"
+          },
+          "_row_num": 26
+        },
+        {
+          "choice_list_name": "from_list",
+          "data_value": "other_journey_start",
+          "display": {
+            "text": "Other"
+          },
+          "_row_num": 27
+        }
+      ],
+      "walking_list": [
+        {
+          "choice_list_name": "walking_list",
+          "data_value": "walking",
+          "display": {
+            "text": "Walking"
+          },
+          "_row_num": 29
+        }
+      ],
+      "bicycle_list": [
+        {
+          "choice_list_name": "bicycle_list",
+          "data_value": "bicycle",
+          "display": {
+            "text": "Bicycle (self rode)"
+          },
+          "_row_num": 30
+        }
+      ],
+      "boda_boda_list": [
+        {
+          "choice_list_name": "boda_boda_list",
+          "data_value": "boda_boda",
+          "display": {
+            "text": "Boda Boda"
+          },
+          "_row_num": 31
+        }
+      ],
+      "piki_piki_list": [
+        {
+          "choice_list_name": "piki_piki_list",
+          "data_value": "piki_piki",
+          "display": {
+            "text": "Piki Piki"
+          },
+          "_row_num": 32
+        }
+      ],
+      "tuk_tuk_list": [
+        {
+          "choice_list_name": "tuk_tuk_list",
+          "data_value": "tuk_tuk",
+          "display": {
+            "text": "Tuk Tuk"
+          },
+          "_row_num": 33
+        }
+      ],
+      "matatu_list": [
+        {
+          "choice_list_name": "matatu_list",
+          "data_value": "matatu",
+          "display": {
+            "text": "Matatu"
+          },
+          "_row_num": 34
+        }
+      ],
+      "bus_list": [
+        {
+          "choice_list_name": "bus_list",
+          "data_value": "bus",
+          "display": {
+            "text": "Long distance bus"
+          },
+          "_row_num": 35
+        }
+      ],
+      "taxi_list": [
+        {
+          "choice_list_name": "taxi_list",
+          "data_value": "taxi",
+          "display": {
+            "text": "Taxi"
+          },
+          "_row_num": 36
+        }
+      ],
+      "car_list": [
+        {
+          "choice_list_name": "car_list",
+          "data_value": "car",
+          "display": {
+            "text": "Car (client/acquaintance drove)"
+          },
+          "_row_num": 37
+        }
+      ],
+      "boat_list": [
+        {
+          "choice_list_name": "boat_list",
+          "data_value": "boat",
+          "display": {
+            "text": "Boat"
+          },
+          "_row_num": 38
+        }
+      ]
+    },
+    "queries": {},
+    "calculates": {
+      "expand_other_occupation": {
+        "calculation_name": "expand_other_occupation",
+        "calculation": "selected(data('occupation'), 'other_occupation')",
+        "_row_num": 2
+      },
+      "expand_other_journey_start": {
+        "calculation_name": "expand_other_journey_start",
+        "calculation": "selected(data('journey_start'), 'other_journey_start')",
+        "_row_num": 3
+      },
+      "expand_walking": {
+        "calculation_name": "expand_walking",
+        "calculation": "selected(data('walking_select'), 'walking')",
+        "_row_num": 5
+      },
+      "expand_bicycle": {
+        "calculation_name": "expand_bicycle",
+        "calculation": "selected(data('bicycle_select'), 'bicycle')",
+        "_row_num": 6
+      },
+      "expand_boda_boda": {
+        "calculation_name": "expand_boda_boda",
+        "calculation": "selected(data('boda_boda_select'), 'boda_boda')",
+        "_row_num": 7
+      },
+      "expand_piki_piki": {
+        "calculation_name": "expand_piki_piki",
+        "calculation": "selected(data('piki_piki_select'), 'piki_piki')",
+        "_row_num": 8
+      },
+      "expand_tuk_tuk": {
+        "calculation_name": "expand_tuk_tuk",
+        "calculation": "selected(data('tuk_tuk_select'), 'tuk_tuk')",
+        "_row_num": 9
+      },
+      "expand_matatu": {
+        "calculation_name": "expand_matatu",
+        "calculation": "selected(data('matatu_select'), 'matatu')",
+        "_row_num": 10
+      },
+      "expand_bus": {
+        "calculation_name": "expand_bus",
+        "calculation": "selected(data('bus_select'), 'bus')",
+        "_row_num": 11
+      },
+      "expand_taxi": {
+        "calculation_name": "expand_taxi",
+        "calculation": "selected(data('taxi_select'), 'taxi')",
+        "_row_num": 12
+      },
+      "expand_car": {
+        "calculation_name": "expand_car",
+        "calculation": "selected(data('car_select'), 'car')",
+        "_row_num": 13
+      },
+      "expand_boat": {
+        "calculation_name": "expand_boat",
+        "calculation": "selected(data('boat_select'), 'boat')",
+        "_row_num": 14
+      }
+    },
+    "model": {
+      "visit_date": {
+        "_defn": [
+          {
+            "_row_num": 4,
+            "section_name": "survey"
+          }
+        ],
+        "type": "object",
+        "elementType": "date",
+        "elementKey": "visit_date"
+      },
+      "interviewer_id": {
+        "_defn": [
+          {
+            "_row_num": 5,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "interviewer_id"
+      },
+      "patient_id": {
+        "_defn": [
+          {
+            "_row_num": 6,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "patient_id"
+      },
+      "clinic": {
+        "_defn": [
+          {
+            "_row_num": 10,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "clinic_list",
+        "elementKey": "clinic"
+      },
+      "birth_date": {
+        "_defn": [
+          {
+            "_row_num": 12,
+            "section_name": "survey"
+          }
+        ],
+        "type": "object",
+        "elementType": "date",
+        "elementKey": "birth_date"
+      },
+      "sex": {
+        "_defn": [
+          {
+            "_row_num": 13,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "sexes",
+        "elementKey": "sex"
+      },
+      "occupation": {
+        "_defn": [
+          {
+            "_row_num": 15,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "occupation_list",
+        "elementKey": "occupation"
+      },
+      "other_occupation": {
+        "_defn": [
+          {
+            "_row_num": 17,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "other_occupation"
+      },
+      "journey_start": {
+        "_defn": [
+          {
+            "_row_num": 22,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "valuesList": "from_list",
+        "elementKey": "journey_start"
+      },
+      "other_journey_start": {
+        "_defn": [
+          {
+            "_row_num": 24,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "other_journey_start"
+      },
+      "sub_country": {
+        "_defn": [
+          {
+            "_row_num": 27,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "sub_country"
+      },
+      "distance": {
+        "_defn": [
+          {
+            "_row_num": 28,
+            "section_name": "survey"
+          }
+        ],
+        "type": "number",
+        "elementKey": "distance"
+      },
+      "leave_time": {
+        "_defn": [
+          {
+            "_row_num": 29,
+            "section_name": "survey"
+          }
+        ],
+        "type": "object",
+        "elementType": "dateTime",
+        "elementKey": "leave_time"
+      },
+      "arrive_time": {
+        "_defn": [
+          {
+            "_row_num": 30,
+            "section_name": "survey"
+          }
+        ],
+        "type": "object",
+        "elementType": "dateTime",
+        "elementKey": "arrive_time"
+      },
+      "seen_time": {
+        "_defn": [
+          {
+            "_row_num": 31,
+            "section_name": "survey"
+          }
+        ],
+        "type": "object",
+        "elementType": "dateTime",
+        "elementKey": "seen_time"
+      },
+      "walking_select": {
+        "_defn": [
+          {
+            "_row_num": 34,
+            "section_name": "survey"
+          }
+        ],
+        "type": "array",
+        "items": {
+          "type": "string",
+          "elementKey": "walking_select_items"
+        },
+        "valuesList": "walking_list",
+        "elementKey": "walking_select"
+      },
+      "time_walking": {
+        "_defn": [
+          {
+            "_row_num": 36,
+            "section_name": "survey"
+          }
+        ],
+        "type": "integer",
+        "elementKey": "time_walking"
+      },
+      "cost_walking": {
+        "_defn": [
+          {
+            "_row_num": 37,
+            "section_name": "survey"
+          }
+        ],
+        "type": "integer",
+        "elementKey": "cost_walking"
+      },
+      "bicycle_select": {
+        "_defn": [
+          {
+            "_row_num": 39,
+            "section_name": "survey"
+          }
+        ],
+        "type": "array",
+        "items": {
+          "type": "string",
+          "elementKey": "bicycle_select_items"
+        },
+        "valuesList": "bicycle_list",
+        "elementKey": "bicycle_select"
+      },
+      "time_bicycle": {
+        "_defn": [
+          {
+            "_row_num": 41,
+            "section_name": "survey"
+          }
+        ],
+        "type": "integer",
+        "elementKey": "time_bicycle"
+      },
+      "cost_bicycle": {
+        "_defn": [
+          {
+            "_row_num": 42,
+            "section_name": "survey"
+          }
+        ],
+        "type": "integer",
+        "elementKey": "cost_bicycle"
+      },
+      "boda_boda_select": {
+        "_defn": [
+          {
+            "_row_num": 44,
+            "section_name": "survey"
+          }
+        ],
+        "type": "array",
+        "items": {
+          "type": "string",
+          "elementKey": "boda_boda_select_items"
+        },
+        "valuesList": "boda_boda_list",
+        "elementKey": "boda_boda_select"
+      },
+      "time_boda_boda": {
+        "_defn": [
+          {
+            "_row_num": 46,
+            "section_name": "survey"
+          }
+        ],
+        "type": "integer",
+        "elementKey": "time_boda_boda"
+      },
+      "cost_boda_boda": {
+        "_defn": [
+          {
+            "_row_num": 47,
+            "section_name": "survey"
+          }
+        ],
+        "type": "integer",
+        "elementKey": "cost_boda_boda"
+      },
+      "piki_piki_select": {
+        "_defn": [
+          {
+            "_row_num": 49,
+            "section_name": "survey"
+          }
+        ],
+        "type": "array",
+        "items": {
+          "type": "string",
+          "elementKey": "piki_piki_select_items"
+        },
+        "valuesList": "piki_piki_list",
+        "elementKey": "piki_piki_select"
+      },
+      "time_piki_piki": {
+        "_defn": [
+          {
+            "_row_num": 51,
+            "section_name": "survey"
+          }
+        ],
+        "type": "integer",
+        "elementKey": "time_piki_piki"
+      },
+      "cost_piki_piki": {
+        "_defn": [
+          {
+            "_row_num": 52,
+            "section_name": "survey"
+          }
+        ],
+        "type": "integer",
+        "elementKey": "cost_piki_piki"
+      },
+      "tuk_tuk_select": {
+        "_defn": [
+          {
+            "_row_num": 54,
+            "section_name": "survey"
+          }
+        ],
+        "type": "array",
+        "items": {
+          "type": "string",
+          "elementKey": "tuk_tuk_select_items"
+        },
+        "valuesList": "tuk_tuk_list",
+        "elementKey": "tuk_tuk_select"
+      },
+      "time_tuk_tuk": {
+        "_defn": [
+          {
+            "_row_num": 56,
+            "section_name": "survey"
+          }
+        ],
+        "type": "integer",
+        "elementKey": "time_tuk_tuk"
+      },
+      "cost_tuk_tuk": {
+        "_defn": [
+          {
+            "_row_num": 57,
+            "section_name": "survey"
+          }
+        ],
+        "type": "integer",
+        "elementKey": "cost_tuk_tuk"
+      },
+      "matatu_select": {
+        "_defn": [
+          {
+            "_row_num": 59,
+            "section_name": "survey"
+          }
+        ],
+        "type": "array",
+        "items": {
+          "type": "string",
+          "elementKey": "matatu_select_items"
+        },
+        "valuesList": "matatu_list",
+        "elementKey": "matatu_select"
+      },
+      "time_matatu": {
+        "_defn": [
+          {
+            "_row_num": 61,
+            "section_name": "survey"
+          }
+        ],
+        "type": "integer",
+        "elementKey": "time_matatu"
+      },
+      "cost_matatu": {
+        "_defn": [
+          {
+            "_row_num": 62,
+            "section_name": "survey"
+          }
+        ],
+        "type": "integer",
+        "elementKey": "cost_matatu"
+      },
+      "bus_select": {
+        "_defn": [
+          {
+            "_row_num": 64,
+            "section_name": "survey"
+          }
+        ],
+        "type": "array",
+        "items": {
+          "type": "string",
+          "elementKey": "bus_select_items"
+        },
+        "valuesList": "bus_list",
+        "elementKey": "bus_select"
+      },
+      "time_bus": {
+        "_defn": [
+          {
+            "_row_num": 66,
+            "section_name": "survey"
+          }
+        ],
+        "type": "integer",
+        "elementKey": "time_bus"
+      },
+      "cost_bus": {
+        "_defn": [
+          {
+            "_row_num": 67,
+            "section_name": "survey"
+          }
+        ],
+        "type": "integer",
+        "elementKey": "cost_bus"
+      },
+      "taxi_select": {
+        "_defn": [
+          {
+            "_row_num": 69,
+            "section_name": "survey"
+          }
+        ],
+        "type": "array",
+        "items": {
+          "type": "string",
+          "elementKey": "taxi_select_items"
+        },
+        "valuesList": "taxi_list",
+        "elementKey": "taxi_select"
+      },
+      "time_taxi": {
+        "_defn": [
+          {
+            "_row_num": 71,
+            "section_name": "survey"
+          }
+        ],
+        "type": "integer",
+        "elementKey": "time_taxi"
+      },
+      "cost_taxi": {
+        "_defn": [
+          {
+            "_row_num": 72,
+            "section_name": "survey"
+          }
+        ],
+        "type": "integer",
+        "elementKey": "cost_taxi"
+      },
+      "car_select": {
+        "_defn": [
+          {
+            "_row_num": 74,
+            "section_name": "survey"
+          }
+        ],
+        "type": "array",
+        "items": {
+          "type": "string",
+          "elementKey": "car_select_items"
+        },
+        "valuesList": "car_list",
+        "elementKey": "car_select"
+      },
+      "time_car": {
+        "_defn": [
+          {
+            "_row_num": 76,
+            "section_name": "survey"
+          }
+        ],
+        "type": "integer",
+        "elementKey": "time_car"
+      },
+      "cost_car": {
+        "_defn": [
+          {
+            "_row_num": 77,
+            "section_name": "survey"
+          }
+        ],
+        "type": "integer",
+        "elementKey": "cost_car"
+      },
+      "boat_select": {
+        "_defn": [
+          {
+            "_row_num": 79,
+            "section_name": "survey"
+          }
+        ],
+        "type": "array",
+        "items": {
+          "type": "string",
+          "elementKey": "boat_select_items"
+        },
+        "valuesList": "boat_list",
+        "elementKey": "boat_select"
+      },
+      "time_boat": {
+        "_defn": [
+          {
+            "_row_num": 81,
+            "section_name": "survey"
+          }
+        ],
+        "type": "integer",
+        "elementKey": "time_boat"
+      },
+      "cost_boat": {
+        "_defn": [
+          {
+            "_row_num": 82,
+            "section_name": "survey"
+          }
+        ],
+        "type": "integer",
+        "elementKey": "cost_boat"
+      },
+      "medical_cost": {
+        "_defn": [
+          {
+            "_row_num": 87,
+            "section_name": "survey"
+          }
+        ],
+        "type": "integer",
+        "elementKey": "medical_cost"
+      },
+      "hours_away": {
+        "_defn": [
+          {
+            "_row_num": 89,
+            "section_name": "survey"
+          }
+        ],
+        "type": "integer",
+        "elementKey": "hours_away"
+      },
+      "earning": {
+        "_defn": [
+          {
+            "_row_num": 90,
+            "section_name": "survey"
+          }
+        ],
+        "type": "integer",
+        "elementKey": "earning"
+      }
+    },
+    "section_names": [
+      "initial",
+      "survey"
+    ],
+    "sections": {
+      "survey": {
+        "section_name": "survey",
+        "nested_sections": {},
+        "reachable_sections": {},
+        "prompts": [
+          {
+            "type": "note",
+            "name": "title_1",
+            "display": {
+              "text": "Administrative",
+              "title": "Administrative"
+            },
+            "_row_num": 3,
+            "__rowNum__": 2,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 0
+          },
+          {
+            "type": "date",
+            "name": "visit_date",
+            "display": {
+              "text": "Date of visit:"
+            },
+            "_row_num": 4,
+            "__rowNum__": 3,
+            "_token_type": "prompt",
+            "_type": "date",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 1
+          },
+          {
+            "type": "text",
+            "name": "interviewer_id",
+            "display": {
+              "text": "Interviewer identifier:"
+            },
+            "_row_num": 5,
+            "__rowNum__": 4,
+            "_token_type": "prompt",
+            "_type": "text",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 2
+          },
+          {
+            "type": "text",
+            "name": "patient_id",
+            "display": {
+              "text": "Patient identifier:"
+            },
+            "_row_num": 6,
+            "__rowNum__": 5,
+            "_token_type": "prompt",
+            "_type": "text",
+            "_branch_label_enclosing_screen": "survey/_screen2",
+            "promptIdx": 3
+          },
+          {
+            "type": "note",
+            "name": "title_2",
+            "display": {
+              "text": "<strong>Demographics</strong>",
+              "title": "Demographics"
+            },
+            "_row_num": 9,
+            "__rowNum__": 8,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "survey/_screen8",
+            "promptIdx": 4
+          },
+          {
+            "type": "select_one_dropdown",
+            "values_list": "clinic_list",
+            "name": "clinic",
+            "display": {
+              "text": "Clinic:"
+            },
+            "_row_num": 10,
+            "__rowNum__": 9,
+            "_token_type": "prompt",
+            "_type": "select_one_dropdown",
+            "_branch_label_enclosing_screen": "survey/_screen8",
+            "promptIdx": 5
+          },
+          {
+            "type": "date",
+            "name": "birth_date",
+            "display": {
+              "text": "Date of birth:"
+            },
+            "_row_num": 12,
+            "__rowNum__": 11,
+            "_token_type": "prompt",
+            "_type": "date",
+            "_branch_label_enclosing_screen": "survey/_screen12",
+            "promptIdx": 6
+          },
+          {
+            "type": "select_one",
+            "values_list": "sexes",
+            "name": "sex",
+            "display": {
+              "text": "Gender:"
+            },
+            "_row_num": 13,
+            "__rowNum__": 12,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen13",
+            "promptIdx": 7
+          },
+          {
+            "type": "select_one",
+            "values_list": "occupation_list",
+            "name": "occupation",
+            "display": {
+              "text": "Primary occupation:"
+            },
+            "_row_num": 15,
+            "__rowNum__": 14,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen14",
+            "promptIdx": 8
+          },
+          {
+            "type": "text",
+            "name": "other_occupation",
+            "display": {
+              "text": "Specify:"
+            },
+            "_row_num": 17,
+            "__rowNum__": 16,
+            "_token_type": "prompt",
+            "_type": "text",
+            "_branch_label_enclosing_screen": "survey/_screen14",
+            "promptIdx": 9
+          },
+          {
+            "type": "note",
+            "name": "title_3",
+            "display": {
+              "text": "<strong>Details of travel to today's visit</strong>",
+              "title": "Details of travel to today's visit"
+            },
+            "_row_num": 21,
+            "__rowNum__": 20,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "survey/_screen20",
+            "promptIdx": 10
+          },
+          {
+            "type": "select_one",
+            "values_list": "from_list",
+            "name": "journey_start",
+            "display": {
+              "text": "When you set out to come to this clinic visit, from where did you start your journey?"
+            },
+            "_row_num": 22,
+            "__rowNum__": 21,
+            "_token_type": "prompt",
+            "_type": "select_one",
+            "_branch_label_enclosing_screen": "survey/_screen20",
+            "promptIdx": 11
+          },
+          {
+            "type": "text",
+            "name": "other_journey_start",
+            "display": {
+              "text": "Specify:"
+            },
+            "_row_num": 24,
+            "__rowNum__": 23,
+            "_token_type": "prompt",
+            "_type": "text",
+            "_branch_label_enclosing_screen": "survey/_screen20",
+            "promptIdx": 12
+          },
+          {
+            "type": "text",
+            "name": "sub_country",
+            "display": {
+              "text": "Which sub-country and constituency is that?"
+            },
+            "_row_num": 27,
+            "__rowNum__": 26,
+            "_token_type": "prompt",
+            "_type": "text",
+            "_branch_label_enclosing_screen": "survey/_screen27",
+            "promptIdx": 13
+          },
+          {
+            "type": "decimal",
+            "name": "distance",
+            "display": {
+              "text": "How far did you travel to get to your clinic visit?"
+            },
+            "_row_num": 28,
+            "__rowNum__": 27,
+            "_token_type": "prompt",
+            "_type": "decimal",
+            "_branch_label_enclosing_screen": "survey/_screen28",
+            "promptIdx": 14
+          },
+          {
+            "type": "datetime",
+            "name": "leave_time",
+            "display": {
+              "text": "What date and time did you leave for the clinic?"
+            },
+            "_row_num": 29,
+            "__rowNum__": 28,
+            "_token_type": "prompt",
+            "_type": "datetime",
+            "_branch_label_enclosing_screen": "survey/_screen29",
+            "promptIdx": 15
+          },
+          {
+            "type": "datetime",
+            "name": "arrive_time",
+            "display": {
+              "text": "What time did you arrive at the clinic?"
+            },
+            "_row_num": 30,
+            "__rowNum__": 29,
+            "_token_type": "prompt",
+            "_type": "datetime",
+            "_branch_label_enclosing_screen": "survey/_screen30",
+            "promptIdx": 16
+          },
+          {
+            "type": "datetime",
+            "name": "seen_time",
+            "display": {
+              "text": "When were you first seen by a doctor or nurse?"
+            },
+            "_row_num": 31,
+            "__rowNum__": 30,
+            "_token_type": "prompt",
+            "_type": "datetime",
+            "_branch_label_enclosing_screen": "survey/_screen31",
+            "promptIdx": 17
+          },
+          {
+            "type": "note",
+            "name": "transport",
+            "display": {
+              "text": "Which of the following modes of transport did you use to get to clinic for today's visit?"
+            },
+            "_row_num": 33,
+            "__rowNum__": 32,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "survey/_screen32",
+            "promptIdx": 18
+          },
+          {
+            "type": "select_multiple",
+            "values_list": "walking_list",
+            "name": "walking_select",
+            "_row_num": 34,
+            "__rowNum__": 33,
+            "_token_type": "prompt",
+            "_type": "select_multiple",
+            "_branch_label_enclosing_screen": "survey/_screen32",
+            "promptIdx": 19
+          },
+          {
+            "type": "integer",
+            "name": "time_walking",
+            "display": {
+              "text": "Time (how long it took one way)"
+            },
+            "_row_num": 36,
+            "__rowNum__": 35,
+            "_token_type": "prompt",
+            "_type": "integer",
+            "_branch_label_enclosing_screen": "survey/_screen32",
+            "promptIdx": 20
+          },
+          {
+            "type": "integer",
+            "name": "cost_walking",
+            "display": {
+              "text": "Cost (in KSH, if no cost enter 0)"
+            },
+            "_row_num": 37,
+            "__rowNum__": 36,
+            "_token_type": "prompt",
+            "_type": "integer",
+            "_branch_label_enclosing_screen": "survey/_screen32",
+            "promptIdx": 21
+          },
+          {
+            "type": "select_multiple",
+            "values_list": "bicycle_list",
+            "name": "bicycle_select",
+            "_row_num": 39,
+            "__rowNum__": 38,
+            "_token_type": "prompt",
+            "_type": "select_multiple",
+            "_branch_label_enclosing_screen": "survey/_screen32",
+            "promptIdx": 22
+          },
+          {
+            "type": "integer",
+            "name": "time_bicycle",
+            "display": {
+              "text": "Time (how long it took one way)"
+            },
+            "_row_num": 41,
+            "__rowNum__": 40,
+            "_token_type": "prompt",
+            "_type": "integer",
+            "_branch_label_enclosing_screen": "survey/_screen32",
+            "promptIdx": 23
+          },
+          {
+            "type": "integer",
+            "name": "cost_bicycle",
+            "display": {
+              "text": "Cost (in KSH, if no cost enter 0)"
+            },
+            "_row_num": 42,
+            "__rowNum__": 41,
+            "_token_type": "prompt",
+            "_type": "integer",
+            "_branch_label_enclosing_screen": "survey/_screen32",
+            "promptIdx": 24
+          },
+          {
+            "type": "select_multiple",
+            "values_list": "boda_boda_list",
+            "name": "boda_boda_select",
+            "_row_num": 44,
+            "__rowNum__": 43,
+            "_token_type": "prompt",
+            "_type": "select_multiple",
+            "_branch_label_enclosing_screen": "survey/_screen32",
+            "promptIdx": 25
+          },
+          {
+            "type": "integer",
+            "name": "time_boda_boda",
+            "display": {
+              "text": "Time (how long it took one way)"
+            },
+            "_row_num": 46,
+            "__rowNum__": 45,
+            "_token_type": "prompt",
+            "_type": "integer",
+            "_branch_label_enclosing_screen": "survey/_screen32",
+            "promptIdx": 26
+          },
+          {
+            "type": "integer",
+            "name": "cost_boda_boda",
+            "display": {
+              "text": "Cost (in KSH, if no cost enter 0)"
+            },
+            "_row_num": 47,
+            "__rowNum__": 46,
+            "_token_type": "prompt",
+            "_type": "integer",
+            "_branch_label_enclosing_screen": "survey/_screen32",
+            "promptIdx": 27
+          },
+          {
+            "type": "select_multiple",
+            "values_list": "piki_piki_list",
+            "name": "piki_piki_select",
+            "_row_num": 49,
+            "__rowNum__": 48,
+            "_token_type": "prompt",
+            "_type": "select_multiple",
+            "_branch_label_enclosing_screen": "survey/_screen32",
+            "promptIdx": 28
+          },
+          {
+            "type": "integer",
+            "name": "time_piki_piki",
+            "display": {
+              "text": "Time (how long it took one way)"
+            },
+            "_row_num": 51,
+            "__rowNum__": 50,
+            "_token_type": "prompt",
+            "_type": "integer",
+            "_branch_label_enclosing_screen": "survey/_screen32",
+            "promptIdx": 29
+          },
+          {
+            "type": "integer",
+            "name": "cost_piki_piki",
+            "display": {
+              "text": "Cost (in KSH, if no cost enter 0)"
+            },
+            "_row_num": 52,
+            "__rowNum__": 51,
+            "_token_type": "prompt",
+            "_type": "integer",
+            "_branch_label_enclosing_screen": "survey/_screen32",
+            "promptIdx": 30
+          },
+          {
+            "type": "select_multiple",
+            "values_list": "tuk_tuk_list",
+            "name": "tuk_tuk_select",
+            "_row_num": 54,
+            "__rowNum__": 53,
+            "_token_type": "prompt",
+            "_type": "select_multiple",
+            "_branch_label_enclosing_screen": "survey/_screen32",
+            "promptIdx": 31
+          },
+          {
+            "type": "integer",
+            "name": "time_tuk_tuk",
+            "display": {
+              "text": "Time (how long it took one way)"
+            },
+            "_row_num": 56,
+            "__rowNum__": 55,
+            "_token_type": "prompt",
+            "_type": "integer",
+            "_branch_label_enclosing_screen": "survey/_screen32",
+            "promptIdx": 32
+          },
+          {
+            "type": "integer",
+            "name": "cost_tuk_tuk",
+            "display": {
+              "text": "Cost (in KSH, if no cost enter 0)"
+            },
+            "_row_num": 57,
+            "__rowNum__": 56,
+            "_token_type": "prompt",
+            "_type": "integer",
+            "_branch_label_enclosing_screen": "survey/_screen32",
+            "promptIdx": 33
+          },
+          {
+            "type": "select_multiple",
+            "values_list": "matatu_list",
+            "name": "matatu_select",
+            "_row_num": 59,
+            "__rowNum__": 58,
+            "_token_type": "prompt",
+            "_type": "select_multiple",
+            "_branch_label_enclosing_screen": "survey/_screen32",
+            "promptIdx": 34
+          },
+          {
+            "type": "integer",
+            "name": "time_matatu",
+            "display": {
+              "text": "Time (how long it took one way)"
+            },
+            "_row_num": 61,
+            "__rowNum__": 60,
+            "_token_type": "prompt",
+            "_type": "integer",
+            "_branch_label_enclosing_screen": "survey/_screen32",
+            "promptIdx": 35
+          },
+          {
+            "type": "integer",
+            "name": "cost_matatu",
+            "display": {
+              "text": "Cost (in KSH, if no cost enter 0)"
+            },
+            "_row_num": 62,
+            "__rowNum__": 61,
+            "_token_type": "prompt",
+            "_type": "integer",
+            "_branch_label_enclosing_screen": "survey/_screen32",
+            "promptIdx": 36
+          },
+          {
+            "type": "select_multiple",
+            "values_list": "bus_list",
+            "name": "bus_select",
+            "_row_num": 64,
+            "__rowNum__": 63,
+            "_token_type": "prompt",
+            "_type": "select_multiple",
+            "_branch_label_enclosing_screen": "survey/_screen32",
+            "promptIdx": 37
+          },
+          {
+            "type": "integer",
+            "name": "time_bus",
+            "display": {
+              "text": "Time (how long it took one way)"
+            },
+            "_row_num": 66,
+            "__rowNum__": 65,
+            "_token_type": "prompt",
+            "_type": "integer",
+            "_branch_label_enclosing_screen": "survey/_screen32",
+            "promptIdx": 38
+          },
+          {
+            "type": "integer",
+            "name": "cost_bus",
+            "display": {
+              "text": "Cost (in KSH, if no cost enter 0)"
+            },
+            "_row_num": 67,
+            "__rowNum__": 66,
+            "_token_type": "prompt",
+            "_type": "integer",
+            "_branch_label_enclosing_screen": "survey/_screen32",
+            "promptIdx": 39
+          },
+          {
+            "type": "select_multiple",
+            "values_list": "taxi_list",
+            "name": "taxi_select",
+            "_row_num": 69,
+            "__rowNum__": 68,
+            "_token_type": "prompt",
+            "_type": "select_multiple",
+            "_branch_label_enclosing_screen": "survey/_screen32",
+            "promptIdx": 40
+          },
+          {
+            "type": "integer",
+            "name": "time_taxi",
+            "display": {
+              "text": "Time (how long it took one way)"
+            },
+            "_row_num": 71,
+            "__rowNum__": 70,
+            "_token_type": "prompt",
+            "_type": "integer",
+            "_branch_label_enclosing_screen": "survey/_screen32",
+            "promptIdx": 41
+          },
+          {
+            "type": "integer",
+            "name": "cost_taxi",
+            "display": {
+              "text": "Cost (in KSH, if no cost enter 0)"
+            },
+            "_row_num": 72,
+            "__rowNum__": 71,
+            "_token_type": "prompt",
+            "_type": "integer",
+            "_branch_label_enclosing_screen": "survey/_screen32",
+            "promptIdx": 42
+          },
+          {
+            "type": "select_multiple",
+            "values_list": "car_list",
+            "name": "car_select",
+            "_row_num": 74,
+            "__rowNum__": 73,
+            "_token_type": "prompt",
+            "_type": "select_multiple",
+            "_branch_label_enclosing_screen": "survey/_screen32",
+            "promptIdx": 43
+          },
+          {
+            "type": "integer",
+            "name": "time_car",
+            "display": {
+              "text": "Time (how long it took one way)"
+            },
+            "_row_num": 76,
+            "__rowNum__": 75,
+            "_token_type": "prompt",
+            "_type": "integer",
+            "_branch_label_enclosing_screen": "survey/_screen32",
+            "promptIdx": 44
+          },
+          {
+            "type": "integer",
+            "name": "cost_car",
+            "display": {
+              "text": "Cost (in KSH, if no cost enter 0)"
+            },
+            "_row_num": 77,
+            "__rowNum__": 76,
+            "_token_type": "prompt",
+            "_type": "integer",
+            "_branch_label_enclosing_screen": "survey/_screen32",
+            "promptIdx": 45
+          },
+          {
+            "type": "select_multiple",
+            "values_list": "boat_list",
+            "name": "boat_select",
+            "_row_num": 79,
+            "__rowNum__": 78,
+            "_token_type": "prompt",
+            "_type": "select_multiple",
+            "_branch_label_enclosing_screen": "survey/_screen32",
+            "promptIdx": 46
+          },
+          {
+            "type": "integer",
+            "name": "time_boat",
+            "display": {
+              "text": "Time (how long it took one way)"
+            },
+            "_row_num": 81,
+            "__rowNum__": 80,
+            "_token_type": "prompt",
+            "_type": "integer",
+            "_branch_label_enclosing_screen": "survey/_screen32",
+            "promptIdx": 47
+          },
+          {
+            "type": "integer",
+            "name": "cost_boat",
+            "display": {
+              "text": "Cost (in KSH, if no cost enter 0)"
+            },
+            "_row_num": 82,
+            "__rowNum__": 81,
+            "_token_type": "prompt",
+            "_type": "integer",
+            "_branch_label_enclosing_screen": "survey/_screen32",
+            "promptIdx": 48
+          },
+          {
+            "type": "note",
+            "name": "ancillary",
+            "display": {
+              "text": "<strong>Ancillary costs</strong>"
+            },
+            "_row_num": 86,
+            "__rowNum__": 85,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "survey/_screen85",
+            "promptIdx": 49
+          },
+          {
+            "type": "integer",
+            "name": "medical_cost",
+            "display": {
+              "text": "For this clinic visit, how many shillings did you spend on medical costs?",
+              "hint": "e.g. HIV testing, medication, lab tests, maternal/child health"
+            },
+            "_row_num": 87,
+            "__rowNum__": 86,
+            "_token_type": "prompt",
+            "_type": "integer",
+            "_branch_label_enclosing_screen": "survey/_screen85",
+            "promptIdx": 50
+          },
+          {
+            "type": "integer",
+            "name": "hours_away",
+            "display": {
+              "text": "How many hours were you away from home in order to seek and receive care?",
+              "hint": "Overall time, including the estimated time need to travel back home"
+            },
+            "_row_num": 89,
+            "__rowNum__": 88,
+            "_token_type": "prompt",
+            "_type": "integer",
+            "_branch_label_enclosing_screen": "survey/_screen89",
+            "promptIdx": 51
+          },
+          {
+            "type": "integer",
+            "name": "earning",
+            "display": {
+              "text": "How much money would you have earned today had you not had to spend the time to clinic?",
+              "hint": "Record \"0\" if the patient doesn't have a paid job (in KSH)"
+            },
+            "_row_num": 90,
+            "__rowNum__": 89,
+            "_token_type": "prompt",
+            "_type": "integer",
+            "_branch_label_enclosing_screen": "survey/_screen90",
+            "promptIdx": 52
+          },
+          {
+            "_token_type": "prompt",
+            "type": "contents",
+            "_type": "contents",
+            "_row_num": 91,
+            "_branch_label_enclosing_screen": "survey/_screen91",
+            "promptIdx": 53
+          }
+        ],
+        "validation_tag_map": {
+          "finalize": []
+        },
+        "operations": [
+          {
+            "clause": "begin screen",
+            "_row_num": 2,
+            "__rowNum__": 1,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 7,
+              "__rowNum__": 6,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\nactivePromptIndicies.push(1);\nactivePromptIndicies.push(2);\nactivePromptIndicies.push(3);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 0
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 8,
+            "__rowNum__": 7,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 11,
+              "__rowNum__": 10,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(4);\nactivePromptIndicies.push(5);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 1
+          },
+          {
+            "_row_num": 12,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(6);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 2
+          },
+          {
+            "_row_num": 13,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(7);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 3
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 14,
+            "__rowNum__": 13,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 19,
+              "__rowNum__": 18,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(8);\nif (calculates.expand_other_occupation()) {\nactivePromptIndicies.push(9);\n}\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 4
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 20,
+            "__rowNum__": 19,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 26,
+              "__rowNum__": 25,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(10);\nactivePromptIndicies.push(11);\nif (calculates.expand_other_journey_start()) {\nactivePromptIndicies.push(12);\n}\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 5
+          },
+          {
+            "_row_num": 27,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(13);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 6
+          },
+          {
+            "_row_num": 28,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(14);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 7
+          },
+          {
+            "_row_num": 29,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(15);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 8
+          },
+          {
+            "_row_num": 30,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(16);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 9
+          },
+          {
+            "_row_num": 31,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(17);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 10
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 32,
+            "__rowNum__": 31,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 84,
+              "__rowNum__": 83,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(18);\nactivePromptIndicies.push(19);\nif (calculates.expand_walking()) {\nactivePromptIndicies.push(20);\nactivePromptIndicies.push(21);\n}\nactivePromptIndicies.push(22);\nif (calculates.expand_bicycle()) {\nactivePromptIndicies.push(23);\nactivePromptIndicies.push(24);\n}\nactivePromptIndicies.push(25);\nif (calculates.expand_boda_boda()) {\nactivePromptIndicies.push(26);\nactivePromptIndicies.push(27);\n}\nactivePromptIndicies.push(28);\nif (calculates.expand_piki_piki()) {\nactivePromptIndicies.push(29);\nactivePromptIndicies.push(30);\n}\nactivePromptIndicies.push(31);\nif (calculates.expand_tuk_tuk()) {\nactivePromptIndicies.push(32);\nactivePromptIndicies.push(33);\n}\nactivePromptIndicies.push(34);\nif (calculates.expand_matatu()) {\nactivePromptIndicies.push(35);\nactivePromptIndicies.push(36);\n}\nactivePromptIndicies.push(37);\nif (calculates.expand_bus()) {\nactivePromptIndicies.push(38);\nactivePromptIndicies.push(39);\n}\nactivePromptIndicies.push(40);\nif (calculates.expand_taxi()) {\nactivePromptIndicies.push(41);\nactivePromptIndicies.push(42);\n}\nactivePromptIndicies.push(43);\nif (calculates.expand_car()) {\nactivePromptIndicies.push(44);\nactivePromptIndicies.push(45);\n}\nactivePromptIndicies.push(46);\nif (calculates.expand_boat()) {\nactivePromptIndicies.push(47);\nactivePromptIndicies.push(48);\n}\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 11
+          },
+          {
+            "clause": "begin screen",
+            "_row_num": 85,
+            "__rowNum__": 84,
+            "_token_type": "begin_screen",
+            "_end_screen_clause": {
+              "clause": "end screen",
+              "_row_num": 88,
+              "__rowNum__": 87,
+              "_token_type": "end_screen"
+            },
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(49);\nactivePromptIndicies.push(50);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 12
+          },
+          {
+            "_row_num": 89,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(51);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 13
+          },
+          {
+            "_row_num": 90,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(52);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 14
+          },
+          {
+            "_token_type": "exit_section",
+            "clause": "exit section",
+            "_row_num": 91,
+            "operationIdx": 15
+          },
+          {
+            "_row_num": 91,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(53);\n\nreturn activePromptIndicies;\n}\n",
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 16
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 91,
+            "operationIdx": 17
+          }
+        ],
+        "branch_label_map": {
+          "_screen2": 0,
+          "_screen8": 1,
+          "_screen12": 2,
+          "_screen13": 3,
+          "_screen14": 4,
+          "_screen20": 5,
+          "_screen27": 6,
+          "_screen28": 7,
+          "_screen29": 8,
+          "_screen30": 9,
+          "_screen31": 10,
+          "_screen32": 11,
+          "_screen85": 12,
+          "_screen89": 13,
+          "_screen90": 14,
+          "_contents": 16,
+          "_screen91": 16
+        }
+      },
+      "initial": {
+        "section_name": "initial",
+        "nested_sections": {
+          "survey": true
+        },
+        "reachable_sections": {
+          "survey": true
+        },
+        "prompts": [
+          {
+            "_row_num": 3,
+            "type": "opening",
+            "display": {
+              "text": "Edit form"
+            },
+            "_token_type": "prompt",
+            "_type": "opening",
+            "_branch_label_enclosing_screen": "initial/_screen3",
+            "promptIdx": 0
+          },
+          {
+            "_row_num": 4,
+            "clause": "do section survey",
+            "_token_type": "prompt",
+            "_do_section_name": "survey",
+            "_type": "_section",
+            "promptIdx": 1,
+            "display": {
+              "title": "Adapt_R Survey Questions on Patient-Borne Costs"
+            },
+            "_branch_label_enclosing_screen": "survey/0"
+          },
+          {
+            "_row_num": 5,
+            "type": "finalize",
+            "display": {
+              "text": "Save form"
+            },
+            "_token_type": "prompt",
+            "_type": "finalize",
+            "_branch_label_enclosing_screen": "initial/_screen5",
+            "promptIdx": 2
+          },
+          {
+            "_row_num": 7,
+            "type": "instances",
+            "display": {
+              "text": "Saved instances"
+            },
+            "_token_type": "prompt",
+            "_type": "instances",
+            "_branch_label_enclosing_screen": "initial/_screen7",
+            "promptIdx": 3
+          },
+          {
+            "_token_type": "prompt",
+            "type": "contents",
+            "_type": "contents",
+            "_row_num": 9,
+            "_branch_label_enclosing_screen": "initial/_screen9",
+            "promptIdx": 4
+          }
+        ],
+        "validation_tag_map": {
+          "finalize": []
+        },
+        "operations": [
+          {
+            "_row_num": 2,
+            "clause": "if // start",
+            "condition": "(opendatakit.getCurrentInstanceId() != null)",
+            "_token_type": "goto_label",
+            "_tag_name": "start",
+            "_branch_label": "_then2",
+            "operationIdx": 0
+          },
+          {
+            "clause": "else // start",
+            "_token_type": "goto_label",
+            "_branch_label": "_else6",
+            "_row_num": 6,
+            "operationIdx": 1
+          },
+          {
+            "_row_num": 3,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(0);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 2
+          },
+          {
+            "_row_num": 4,
+            "clause": "do section survey",
+            "_token_type": "do_section",
+            "_do_section_name": "survey",
+            "operationIdx": 3
+          },
+          {
+            "_row_num": 5,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(2);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 4
+          },
+          {
+            "clause": "end if // start",
+            "_token_type": "goto_label",
+            "_branch_label": "_endif8",
+            "_row_num": 8,
+            "operationIdx": 5
+          },
+          {
+            "_row_num": 7,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(3);\n\nreturn activePromptIndicies;\n}\n",
+            "operationIdx": 6
+          },
+          {
+            "_token_type": "exit_section",
+            "clause": "exit section",
+            "_row_num": 9,
+            "operationIdx": 7
+          },
+          {
+            "_row_num": 9,
+            "_token_type": "begin_screen",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(4);\n\nreturn activePromptIndicies;\n}\n",
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 8
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 9,
+            "operationIdx": 9
+          },
+          {
+            "_token_type": "validate",
+            "clause": "validate finalize",
+            "_sweep_name": "finalize",
+            "_row_num": 9,
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 10
+          },
+          {
+            "_token_type": "save_and_terminate",
+            "clause": "save and terminate",
+            "calculation": true,
+            "_row_num": 9,
+            "screen": {
+              "hideInBackHistory": true
+            },
+            "operationIdx": 11
+          },
+          {
+            "_token_type": "resume",
+            "clause": "resume",
+            "_row_num": 9,
+            "operationIdx": 12
+          }
+        ],
+        "branch_label_map": {
+          "_then2": 2,
+          "_screen3": 2,
+          "_screen5": 4,
+          "_else6": 6,
+          "_screen7": 6,
+          "_endif8": 7,
+          "_contents": 8,
+          "_screen9": 8,
+          "_finalize": 10
+        }
+      }
+    }
+  }
+}
