@@ -1482,6 +1482,22 @@ promptTypes.input_type = promptTypes.base.extend({
         return true;
     }
 });
+promptTypes.textarea = promptTypes.input_type.extend({
+    type: "textarea",
+    templatePath: "templates/textarea.handlebars",
+    renderContext: {
+        "type": "textarea"
+    },
+    beforeMove: function() {
+        var that = this;
+        var isInvalid = that.setValueAndValidate(this.$('textarea').val());
+        if ( isInvalid ) {
+            return { message: that.invalid_value_message };
+        } else {
+            return null;
+        }
+    }
+});
 promptTypes.string = promptTypes.input_type.extend({
     type: "string",
     renderContext: {
