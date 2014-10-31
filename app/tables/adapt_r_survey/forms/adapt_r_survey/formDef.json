@@ -9,7 +9,7 @@
         "type": "note",
         "name": "title_1",
         "display": {
-          "text": "Administrative",
+          "text": "<strong>Administrative</strong>",
           "title": "Administrative"
         },
         "_row_num": 3
@@ -18,7 +18,7 @@
         "type": "date",
         "name": "visit_date",
         "display": {
-          "text": "Date of visit:"
+          "text": "1.  Date of visit:"
         },
         "_row_num": 4
       },
@@ -26,7 +26,7 @@
         "type": "text",
         "name": "interviewer_id",
         "display": {
-          "text": "Interviewer identifier:"
+          "text": "2.  Interviewer identifier:"
         },
         "_row_num": 5
       },
@@ -34,7 +34,7 @@
         "type": "text",
         "name": "patient_id",
         "display": {
-          "text": "Patient identifier:"
+          "text": "3.  Patient identifier:"
         },
         "_row_num": 6
       },
@@ -60,7 +60,7 @@
         "values_list": "clinic_list",
         "name": "clinic",
         "display": {
-          "text": "Clinic:"
+          "text": "1.  Clinic:"
         },
         "_row_num": 10
       },
@@ -72,7 +72,7 @@
         "type": "date",
         "name": "birth_date",
         "display": {
-          "text": "Date of birth:"
+          "text": "2.  Date of birth:"
         },
         "_row_num": 12
       },
@@ -81,7 +81,7 @@
         "values_list": "sexes",
         "name": "sex",
         "display": {
-          "text": "Gender:"
+          "text": "3.  Gender:"
         },
         "_row_num": 13
       },
@@ -94,7 +94,7 @@
         "values_list": "occupation_list",
         "name": "occupation",
         "display": {
-          "text": "Primary occupation:"
+          "text": "4.  Primary occupation:"
         },
         "_row_num": 15
       },
@@ -107,7 +107,7 @@
         "type": "text",
         "name": "other_occupation",
         "display": {
-          "text": "Specify:"
+          "text": "4b.  Specify:"
         },
         "_row_num": 17
       },
@@ -137,7 +137,7 @@
         "values_list": "from_list",
         "name": "journey_start",
         "display": {
-          "text": "When you set out to come to this clinic visit, from where did you start your journey?"
+          "text": "1.  When you set out to come to this clinic visit, from where did you start your journey?"
         },
         "_row_num": 22
       },
@@ -150,7 +150,7 @@
         "type": "text",
         "name": "other_journey_start",
         "display": {
-          "text": "Specify:"
+          "text": "1.  Specify:"
         },
         "_row_num": 24
       },
@@ -166,7 +166,7 @@
         "type": "text",
         "name": "sub_country",
         "display": {
-          "text": "Which sub-country and constituency is that?"
+          "text": "2.  Which sub-county and constituency is that?"
         },
         "_row_num": 27
       },
@@ -174,7 +174,10 @@
         "type": "decimal",
         "name": "distance",
         "display": {
-          "text": "How far did you travel to get to your clinic visit?"
+          "text": "3.  How far did you travel to get to your clinic visit?  (in kilometers)"
+        },
+        "inputAttributes": {
+          "min": 1
         },
         "_row_num": 28
       },
@@ -182,7 +185,7 @@
         "type": "datetime",
         "name": "leave_time",
         "display": {
-          "text": "What date and time did you leave for the clinic?"
+          "text": "4.  What date and time did you leave for the clinic?"
         },
         "_row_num": 29
       },
@@ -190,15 +193,15 @@
         "type": "datetime",
         "name": "arrive_time",
         "display": {
-          "text": "What time did you arrive at the clinic?"
+          "text": "5.  What date and time did you arrive at the clinic?"
         },
         "_row_num": 30
       },
       {
-        "type": "datetime",
+        "type": "time",
         "name": "seen_time",
         "display": {
-          "text": "When were you first seen by a doctor or nurse?"
+          "text": "6.  When were you first seen by a doctor or nurse?"
         },
         "_row_num": 31
       },
@@ -210,7 +213,7 @@
         "type": "note",
         "name": "transport",
         "display": {
-          "text": "Which of the following modes of transport did you use to get to clinic for today's visit?"
+          "text": "7.  Which of the following modes of transport did you use to get to clinic for today's visit?"
         },
         "_row_num": 33
       },
@@ -226,8 +229,8 @@
         "_row_num": 35
       },
       {
-        "type": "integer",
-        "name": "time_walking",
+        "type": "note",
+        "name": "walking_note",
         "display": {
           "text": "Time (how long it took one way)"
         },
@@ -235,26 +238,45 @@
       },
       {
         "type": "integer",
-        "name": "cost_walking",
+        "name": "walking_hour",
         "display": {
-          "text": "Cost (in KSH, if no cost enter 0)"
+          "text": "hours"
         },
         "_row_num": 37
       },
       {
-        "clause": "end if",
+        "type": "integer",
+        "name": "walking_min",
+        "display": {
+          "text": "minutes"
+        },
         "_row_num": 38
+      },
+      {
+        "type": "integer",
+        "name": "cost_walking",
+        "display": {
+          "text": "Cost (in KSH, if no cost enter 0)"
+        },
+        "inputAttributes": {
+          "min": 0
+        },
+        "_row_num": 39
+      },
+      {
+        "clause": "end if",
+        "_row_num": 40
       },
       {
         "type": "select_multiple",
         "values_list": "bicycle_list",
         "name": "bicycle_select",
-        "_row_num": 39
+        "_row_num": 41
       },
       {
         "clause": "if",
         "condition": "calculates.expand_bicycle()",
-        "_row_num": 40
+        "_row_num": 42
       },
       {
         "type": "integer",
@@ -262,7 +284,7 @@
         "display": {
           "text": "Time (how long it took one way)"
         },
-        "_row_num": 41
+        "_row_num": 43
       },
       {
         "type": "integer",
@@ -270,22 +292,25 @@
         "display": {
           "text": "Cost (in KSH, if no cost enter 0)"
         },
-        "_row_num": 42
+        "inputAttributes": {
+          "min": 0
+        },
+        "_row_num": 44
       },
       {
         "clause": "end if",
-        "_row_num": 43
+        "_row_num": 45
       },
       {
         "type": "select_multiple",
         "values_list": "boda_boda_list",
         "name": "boda_boda_select",
-        "_row_num": 44
+        "_row_num": 46
       },
       {
         "clause": "if",
         "condition": "calculates.expand_boda_boda()",
-        "_row_num": 45
+        "_row_num": 47
       },
       {
         "type": "integer",
@@ -293,7 +318,7 @@
         "display": {
           "text": "Time (how long it took one way)"
         },
-        "_row_num": 46
+        "_row_num": 48
       },
       {
         "type": "integer",
@@ -301,22 +326,25 @@
         "display": {
           "text": "Cost (in KSH, if no cost enter 0)"
         },
-        "_row_num": 47
+        "inputAttributes": {
+          "min": 0
+        },
+        "_row_num": 49
       },
       {
         "clause": "end if",
-        "_row_num": 48
+        "_row_num": 50
       },
       {
         "type": "select_multiple",
         "values_list": "piki_piki_list",
         "name": "piki_piki_select",
-        "_row_num": 49
+        "_row_num": 51
       },
       {
         "clause": "if",
         "condition": "calculates.expand_piki_piki()",
-        "_row_num": 50
+        "_row_num": 52
       },
       {
         "type": "integer",
@@ -324,7 +352,7 @@
         "display": {
           "text": "Time (how long it took one way)"
         },
-        "_row_num": 51
+        "_row_num": 53
       },
       {
         "type": "integer",
@@ -332,22 +360,25 @@
         "display": {
           "text": "Cost (in KSH, if no cost enter 0)"
         },
-        "_row_num": 52
+        "inputAttributes": {
+          "min": 0
+        },
+        "_row_num": 54
       },
       {
         "clause": "end if",
-        "_row_num": 53
+        "_row_num": 55
       },
       {
         "type": "select_multiple",
         "values_list": "tuk_tuk_list",
         "name": "tuk_tuk_select",
-        "_row_num": 54
+        "_row_num": 56
       },
       {
         "clause": "if",
         "condition": "calculates.expand_tuk_tuk()",
-        "_row_num": 55
+        "_row_num": 57
       },
       {
         "type": "integer",
@@ -355,7 +386,7 @@
         "display": {
           "text": "Time (how long it took one way)"
         },
-        "_row_num": 56
+        "_row_num": 58
       },
       {
         "type": "integer",
@@ -363,22 +394,25 @@
         "display": {
           "text": "Cost (in KSH, if no cost enter 0)"
         },
-        "_row_num": 57
+        "inputAttributes": {
+          "min": 0
+        },
+        "_row_num": 59
       },
       {
         "clause": "end if",
-        "_row_num": 58
+        "_row_num": 60
       },
       {
         "type": "select_multiple",
         "values_list": "matatu_list",
         "name": "matatu_select",
-        "_row_num": 59
+        "_row_num": 61
       },
       {
         "clause": "if",
         "condition": "calculates.expand_matatu()",
-        "_row_num": 60
+        "_row_num": 62
       },
       {
         "type": "integer",
@@ -386,7 +420,7 @@
         "display": {
           "text": "Time (how long it took one way)"
         },
-        "_row_num": 61
+        "_row_num": 63
       },
       {
         "type": "integer",
@@ -394,22 +428,25 @@
         "display": {
           "text": "Cost (in KSH, if no cost enter 0)"
         },
-        "_row_num": 62
+        "inputAttributes": {
+          "min": 0
+        },
+        "_row_num": 64
       },
       {
         "clause": "end if",
-        "_row_num": 63
+        "_row_num": 65
       },
       {
         "type": "select_multiple",
         "values_list": "bus_list",
         "name": "bus_select",
-        "_row_num": 64
+        "_row_num": 66
       },
       {
         "clause": "if",
         "condition": "calculates.expand_bus()",
-        "_row_num": 65
+        "_row_num": 67
       },
       {
         "type": "integer",
@@ -417,7 +454,7 @@
         "display": {
           "text": "Time (how long it took one way)"
         },
-        "_row_num": 66
+        "_row_num": 68
       },
       {
         "type": "integer",
@@ -425,22 +462,25 @@
         "display": {
           "text": "Cost (in KSH, if no cost enter 0)"
         },
-        "_row_num": 67
+        "inputAttributes": {
+          "min": 0
+        },
+        "_row_num": 69
       },
       {
         "clause": "end if",
-        "_row_num": 68
+        "_row_num": 70
       },
       {
         "type": "select_multiple",
         "values_list": "taxi_list",
         "name": "taxi_select",
-        "_row_num": 69
+        "_row_num": 71
       },
       {
         "clause": "if",
         "condition": "calculates.expand_taxi()",
-        "_row_num": 70
+        "_row_num": 72
       },
       {
         "type": "integer",
@@ -448,7 +488,7 @@
         "display": {
           "text": "Time (how long it took one way)"
         },
-        "_row_num": 71
+        "_row_num": 73
       },
       {
         "type": "integer",
@@ -456,22 +496,25 @@
         "display": {
           "text": "Cost (in KSH, if no cost enter 0)"
         },
-        "_row_num": 72
+        "inputAttributes": {
+          "min": 0
+        },
+        "_row_num": 74
       },
       {
         "clause": "end if",
-        "_row_num": 73
+        "_row_num": 75
       },
       {
         "type": "select_multiple",
         "values_list": "car_list",
         "name": "car_select",
-        "_row_num": 74
+        "_row_num": 76
       },
       {
         "clause": "if",
         "condition": "calculates.expand_car()",
-        "_row_num": 75
+        "_row_num": 77
       },
       {
         "type": "integer",
@@ -479,7 +522,7 @@
         "display": {
           "text": "Time (how long it took one way)"
         },
-        "_row_num": 76
+        "_row_num": 78
       },
       {
         "type": "integer",
@@ -487,22 +530,25 @@
         "display": {
           "text": "Cost (in KSH, if no cost enter 0)"
         },
-        "_row_num": 77
+        "inputAttributes": {
+          "min": 0
+        },
+        "_row_num": 79
       },
       {
         "clause": "end if",
-        "_row_num": 78
+        "_row_num": 80
       },
       {
         "type": "select_multiple",
         "values_list": "boat_list",
         "name": "boat_select",
-        "_row_num": 79
+        "_row_num": 81
       },
       {
         "clause": "if",
         "condition": "calculates.expand_boat()",
-        "_row_num": 80
+        "_row_num": 82
       },
       {
         "type": "integer",
@@ -510,7 +556,7 @@
         "display": {
           "text": "Time (how long it took one way)"
         },
-        "_row_num": 81
+        "_row_num": 83
       },
       {
         "type": "integer",
@@ -518,58 +564,109 @@
         "display": {
           "text": "Cost (in KSH, if no cost enter 0)"
         },
-        "_row_num": 82
-      },
-      {
-        "clause": "end if",
-        "_row_num": 83
-      },
-      {
-        "clause": "end screen",
+        "inputAttributes": {
+          "min": 0
+        },
         "_row_num": 84
       },
       {
-        "clause": "begin screen",
+        "clause": "end if",
         "_row_num": 85
       },
       {
-        "type": "note",
-        "name": "ancillary",
-        "display": {
-          "text": "<strong>Ancillary costs</strong>"
-        },
+        "type": "select_multiple",
+        "values_list": "other_transport_list",
+        "name": "other_transport_select",
         "_row_num": 86
       },
       {
-        "type": "integer",
-        "name": "medical_cost",
-        "display": {
-          "text": "For this clinic visit, how many shillings did you spend on medical costs?",
-          "hint": "e.g. HIV testing, medication, lab tests, maternal/child health"
-        },
+        "clause": "if",
+        "condition": "calculates.expand_other_transport()",
         "_row_num": 87
       },
       {
-        "clause": "end screen",
+        "type": "text",
+        "name": "other_tranport",
+        "display": {
+          "text": "Specify:"
+        },
         "_row_num": 88
       },
       {
         "type": "integer",
-        "name": "hours_away",
+        "name": "time_other",
         "display": {
-          "text": "How many hours were you away from home in order to seek and receive care?",
-          "hint": "Overall time, including the estimated time need to travel back home"
+          "text": "Time (how long it took one way)"
         },
         "_row_num": 89
       },
       {
         "type": "integer",
-        "name": "earning",
+        "name": "cost_other",
         "display": {
-          "text": "How much money would you have earned today had you not had to spend the time to clinic?",
-          "hint": "Record \"0\" if the patient doesn't have a paid job (in KSH)"
+          "text": "Cost (in KSH, if no cost enter 0)"
+        },
+        "inputAttributes": {
+          "min": 0
         },
         "_row_num": 90
+      },
+      {
+        "clause": "end if",
+        "_row_num": 91
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 92
+      },
+      {
+        "clause": "begin screen",
+        "_row_num": 93
+      },
+      {
+        "type": "note",
+        "name": "ancillary",
+        "display": {
+          "text": "8.  Ancillary costs"
+        },
+        "_row_num": 94
+      },
+      {
+        "type": "integer",
+        "name": "medical_cost",
+        "display": {
+          "text": "a.  For this clinic visit, how many shillings did you spend on medical costs?  (in KSH)",
+          "hint": "e.g. HIV testing, medication, lab tests, maternal/child health"
+        },
+        "inputAttributes": {
+          "min": 0
+        },
+        "_row_num": 95
+      },
+      {
+        "clause": "end screen",
+        "_row_num": 96
+      },
+      {
+        "type": "integer",
+        "name": "hours_away",
+        "display": {
+          "text": "b.  How many hours were you away from home in order to seek and receive care?",
+          "hint": "Overall time, including the estimated time need to travel back home"
+        },
+        "_row_num": 97
+      },
+      {
+        "type": "integer",
+        "name": "earning",
+        "display": {
+          "text": "c.  How much money would you have earned today had you not had to spend the time to clinic?  (in KSH)",
+          "hint": "Record \"0\" if the patient doesn't have a paid job (in KSH)"
+        },
+        "inputAttributes": {
+          "min": 0
+        },
+        "_row_num": 98
       }
     ],
     "choices": [
@@ -836,6 +933,14 @@
           "text": "Boat"
         },
         "_row_num": 38
+      },
+      {
+        "choice_list_name": "other_transport_list",
+        "data_value": "other_transport",
+        "display": {
+          "text": "Other"
+        },
+        "_row_num": 39
       }
     ],
     "calculates": [
@@ -898,6 +1003,11 @@
         "calculation_name": "expand_boat",
         "calculation": "selected(data('boat_select'), 'boat')",
         "_row_num": 14
+      },
+      {
+        "calculation_name": "expand_other_transport",
+        "calculation": "selected(data('other_transport_select'), 'other_transport')",
+        "_row_num": 15
       }
     ],
     "settings": [
@@ -1283,6 +1393,16 @@
           },
           "_row_num": 38
         }
+      ],
+      "other_transport_list": [
+        {
+          "choice_list_name": "other_transport_list",
+          "data_value": "other_transport",
+          "display": {
+            "text": "Other"
+          },
+          "_row_num": 39
+        }
       ]
     },
     "queries": {},
@@ -1346,6 +1466,11 @@
         "calculation_name": "expand_boat",
         "calculation": "selected(data('boat_select'), 'boat')",
         "_row_num": 14
+      },
+      "expand_other_transport": {
+        "calculation_name": "expand_other_transport",
+        "calculation": "selected(data('other_transport_select'), 'other_transport')",
+        "_row_num": 15
       }
     },
     "model": {
@@ -1505,7 +1630,7 @@
           }
         ],
         "type": "object",
-        "elementType": "dateTime",
+        "elementType": "time",
         "elementKey": "seen_time"
       },
       "walking_select": {
@@ -1523,20 +1648,30 @@
         "valuesList": "walking_list",
         "elementKey": "walking_select"
       },
-      "time_walking": {
+      "walking_hour": {
         "_defn": [
           {
-            "_row_num": 36,
+            "_row_num": 37,
             "section_name": "survey"
           }
         ],
         "type": "integer",
-        "elementKey": "time_walking"
+        "elementKey": "walking_hour"
+      },
+      "walking_min": {
+        "_defn": [
+          {
+            "_row_num": 38,
+            "section_name": "survey"
+          }
+        ],
+        "type": "integer",
+        "elementKey": "walking_min"
       },
       "cost_walking": {
         "_defn": [
           {
-            "_row_num": 37,
+            "_row_num": 39,
             "section_name": "survey"
           }
         ],
@@ -1546,7 +1681,7 @@
       "bicycle_select": {
         "_defn": [
           {
-            "_row_num": 39,
+            "_row_num": 41,
             "section_name": "survey"
           }
         ],
@@ -1561,7 +1696,7 @@
       "time_bicycle": {
         "_defn": [
           {
-            "_row_num": 41,
+            "_row_num": 43,
             "section_name": "survey"
           }
         ],
@@ -1571,7 +1706,7 @@
       "cost_bicycle": {
         "_defn": [
           {
-            "_row_num": 42,
+            "_row_num": 44,
             "section_name": "survey"
           }
         ],
@@ -1581,7 +1716,7 @@
       "boda_boda_select": {
         "_defn": [
           {
-            "_row_num": 44,
+            "_row_num": 46,
             "section_name": "survey"
           }
         ],
@@ -1596,7 +1731,7 @@
       "time_boda_boda": {
         "_defn": [
           {
-            "_row_num": 46,
+            "_row_num": 48,
             "section_name": "survey"
           }
         ],
@@ -1606,7 +1741,7 @@
       "cost_boda_boda": {
         "_defn": [
           {
-            "_row_num": 47,
+            "_row_num": 49,
             "section_name": "survey"
           }
         ],
@@ -1616,7 +1751,7 @@
       "piki_piki_select": {
         "_defn": [
           {
-            "_row_num": 49,
+            "_row_num": 51,
             "section_name": "survey"
           }
         ],
@@ -1631,7 +1766,7 @@
       "time_piki_piki": {
         "_defn": [
           {
-            "_row_num": 51,
+            "_row_num": 53,
             "section_name": "survey"
           }
         ],
@@ -1641,7 +1776,7 @@
       "cost_piki_piki": {
         "_defn": [
           {
-            "_row_num": 52,
+            "_row_num": 54,
             "section_name": "survey"
           }
         ],
@@ -1651,7 +1786,7 @@
       "tuk_tuk_select": {
         "_defn": [
           {
-            "_row_num": 54,
+            "_row_num": 56,
             "section_name": "survey"
           }
         ],
@@ -1666,7 +1801,7 @@
       "time_tuk_tuk": {
         "_defn": [
           {
-            "_row_num": 56,
+            "_row_num": 58,
             "section_name": "survey"
           }
         ],
@@ -1676,7 +1811,7 @@
       "cost_tuk_tuk": {
         "_defn": [
           {
-            "_row_num": 57,
+            "_row_num": 59,
             "section_name": "survey"
           }
         ],
@@ -1686,7 +1821,7 @@
       "matatu_select": {
         "_defn": [
           {
-            "_row_num": 59,
+            "_row_num": 61,
             "section_name": "survey"
           }
         ],
@@ -1701,7 +1836,7 @@
       "time_matatu": {
         "_defn": [
           {
-            "_row_num": 61,
+            "_row_num": 63,
             "section_name": "survey"
           }
         ],
@@ -1711,7 +1846,7 @@
       "cost_matatu": {
         "_defn": [
           {
-            "_row_num": 62,
+            "_row_num": 64,
             "section_name": "survey"
           }
         ],
@@ -1721,7 +1856,7 @@
       "bus_select": {
         "_defn": [
           {
-            "_row_num": 64,
+            "_row_num": 66,
             "section_name": "survey"
           }
         ],
@@ -1736,7 +1871,7 @@
       "time_bus": {
         "_defn": [
           {
-            "_row_num": 66,
+            "_row_num": 68,
             "section_name": "survey"
           }
         ],
@@ -1746,7 +1881,7 @@
       "cost_bus": {
         "_defn": [
           {
-            "_row_num": 67,
+            "_row_num": 69,
             "section_name": "survey"
           }
         ],
@@ -1756,7 +1891,7 @@
       "taxi_select": {
         "_defn": [
           {
-            "_row_num": 69,
+            "_row_num": 71,
             "section_name": "survey"
           }
         ],
@@ -1771,7 +1906,7 @@
       "time_taxi": {
         "_defn": [
           {
-            "_row_num": 71,
+            "_row_num": 73,
             "section_name": "survey"
           }
         ],
@@ -1781,7 +1916,7 @@
       "cost_taxi": {
         "_defn": [
           {
-            "_row_num": 72,
+            "_row_num": 74,
             "section_name": "survey"
           }
         ],
@@ -1791,7 +1926,7 @@
       "car_select": {
         "_defn": [
           {
-            "_row_num": 74,
+            "_row_num": 76,
             "section_name": "survey"
           }
         ],
@@ -1806,7 +1941,7 @@
       "time_car": {
         "_defn": [
           {
-            "_row_num": 76,
+            "_row_num": 78,
             "section_name": "survey"
           }
         ],
@@ -1816,7 +1951,7 @@
       "cost_car": {
         "_defn": [
           {
-            "_row_num": 77,
+            "_row_num": 79,
             "section_name": "survey"
           }
         ],
@@ -1826,7 +1961,7 @@
       "boat_select": {
         "_defn": [
           {
-            "_row_num": 79,
+            "_row_num": 81,
             "section_name": "survey"
           }
         ],
@@ -1841,7 +1976,7 @@
       "time_boat": {
         "_defn": [
           {
-            "_row_num": 81,
+            "_row_num": 83,
             "section_name": "survey"
           }
         ],
@@ -1851,17 +1986,62 @@
       "cost_boat": {
         "_defn": [
           {
-            "_row_num": 82,
+            "_row_num": 84,
             "section_name": "survey"
           }
         ],
         "type": "integer",
         "elementKey": "cost_boat"
       },
+      "other_transport_select": {
+        "_defn": [
+          {
+            "_row_num": 86,
+            "section_name": "survey"
+          }
+        ],
+        "type": "array",
+        "items": {
+          "type": "string",
+          "elementKey": "other_transport_select_items"
+        },
+        "valuesList": "other_transport_list",
+        "elementKey": "other_transport_select"
+      },
+      "other_tranport": {
+        "_defn": [
+          {
+            "_row_num": 88,
+            "section_name": "survey"
+          }
+        ],
+        "type": "string",
+        "elementKey": "other_tranport"
+      },
+      "time_other": {
+        "_defn": [
+          {
+            "_row_num": 89,
+            "section_name": "survey"
+          }
+        ],
+        "type": "integer",
+        "elementKey": "time_other"
+      },
+      "cost_other": {
+        "_defn": [
+          {
+            "_row_num": 90,
+            "section_name": "survey"
+          }
+        ],
+        "type": "integer",
+        "elementKey": "cost_other"
+      },
       "medical_cost": {
         "_defn": [
           {
-            "_row_num": 87,
+            "_row_num": 95,
             "section_name": "survey"
           }
         ],
@@ -1871,7 +2051,7 @@
       "hours_away": {
         "_defn": [
           {
-            "_row_num": 89,
+            "_row_num": 97,
             "section_name": "survey"
           }
         ],
@@ -1881,7 +2061,7 @@
       "earning": {
         "_defn": [
           {
-            "_row_num": 90,
+            "_row_num": 98,
             "section_name": "survey"
           }
         ],
@@ -1903,7 +2083,7 @@
             "type": "note",
             "name": "title_1",
             "display": {
-              "text": "Administrative",
+              "text": "<strong>Administrative</strong>",
               "title": "Administrative"
             },
             "_row_num": 3,
@@ -1917,7 +2097,7 @@
             "type": "date",
             "name": "visit_date",
             "display": {
-              "text": "Date of visit:"
+              "text": "1.  Date of visit:"
             },
             "_row_num": 4,
             "__rowNum__": 3,
@@ -1930,7 +2110,7 @@
             "type": "text",
             "name": "interviewer_id",
             "display": {
-              "text": "Interviewer identifier:"
+              "text": "2.  Interviewer identifier:"
             },
             "_row_num": 5,
             "__rowNum__": 4,
@@ -1943,7 +2123,7 @@
             "type": "text",
             "name": "patient_id",
             "display": {
-              "text": "Patient identifier:"
+              "text": "3.  Patient identifier:"
             },
             "_row_num": 6,
             "__rowNum__": 5,
@@ -1971,7 +2151,7 @@
             "values_list": "clinic_list",
             "name": "clinic",
             "display": {
-              "text": "Clinic:"
+              "text": "1.  Clinic:"
             },
             "_row_num": 10,
             "__rowNum__": 9,
@@ -1984,7 +2164,7 @@
             "type": "date",
             "name": "birth_date",
             "display": {
-              "text": "Date of birth:"
+              "text": "2.  Date of birth:"
             },
             "_row_num": 12,
             "__rowNum__": 11,
@@ -1998,7 +2178,7 @@
             "values_list": "sexes",
             "name": "sex",
             "display": {
-              "text": "Gender:"
+              "text": "3.  Gender:"
             },
             "_row_num": 13,
             "__rowNum__": 12,
@@ -2012,7 +2192,7 @@
             "values_list": "occupation_list",
             "name": "occupation",
             "display": {
-              "text": "Primary occupation:"
+              "text": "4.  Primary occupation:"
             },
             "_row_num": 15,
             "__rowNum__": 14,
@@ -2025,7 +2205,7 @@
             "type": "text",
             "name": "other_occupation",
             "display": {
-              "text": "Specify:"
+              "text": "4b.  Specify:"
             },
             "_row_num": 17,
             "__rowNum__": 16,
@@ -2053,7 +2233,7 @@
             "values_list": "from_list",
             "name": "journey_start",
             "display": {
-              "text": "When you set out to come to this clinic visit, from where did you start your journey?"
+              "text": "1.  When you set out to come to this clinic visit, from where did you start your journey?"
             },
             "_row_num": 22,
             "__rowNum__": 21,
@@ -2066,7 +2246,7 @@
             "type": "text",
             "name": "other_journey_start",
             "display": {
-              "text": "Specify:"
+              "text": "1.  Specify:"
             },
             "_row_num": 24,
             "__rowNum__": 23,
@@ -2079,7 +2259,7 @@
             "type": "text",
             "name": "sub_country",
             "display": {
-              "text": "Which sub-country and constituency is that?"
+              "text": "2.  Which sub-county and constituency is that?"
             },
             "_row_num": 27,
             "__rowNum__": 26,
@@ -2092,7 +2272,10 @@
             "type": "decimal",
             "name": "distance",
             "display": {
-              "text": "How far did you travel to get to your clinic visit?"
+              "text": "3.  How far did you travel to get to your clinic visit?  (in kilometers)"
+            },
+            "inputAttributes": {
+              "min": 1
             },
             "_row_num": 28,
             "__rowNum__": 27,
@@ -2105,7 +2288,7 @@
             "type": "datetime",
             "name": "leave_time",
             "display": {
-              "text": "What date and time did you leave for the clinic?"
+              "text": "4.  What date and time did you leave for the clinic?"
             },
             "_row_num": 29,
             "__rowNum__": 28,
@@ -2118,7 +2301,7 @@
             "type": "datetime",
             "name": "arrive_time",
             "display": {
-              "text": "What time did you arrive at the clinic?"
+              "text": "5.  What date and time did you arrive at the clinic?"
             },
             "_row_num": 30,
             "__rowNum__": 29,
@@ -2128,15 +2311,15 @@
             "promptIdx": 16
           },
           {
-            "type": "datetime",
+            "type": "time",
             "name": "seen_time",
             "display": {
-              "text": "When were you first seen by a doctor or nurse?"
+              "text": "6.  When were you first seen by a doctor or nurse?"
             },
             "_row_num": 31,
             "__rowNum__": 30,
             "_token_type": "prompt",
-            "_type": "datetime",
+            "_type": "time",
             "_branch_label_enclosing_screen": "survey/_screen31",
             "promptIdx": 17
           },
@@ -2144,7 +2327,7 @@
             "type": "note",
             "name": "transport",
             "display": {
-              "text": "Which of the following modes of transport did you use to get to clinic for today's visit?"
+              "text": "7.  Which of the following modes of transport did you use to get to clinic for today's visit?"
             },
             "_row_num": 33,
             "__rowNum__": 32,
@@ -2165,23 +2348,23 @@
             "promptIdx": 19
           },
           {
-            "type": "integer",
-            "name": "time_walking",
+            "type": "note",
+            "name": "walking_note",
             "display": {
               "text": "Time (how long it took one way)"
             },
             "_row_num": 36,
             "__rowNum__": 35,
             "_token_type": "prompt",
-            "_type": "integer",
+            "_type": "note",
             "_branch_label_enclosing_screen": "survey/_screen32",
             "promptIdx": 20
           },
           {
             "type": "integer",
-            "name": "cost_walking",
+            "name": "walking_hour",
             "display": {
-              "text": "Cost (in KSH, if no cost enter 0)"
+              "text": "hours"
             },
             "_row_num": 37,
             "__rowNum__": 36,
@@ -2191,15 +2374,44 @@
             "promptIdx": 21
           },
           {
-            "type": "select_multiple",
-            "values_list": "bicycle_list",
-            "name": "bicycle_select",
+            "type": "integer",
+            "name": "walking_min",
+            "display": {
+              "text": "minutes"
+            },
+            "_row_num": 38,
+            "__rowNum__": 37,
+            "_token_type": "prompt",
+            "_type": "integer",
+            "_branch_label_enclosing_screen": "survey/_screen32",
+            "promptIdx": 22
+          },
+          {
+            "type": "integer",
+            "name": "cost_walking",
+            "display": {
+              "text": "Cost (in KSH, if no cost enter 0)"
+            },
+            "inputAttributes": {
+              "min": 0
+            },
             "_row_num": 39,
             "__rowNum__": 38,
             "_token_type": "prompt",
+            "_type": "integer",
+            "_branch_label_enclosing_screen": "survey/_screen32",
+            "promptIdx": 23
+          },
+          {
+            "type": "select_multiple",
+            "values_list": "bicycle_list",
+            "name": "bicycle_select",
+            "_row_num": 41,
+            "__rowNum__": 40,
+            "_token_type": "prompt",
             "_type": "select_multiple",
             "_branch_label_enclosing_screen": "survey/_screen32",
-            "promptIdx": 22
+            "promptIdx": 24
           },
           {
             "type": "integer",
@@ -2207,12 +2419,12 @@
             "display": {
               "text": "Time (how long it took one way)"
             },
-            "_row_num": 41,
-            "__rowNum__": 40,
+            "_row_num": 43,
+            "__rowNum__": 42,
             "_token_type": "prompt",
             "_type": "integer",
             "_branch_label_enclosing_screen": "survey/_screen32",
-            "promptIdx": 23
+            "promptIdx": 25
           },
           {
             "type": "integer",
@@ -2220,23 +2432,26 @@
             "display": {
               "text": "Cost (in KSH, if no cost enter 0)"
             },
-            "_row_num": 42,
-            "__rowNum__": 41,
+            "inputAttributes": {
+              "min": 0
+            },
+            "_row_num": 44,
+            "__rowNum__": 43,
             "_token_type": "prompt",
             "_type": "integer",
             "_branch_label_enclosing_screen": "survey/_screen32",
-            "promptIdx": 24
+            "promptIdx": 26
           },
           {
             "type": "select_multiple",
             "values_list": "boda_boda_list",
             "name": "boda_boda_select",
-            "_row_num": 44,
-            "__rowNum__": 43,
+            "_row_num": 46,
+            "__rowNum__": 45,
             "_token_type": "prompt",
             "_type": "select_multiple",
             "_branch_label_enclosing_screen": "survey/_screen32",
-            "promptIdx": 25
+            "promptIdx": 27
           },
           {
             "type": "integer",
@@ -2244,12 +2459,12 @@
             "display": {
               "text": "Time (how long it took one way)"
             },
-            "_row_num": 46,
-            "__rowNum__": 45,
+            "_row_num": 48,
+            "__rowNum__": 47,
             "_token_type": "prompt",
             "_type": "integer",
             "_branch_label_enclosing_screen": "survey/_screen32",
-            "promptIdx": 26
+            "promptIdx": 28
           },
           {
             "type": "integer",
@@ -2257,23 +2472,26 @@
             "display": {
               "text": "Cost (in KSH, if no cost enter 0)"
             },
-            "_row_num": 47,
-            "__rowNum__": 46,
+            "inputAttributes": {
+              "min": 0
+            },
+            "_row_num": 49,
+            "__rowNum__": 48,
             "_token_type": "prompt",
             "_type": "integer",
             "_branch_label_enclosing_screen": "survey/_screen32",
-            "promptIdx": 27
+            "promptIdx": 29
           },
           {
             "type": "select_multiple",
             "values_list": "piki_piki_list",
             "name": "piki_piki_select",
-            "_row_num": 49,
-            "__rowNum__": 48,
+            "_row_num": 51,
+            "__rowNum__": 50,
             "_token_type": "prompt",
             "_type": "select_multiple",
             "_branch_label_enclosing_screen": "survey/_screen32",
-            "promptIdx": 28
+            "promptIdx": 30
           },
           {
             "type": "integer",
@@ -2281,12 +2499,12 @@
             "display": {
               "text": "Time (how long it took one way)"
             },
-            "_row_num": 51,
-            "__rowNum__": 50,
+            "_row_num": 53,
+            "__rowNum__": 52,
             "_token_type": "prompt",
             "_type": "integer",
             "_branch_label_enclosing_screen": "survey/_screen32",
-            "promptIdx": 29
+            "promptIdx": 31
           },
           {
             "type": "integer",
@@ -2294,23 +2512,26 @@
             "display": {
               "text": "Cost (in KSH, if no cost enter 0)"
             },
-            "_row_num": 52,
-            "__rowNum__": 51,
+            "inputAttributes": {
+              "min": 0
+            },
+            "_row_num": 54,
+            "__rowNum__": 53,
             "_token_type": "prompt",
             "_type": "integer",
             "_branch_label_enclosing_screen": "survey/_screen32",
-            "promptIdx": 30
+            "promptIdx": 32
           },
           {
             "type": "select_multiple",
             "values_list": "tuk_tuk_list",
             "name": "tuk_tuk_select",
-            "_row_num": 54,
-            "__rowNum__": 53,
+            "_row_num": 56,
+            "__rowNum__": 55,
             "_token_type": "prompt",
             "_type": "select_multiple",
             "_branch_label_enclosing_screen": "survey/_screen32",
-            "promptIdx": 31
+            "promptIdx": 33
           },
           {
             "type": "integer",
@@ -2318,12 +2539,12 @@
             "display": {
               "text": "Time (how long it took one way)"
             },
-            "_row_num": 56,
-            "__rowNum__": 55,
+            "_row_num": 58,
+            "__rowNum__": 57,
             "_token_type": "prompt",
             "_type": "integer",
             "_branch_label_enclosing_screen": "survey/_screen32",
-            "promptIdx": 32
+            "promptIdx": 34
           },
           {
             "type": "integer",
@@ -2331,23 +2552,26 @@
             "display": {
               "text": "Cost (in KSH, if no cost enter 0)"
             },
-            "_row_num": 57,
-            "__rowNum__": 56,
+            "inputAttributes": {
+              "min": 0
+            },
+            "_row_num": 59,
+            "__rowNum__": 58,
             "_token_type": "prompt",
             "_type": "integer",
             "_branch_label_enclosing_screen": "survey/_screen32",
-            "promptIdx": 33
+            "promptIdx": 35
           },
           {
             "type": "select_multiple",
             "values_list": "matatu_list",
             "name": "matatu_select",
-            "_row_num": 59,
-            "__rowNum__": 58,
+            "_row_num": 61,
+            "__rowNum__": 60,
             "_token_type": "prompt",
             "_type": "select_multiple",
             "_branch_label_enclosing_screen": "survey/_screen32",
-            "promptIdx": 34
+            "promptIdx": 36
           },
           {
             "type": "integer",
@@ -2355,12 +2579,12 @@
             "display": {
               "text": "Time (how long it took one way)"
             },
-            "_row_num": 61,
-            "__rowNum__": 60,
+            "_row_num": 63,
+            "__rowNum__": 62,
             "_token_type": "prompt",
             "_type": "integer",
             "_branch_label_enclosing_screen": "survey/_screen32",
-            "promptIdx": 35
+            "promptIdx": 37
           },
           {
             "type": "integer",
@@ -2368,23 +2592,26 @@
             "display": {
               "text": "Cost (in KSH, if no cost enter 0)"
             },
-            "_row_num": 62,
-            "__rowNum__": 61,
+            "inputAttributes": {
+              "min": 0
+            },
+            "_row_num": 64,
+            "__rowNum__": 63,
             "_token_type": "prompt",
             "_type": "integer",
             "_branch_label_enclosing_screen": "survey/_screen32",
-            "promptIdx": 36
+            "promptIdx": 38
           },
           {
             "type": "select_multiple",
             "values_list": "bus_list",
             "name": "bus_select",
-            "_row_num": 64,
-            "__rowNum__": 63,
+            "_row_num": 66,
+            "__rowNum__": 65,
             "_token_type": "prompt",
             "_type": "select_multiple",
             "_branch_label_enclosing_screen": "survey/_screen32",
-            "promptIdx": 37
+            "promptIdx": 39
           },
           {
             "type": "integer",
@@ -2392,12 +2619,12 @@
             "display": {
               "text": "Time (how long it took one way)"
             },
-            "_row_num": 66,
-            "__rowNum__": 65,
+            "_row_num": 68,
+            "__rowNum__": 67,
             "_token_type": "prompt",
             "_type": "integer",
             "_branch_label_enclosing_screen": "survey/_screen32",
-            "promptIdx": 38
+            "promptIdx": 40
           },
           {
             "type": "integer",
@@ -2405,23 +2632,26 @@
             "display": {
               "text": "Cost (in KSH, if no cost enter 0)"
             },
-            "_row_num": 67,
-            "__rowNum__": 66,
+            "inputAttributes": {
+              "min": 0
+            },
+            "_row_num": 69,
+            "__rowNum__": 68,
             "_token_type": "prompt",
             "_type": "integer",
             "_branch_label_enclosing_screen": "survey/_screen32",
-            "promptIdx": 39
+            "promptIdx": 41
           },
           {
             "type": "select_multiple",
             "values_list": "taxi_list",
             "name": "taxi_select",
-            "_row_num": 69,
-            "__rowNum__": 68,
+            "_row_num": 71,
+            "__rowNum__": 70,
             "_token_type": "prompt",
             "_type": "select_multiple",
             "_branch_label_enclosing_screen": "survey/_screen32",
-            "promptIdx": 40
+            "promptIdx": 42
           },
           {
             "type": "integer",
@@ -2429,12 +2659,12 @@
             "display": {
               "text": "Time (how long it took one way)"
             },
-            "_row_num": 71,
-            "__rowNum__": 70,
+            "_row_num": 73,
+            "__rowNum__": 72,
             "_token_type": "prompt",
             "_type": "integer",
             "_branch_label_enclosing_screen": "survey/_screen32",
-            "promptIdx": 41
+            "promptIdx": 43
           },
           {
             "type": "integer",
@@ -2442,23 +2672,26 @@
             "display": {
               "text": "Cost (in KSH, if no cost enter 0)"
             },
-            "_row_num": 72,
-            "__rowNum__": 71,
+            "inputAttributes": {
+              "min": 0
+            },
+            "_row_num": 74,
+            "__rowNum__": 73,
             "_token_type": "prompt",
             "_type": "integer",
             "_branch_label_enclosing_screen": "survey/_screen32",
-            "promptIdx": 42
+            "promptIdx": 44
           },
           {
             "type": "select_multiple",
             "values_list": "car_list",
             "name": "car_select",
-            "_row_num": 74,
-            "__rowNum__": 73,
+            "_row_num": 76,
+            "__rowNum__": 75,
             "_token_type": "prompt",
             "_type": "select_multiple",
             "_branch_label_enclosing_screen": "survey/_screen32",
-            "promptIdx": 43
+            "promptIdx": 45
           },
           {
             "type": "integer",
@@ -2466,12 +2699,12 @@
             "display": {
               "text": "Time (how long it took one way)"
             },
-            "_row_num": 76,
-            "__rowNum__": 75,
+            "_row_num": 78,
+            "__rowNum__": 77,
             "_token_type": "prompt",
             "_type": "integer",
             "_branch_label_enclosing_screen": "survey/_screen32",
-            "promptIdx": 44
+            "promptIdx": 46
           },
           {
             "type": "integer",
@@ -2479,23 +2712,26 @@
             "display": {
               "text": "Cost (in KSH, if no cost enter 0)"
             },
-            "_row_num": 77,
-            "__rowNum__": 76,
+            "inputAttributes": {
+              "min": 0
+            },
+            "_row_num": 79,
+            "__rowNum__": 78,
             "_token_type": "prompt",
             "_type": "integer",
             "_branch_label_enclosing_screen": "survey/_screen32",
-            "promptIdx": 45
+            "promptIdx": 47
           },
           {
             "type": "select_multiple",
             "values_list": "boat_list",
             "name": "boat_select",
-            "_row_num": 79,
-            "__rowNum__": 78,
+            "_row_num": 81,
+            "__rowNum__": 80,
             "_token_type": "prompt",
             "_type": "select_multiple",
             "_branch_label_enclosing_screen": "survey/_screen32",
-            "promptIdx": 46
+            "promptIdx": 48
           },
           {
             "type": "integer",
@@ -2503,12 +2739,12 @@
             "display": {
               "text": "Time (how long it took one way)"
             },
-            "_row_num": 81,
-            "__rowNum__": 80,
+            "_row_num": 83,
+            "__rowNum__": 82,
             "_token_type": "prompt",
             "_type": "integer",
             "_branch_label_enclosing_screen": "survey/_screen32",
-            "promptIdx": 47
+            "promptIdx": 49
           },
           {
             "type": "integer",
@@ -2516,75 +2752,137 @@
             "display": {
               "text": "Cost (in KSH, if no cost enter 0)"
             },
-            "_row_num": 82,
-            "__rowNum__": 81,
+            "inputAttributes": {
+              "min": 0
+            },
+            "_row_num": 84,
+            "__rowNum__": 83,
             "_token_type": "prompt",
             "_type": "integer",
             "_branch_label_enclosing_screen": "survey/_screen32",
-            "promptIdx": 48
-          },
-          {
-            "type": "note",
-            "name": "ancillary",
-            "display": {
-              "text": "<strong>Ancillary costs</strong>"
-            },
-            "_row_num": 86,
-            "__rowNum__": 85,
-            "_token_type": "prompt",
-            "_type": "note",
-            "_branch_label_enclosing_screen": "survey/_screen85",
-            "promptIdx": 49
-          },
-          {
-            "type": "integer",
-            "name": "medical_cost",
-            "display": {
-              "text": "For this clinic visit, how many shillings did you spend on medical costs?",
-              "hint": "e.g. HIV testing, medication, lab tests, maternal/child health"
-            },
-            "_row_num": 87,
-            "__rowNum__": 86,
-            "_token_type": "prompt",
-            "_type": "integer",
-            "_branch_label_enclosing_screen": "survey/_screen85",
             "promptIdx": 50
           },
           {
-            "type": "integer",
-            "name": "hours_away",
+            "type": "select_multiple",
+            "values_list": "other_transport_list",
+            "name": "other_transport_select",
+            "_row_num": 86,
+            "__rowNum__": 85,
+            "_token_type": "prompt",
+            "_type": "select_multiple",
+            "_branch_label_enclosing_screen": "survey/_screen32",
+            "promptIdx": 51
+          },
+          {
+            "type": "text",
+            "name": "other_tranport",
             "display": {
-              "text": "How many hours were you away from home in order to seek and receive care?",
-              "hint": "Overall time, including the estimated time need to travel back home"
+              "text": "Specify:"
+            },
+            "_row_num": 88,
+            "__rowNum__": 87,
+            "_token_type": "prompt",
+            "_type": "text",
+            "_branch_label_enclosing_screen": "survey/_screen32",
+            "promptIdx": 52
+          },
+          {
+            "type": "integer",
+            "name": "time_other",
+            "display": {
+              "text": "Time (how long it took one way)"
             },
             "_row_num": 89,
             "__rowNum__": 88,
             "_token_type": "prompt",
             "_type": "integer",
-            "_branch_label_enclosing_screen": "survey/_screen89",
-            "promptIdx": 51
+            "_branch_label_enclosing_screen": "survey/_screen32",
+            "promptIdx": 53
           },
           {
             "type": "integer",
-            "name": "earning",
+            "name": "cost_other",
             "display": {
-              "text": "How much money would you have earned today had you not had to spend the time to clinic?",
-              "hint": "Record \"0\" if the patient doesn't have a paid job (in KSH)"
+              "text": "Cost (in KSH, if no cost enter 0)"
+            },
+            "inputAttributes": {
+              "min": 0
             },
             "_row_num": 90,
             "__rowNum__": 89,
             "_token_type": "prompt",
             "_type": "integer",
-            "_branch_label_enclosing_screen": "survey/_screen90",
-            "promptIdx": 52
+            "_branch_label_enclosing_screen": "survey/_screen32",
+            "promptIdx": 54
+          },
+          {
+            "type": "note",
+            "name": "ancillary",
+            "display": {
+              "text": "8.  Ancillary costs"
+            },
+            "_row_num": 94,
+            "__rowNum__": 93,
+            "_token_type": "prompt",
+            "_type": "note",
+            "_branch_label_enclosing_screen": "survey/_screen93",
+            "promptIdx": 55
+          },
+          {
+            "type": "integer",
+            "name": "medical_cost",
+            "display": {
+              "text": "a.  For this clinic visit, how many shillings did you spend on medical costs?  (in KSH)",
+              "hint": "e.g. HIV testing, medication, lab tests, maternal/child health"
+            },
+            "inputAttributes": {
+              "min": 0
+            },
+            "_row_num": 95,
+            "__rowNum__": 94,
+            "_token_type": "prompt",
+            "_type": "integer",
+            "_branch_label_enclosing_screen": "survey/_screen93",
+            "promptIdx": 56
+          },
+          {
+            "type": "integer",
+            "name": "hours_away",
+            "display": {
+              "text": "b.  How many hours were you away from home in order to seek and receive care?",
+              "hint": "Overall time, including the estimated time need to travel back home"
+            },
+            "_row_num": 97,
+            "__rowNum__": 96,
+            "_token_type": "prompt",
+            "_type": "integer",
+            "_branch_label_enclosing_screen": "survey/_screen97",
+            "promptIdx": 57
+          },
+          {
+            "type": "integer",
+            "name": "earning",
+            "display": {
+              "text": "c.  How much money would you have earned today had you not had to spend the time to clinic?  (in KSH)",
+              "hint": "Record \"0\" if the patient doesn't have a paid job (in KSH)"
+            },
+            "inputAttributes": {
+              "min": 0
+            },
+            "_row_num": 98,
+            "__rowNum__": 97,
+            "_token_type": "prompt",
+            "_type": "integer",
+            "_branch_label_enclosing_screen": "survey/_screen98",
+            "promptIdx": 58
           },
           {
             "_token_type": "prompt",
             "type": "contents",
             "_type": "contents",
-            "_row_num": 91,
-            "_branch_label_enclosing_screen": "survey/_screen91",
-            "promptIdx": 53
+            "_row_num": 99,
+            "_branch_label_enclosing_screen": "survey/_screen99",
+            "promptIdx": 59
           }
         ],
         "validation_tag_map": {
@@ -2696,49 +2994,49 @@
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 84,
-              "__rowNum__": 83,
+              "_row_num": 92,
+              "__rowNum__": 91,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(18);\nactivePromptIndicies.push(19);\nif (calculates.expand_walking()) {\nactivePromptIndicies.push(20);\nactivePromptIndicies.push(21);\n}\nactivePromptIndicies.push(22);\nif (calculates.expand_bicycle()) {\nactivePromptIndicies.push(23);\nactivePromptIndicies.push(24);\n}\nactivePromptIndicies.push(25);\nif (calculates.expand_boda_boda()) {\nactivePromptIndicies.push(26);\nactivePromptIndicies.push(27);\n}\nactivePromptIndicies.push(28);\nif (calculates.expand_piki_piki()) {\nactivePromptIndicies.push(29);\nactivePromptIndicies.push(30);\n}\nactivePromptIndicies.push(31);\nif (calculates.expand_tuk_tuk()) {\nactivePromptIndicies.push(32);\nactivePromptIndicies.push(33);\n}\nactivePromptIndicies.push(34);\nif (calculates.expand_matatu()) {\nactivePromptIndicies.push(35);\nactivePromptIndicies.push(36);\n}\nactivePromptIndicies.push(37);\nif (calculates.expand_bus()) {\nactivePromptIndicies.push(38);\nactivePromptIndicies.push(39);\n}\nactivePromptIndicies.push(40);\nif (calculates.expand_taxi()) {\nactivePromptIndicies.push(41);\nactivePromptIndicies.push(42);\n}\nactivePromptIndicies.push(43);\nif (calculates.expand_car()) {\nactivePromptIndicies.push(44);\nactivePromptIndicies.push(45);\n}\nactivePromptIndicies.push(46);\nif (calculates.expand_boat()) {\nactivePromptIndicies.push(47);\nactivePromptIndicies.push(48);\n}\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(18);\nactivePromptIndicies.push(19);\nif (calculates.expand_walking()) {\nactivePromptIndicies.push(20);\nactivePromptIndicies.push(21);\nactivePromptIndicies.push(22);\nactivePromptIndicies.push(23);\n}\nactivePromptIndicies.push(24);\nif (calculates.expand_bicycle()) {\nactivePromptIndicies.push(25);\nactivePromptIndicies.push(26);\n}\nactivePromptIndicies.push(27);\nif (calculates.expand_boda_boda()) {\nactivePromptIndicies.push(28);\nactivePromptIndicies.push(29);\n}\nactivePromptIndicies.push(30);\nif (calculates.expand_piki_piki()) {\nactivePromptIndicies.push(31);\nactivePromptIndicies.push(32);\n}\nactivePromptIndicies.push(33);\nif (calculates.expand_tuk_tuk()) {\nactivePromptIndicies.push(34);\nactivePromptIndicies.push(35);\n}\nactivePromptIndicies.push(36);\nif (calculates.expand_matatu()) {\nactivePromptIndicies.push(37);\nactivePromptIndicies.push(38);\n}\nactivePromptIndicies.push(39);\nif (calculates.expand_bus()) {\nactivePromptIndicies.push(40);\nactivePromptIndicies.push(41);\n}\nactivePromptIndicies.push(42);\nif (calculates.expand_taxi()) {\nactivePromptIndicies.push(43);\nactivePromptIndicies.push(44);\n}\nactivePromptIndicies.push(45);\nif (calculates.expand_car()) {\nactivePromptIndicies.push(46);\nactivePromptIndicies.push(47);\n}\nactivePromptIndicies.push(48);\nif (calculates.expand_boat()) {\nactivePromptIndicies.push(49);\nactivePromptIndicies.push(50);\n}\nactivePromptIndicies.push(51);\nif (calculates.expand_other_transport()) {\nactivePromptIndicies.push(52);\nactivePromptIndicies.push(53);\nactivePromptIndicies.push(54);\n}\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 11
           },
           {
             "clause": "begin screen",
-            "_row_num": 85,
-            "__rowNum__": 84,
+            "_row_num": 93,
+            "__rowNum__": 92,
             "_token_type": "begin_screen",
             "_end_screen_clause": {
               "clause": "end screen",
-              "_row_num": 88,
-              "__rowNum__": 87,
+              "_row_num": 96,
+              "__rowNum__": 95,
               "_token_type": "end_screen"
             },
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(49);\nactivePromptIndicies.push(50);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(55);\nactivePromptIndicies.push(56);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 12
           },
           {
-            "_row_num": 89,
+            "_row_num": 97,
             "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(51);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(57);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 13
           },
           {
-            "_row_num": 90,
+            "_row_num": 98,
             "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(52);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(58);\n\nreturn activePromptIndicies;\n}\n",
             "operationIdx": 14
           },
           {
             "_token_type": "exit_section",
             "clause": "exit section",
-            "_row_num": 91,
+            "_row_num": 99,
             "operationIdx": 15
           },
           {
-            "_row_num": 91,
+            "_row_num": 99,
             "_token_type": "begin_screen",
-            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(53);\n\nreturn activePromptIndicies;\n}\n",
+            "_screen_block": "function() {var activePromptIndicies = [];\nactivePromptIndicies.push(59);\n\nreturn activePromptIndicies;\n}\n",
             "screen": {
               "hideInBackHistory": true
             },
@@ -2747,7 +3045,7 @@
           {
             "_token_type": "resume",
             "clause": "resume",
-            "_row_num": 91,
+            "_row_num": 99,
             "operationIdx": 17
           }
         ],
@@ -2764,11 +3062,11 @@
           "_screen30": 9,
           "_screen31": 10,
           "_screen32": 11,
-          "_screen85": 12,
-          "_screen89": 13,
-          "_screen90": 14,
+          "_screen93": 12,
+          "_screen97": 13,
+          "_screen98": 14,
           "_contents": 16,
-          "_screen91": 16
+          "_screen99": 16
         }
       },
       "initial": {

@@ -70,9 +70,9 @@
       },
       {
         "type": "text",
-        "name": "clinic_sub_country",
+        "name": "clinic_sub_county",
         "display": {
-          "text": "Clinic sub-country:"
+          "text": "Clinic sub-county:"
         },
         "_row_num": 13
       },
@@ -97,6 +97,7 @@
         "display": {
           "text": "Date of last visit to this clinic prior to gap in care:"
         },
+        "constraint": "Date.parse(data('date_last_visit')) < new Date(new Date().setDate(new Date().getDate()-1))",
         "_row_num": 17
       },
       {
@@ -109,6 +110,7 @@
         "display": {
           "text": "Date of first return visit to this clinic after gap in care:"
         },
+        "constraint": "Date.parse(data('date_first_return'))> Date.parse(data('date_last_visit'))",
         "_row_num": 19
       },
       {
@@ -422,6 +424,9 @@
         "display": {
           "text": "How long (in minutes):"
         },
+        "inputAttributes": {
+          "min": 1
+        },
         "_row_num": 70
       },
       {
@@ -442,7 +447,7 @@
         "_row_num": 73
       },
       {
-        "type": "text",
+        "type": "textarea",
         "name": "interaction_notes",
         "display": {
           "text": "Notes on interaction with patient:"
@@ -1429,7 +1434,7 @@
         "type": "string",
         "elementKey": "clinic_name"
       },
-      "clinic_sub_country": {
+      "clinic_sub_county": {
         "_defn": [
           {
             "_row_num": 13,
@@ -1437,7 +1442,7 @@
           }
         ],
         "type": "string",
-        "elementKey": "clinic_sub_country"
+        "elementKey": "clinic_sub_county"
       },
       "date_last_visit": {
         "_defn": [
@@ -1837,9 +1842,9 @@
           },
           {
             "type": "text",
-            "name": "clinic_sub_country",
+            "name": "clinic_sub_county",
             "display": {
-              "text": "Clinic sub-country:"
+              "text": "Clinic sub-county:"
             },
             "_row_num": 13,
             "__rowNum__": 12,
@@ -1866,6 +1871,7 @@
             "display": {
               "text": "Date of last visit to this clinic prior to gap in care:"
             },
+            "constraint": "Date.parse(data('date_last_visit')) < new Date(new Date().setDate(new Date().getDate()-1))",
             "_row_num": 17,
             "__rowNum__": 16,
             "_token_type": "prompt",
@@ -1879,6 +1885,7 @@
             "display": {
               "text": "Date of first return visit to this clinic after gap in care:"
             },
+            "constraint": "Date.parse(data('date_first_return'))> Date.parse(data('date_last_visit'))",
             "_row_num": 19,
             "__rowNum__": 18,
             "_token_type": "prompt",
@@ -2207,6 +2214,9 @@
             "display": {
               "text": "How long (in minutes):"
             },
+            "inputAttributes": {
+              "min": 1
+            },
             "_row_num": 70,
             "__rowNum__": 69,
             "_token_type": "prompt",
@@ -2229,7 +2239,7 @@
             "promptIdx": 35
           },
           {
-            "type": "text",
+            "type": "textarea",
             "name": "interaction_notes",
             "display": {
               "text": "Notes on interaction with patient:"
@@ -2237,7 +2247,7 @@
             "_row_num": 74,
             "__rowNum__": 73,
             "_token_type": "prompt",
-            "_type": "text",
+            "_type": "textarea",
             "_branch_label_enclosing_screen": "survey/_screen74",
             "promptIdx": 36
           },
@@ -2251,7 +2261,10 @@
           }
         ],
         "validation_tag_map": {
-          "finalize": []
+          "finalize": [
+            8,
+            9
+          ]
         },
         "operations": [
           {
